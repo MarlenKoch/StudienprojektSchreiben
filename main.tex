@@ -1,0 +1,317 @@
+\documentclass[
+	12pt, %Schriftgröße
+	a4paper,
+	bibliography=totoc, %Inhaltsverzeichniseinträge f+r Quellen
+	numbers=noenddot, %Entfernt Punkt hinter Gliederungsnummern
+	ngerman, %Sprachpaket
+	headsepline, %Headertrennlinie
+	%footsepline, %Footertrennlinie
+	oneside %einseitiges Druckformat %%% Unterdrücken der leeren Seite nach Titelblatt
+	]{scrbook} %Dokumentenklasse (Koma-Script)
+
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{url}
+\usepackage{graphicx} %Bilder einfügen
+%\usepackage{hyphenat}
+%\usepackage{pdfpages} %PDF einfügen
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage[right]{eurosym} %Euro-Zeichen
+\usepackage{amssymb}
+\usepackage{setspace} % Zeilenabstand
+\usepackage[ 
+   colorlinks,        % Links ohne Umrandungen in zu wählender Farbe 
+   linkcolor=black,   % Farbe interner Verweise 
+   filecolor=black,   % Farbe externer Verweise 
+   citecolor=black,   % Farbe von Zitaten 
+   urlcolor=blue	  % Farbe von Links
+   ]{hyperref} %Verlinkungen
+\usepackage[figure]{hypcap}
+\usepackage[ngerman]{translator}
+\usepackage{blindtext} % Lorem-Ipsum-Plugin
+\usepackage[acronym, nonumberlist, toc, translate=babel]{glossaries} %% Glossar mit Akronymen laden und mit babel auf deutsch anzeigen
+%\usepackage[
+	%nonumberlist, %keine Seitenzahlen anzeigen
+	%acronym,      %ein Abkürzungsverzeichnis erstellen
+	%toc,          %Einträge im Inhaltsverzeichnis
+	%section      %im Inhaltsverzeichnis auf section-Ebene erscheinen
+	%]
+%{glossaries}
+
+\usepackage{csquotes}
+\usepackage[]{bookmark}
+\usepackage{scrhack}
+
+\usepackage{listings,xcolor} %Codeanzeige
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+\usepackage{subfiles}
+
+\usepackage{biblatex}
+\addbibresource{lit.bib}
+
+\definecolor{dkgreen}{rgb}{0,.6,0}
+\definecolor{dkblue}{rgb}{0,0,.6}
+\definecolor{dkyellow}{cmyk}{0,0,.8,.3}
+
+\lstset{
+    numbers=left, 
+    numberstyle=\tiny, 
+    numbersep=5pt,
+    breaklines=true,
+    frame=single,
+    language=sh,
+    basicstyle=\ttfamily\fontsize{10}{12}\selectfont,
+    keywordstyle    = \color{dkblue},
+    stringstyle     = \color{red},
+    identifierstyle = \color{dkgreen},
+    commentstyle    = \color{gray},
+    emph            =[1]{php},
+    emphstyle       =[1]\color{black},
+    emph            =[2]{if,and,or,else},
+    emphstyle       =[2]\color{dkyellow}
+} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Sonderformatierung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Seitenabstände definieren
+\geometry{verbose,tmargin=3cm,bmargin=2cm,lmargin=3cm,rmargin=3cm} 
+
+% Hurenkinder und Schusterjungen verhindern (Ja, das heißt wirklich so!!!)
+\clubpenalty= 10000
+\widowpenalty= 10000
+\displaywidowpenalty= 10000 
+
+%% Bei Referenzen im Text wird jetzt bei allen Ebenen "Kapitel" vorgestellt, z.b. Kapitel 2, Kapitel 2.2, Kapitel 6.3.2
+\addto\extrasngerman{
+    \def\sectionautorefname{Kapitel}%
+    \def\subsectionautorefname{Kapitel}%
+    \def\subsubsectionautorefname{Kapitel}%
+    }
+
+% Vertikaler Abstand zwischen Ende Textblock - Ende Fußzeile --> Abstand der Seitenzahl von Rand erhöhen 
+\setlength{\footskip}{10mm}
+
+% Abstand vor/nach Überschriften verändern
+
+\RedeclareSectionCommand[%
+    beforeskip=0.5\baselineskip,
+    afterskip=0.5\baselineskip,
+]{chapter}
+
+\RedeclareSectionCommand[%
+    beforeskip=0.5\baselineskip,
+    afterskip=0.5\baselineskip,
+]{section}
+
+\RedeclareSectionCommand[%
+    beforeskip=0.1\baselineskip,
+    afterskip=0.1\baselineskip,
+]{subsection}
+
+\RedeclareSectionCommand[%
+    beforeskip=0.01\baselineskip,
+    %%afterskip=0.2\baselineskip
+]{paragraph}
+
+\setlength{\abovecaptionskip}{4pt}  % 1pc=12pt 
+\setlength{\belowcaptionskip}{0pt}
+%\setlength{\textfloatsep}{4pt}
+\setlength{\intextsep}{1pc}
+
+%% Verkleinerung der Textgröße unter Abbildungen
+\addtokomafont{caption}{\small}
+
+
+
+% Den Punkt am Ende der Glossareinträge deaktivieren
+\renewcommand*{\glspostdescription}{}
+
+%Glossar-Befehle anschalten
+\makenoidxglossaries{}
+\loadglsentries{glossar.tex}
+
+% sorgt dafür, dass bei Leerzeile die Einrückung verhindert und stattdessen eine Leerzeile eingefügt wird % erspart bigskips und erhöht die Lesbarkeit im LaTeX-Text 
+\KOMAoptions{parskip=full*}
+
+% ändert Titelschriftart in Serifen-Normalschriftart
+\addtokomafont{disposition}{\rmfamily} 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\studentName}{Justin Becker}
+\newcommand{\matrnr}{77204368351}
+\newcommand{\type}{Praxistransferbericht}
+\newcommand{\topic}{Vereinfachung von Entwicklungsprozessen durch Large Language Models}
+\newcommand{\studiengangh}{Informatik}
+\newcommand{\fachbereich}{FB2: Duales Studium --- Technik}
+\newcommand{\studiengang}{Informatik}
+\newcommand{\company}{SAP SE}
+\newcommand{\betreuerHS}{Carl Dolling}
+\newcommand{\betreuerUnt}{Jenny Peter}
+\newcommand{\jahrgang}{2023}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%>>>>>>>
+
+
+\newcommand{\quickwordcount}[1]{%
+  \immediate\write18{texcount -1 -sum -merge -q -relaxed #1.tex > #1-words.sum }%
+  \input{#1-words.sum}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% falsche Default-Silbentrennung überschreiben
+%\include{hyphenation}
+
+% keine Silbentrennung sonder space zwischen den Wörtern nutzen, wie Blick Absatz in word 
+\spaceskip=0.3em plus 4em minus 0.2em
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%>>>>>>>
+%%%%%%%%%%% Titelblatt
+
+%% Anordnung und Aussehen von Titel und Untertitel
+
+\subject{\type}
+
+\title{
+\normalfont\endgraf\rule{\textwidth}{.4pt}
+\begingroup
+	\centering
+	\linespread{1.5}
+	\huge\topic%
+\endgroup
+\endgraf\rule{\textwidth}{.4pt}
+}
+ 
+%%Eigentlich nicht besonders schön, aber Koma erlaubt die Anordnung eines weiteren Felder (hier: Fachbereich) nicht
+\date{\vspace{-2cm}\normalsize vorgelegt am \today \vspace{1cm}}
+%% \date muss leer angegeben werden, um die Default-Datumsanzeige
+
+\publishers{
+	\begin{tabular}{l l}
+	\textbf{\normalsize{Name:}} & \normalsize{\studentName}  \tabularnewline%
+    \textbf{\normalsize{Matrikelnummer:}} & \normalsize{\matrnr}  \tabularnewline%
+	\textbf{\normalsize{Ausbildungsbetrieb:}} & \normalsize{\company}  \tabularnewline%
+    \textbf{\normalsize{Fachbereich:}} & \normalsize{\fachbereich} \tabularnewline%
+    \textbf{\normalsize{Studienjahrgang:}} & \normalsize{\jahrgang} \tabularnewline%
+	\textbf{\normalsize{Studiengang:}} & \normalsize{\studiengang}  \tabularnewline%
+	\textbf{\normalsize{Betreuerin Unternehmen:}} & \normalsize{\betreuerUnt} \tabularnewline%
+	\textbf{\normalsize{Betreuerin Hochschule:}} & \normalsize{\betreuerHS} \tabularnewline%
+	\textbf{\normalsize{Wortanzahl:}} & \normalsize{\quickwordcount{main}}
+	\end{tabular}
+    
+
+}
+
+
+\titlehead{\begin{center}
+    \includegraphics[scale=0.7]{bilder/header_logo.PNG}
+    \end{center}
+    }
+
+\maketitle
+
+\onehalfspacing
+
+\textbf{Sperrvermerk}
+
+Der vorliegende Bericht enthält vertrauliche Daten des Unternehmens SAP SE.
+Auf Wunsch des Unternehmens SAP SE ist der vorliegende Bericht für die öffentliche Nutzung zu sperren.
+Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche Genehmigung des Unternehmen SAP SE, in 14469 Potsdam und des Verfassers Justin Becker nicht gestattet.
+Der Bericht ist nur den Gutachtern und des Mitgliedern des Prüfungsausschlusses zugänglich zu machen.
+
+\vspace{20mm}
+
+\begin{tabular}{lp{2em}l} 
+    \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
+    Ort, Datum     && \studentName{}
+\end{tabular}
+
+\vspace{\fill}
+\normalsize{Von der betrieblichen Betreuung zur Kenntnis genommen:}
+\vspace*{20mm}
+
+\begin{tabular}{lp{2em}l} 
+    \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
+    Ort, Datum     && \betreuerUnt
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Dokumenteninhalt START
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Abstract
+\chapter*{Zusammenfassung}
+\addcontentsline{toc}{chapter}{Zusammenfassung}
+\subfile{chapter/abstract.tex}
+
+\pagenumbering{Roman} % römische Seitenzahlen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Inhaltsverzeichnis, Tabellen, Abbildungen, etc.
+\newpage
+
+\tableofcontents{}
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+
+\listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+
+\section*{Hinweis}
+
+Aus Gründen der besseren Lesbarkeit wird im Text verallgemeinernd die männliche Form verwendet.
+Diese Formulierungen umfassen gleichermaßen weibliche und männliche Personen.
+\clearpage
+
+%Tabellenverzeichnis, falls nötig: 
+
+%\listoftables
+%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+
+
+\printnoidxglossaries{}
+
+\clearpage
+
+%% arabische Seitenzahlen
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Einführung
+
+\chapter{Einleitung}\label{ch:einleitung}
+\subfile{chapter/einleitung.tex}
+
+\chapter{Fazit}\label{ch:fazit}
+\subfile{chapter/fazit.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Quellen
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\spaceskip=0.3em plus 0.5em minus 0.2em
+\printbibliography
+
+%% \bibliographystyle{alpha} %% tu es nicht, niemals, das ist eklig, nicht einkommentieren
+
+\chapter*{Ehrenwörtliche Erklärung}
+\addcontentsline{toc}{chapter}{Ehrenwörtliche Erklärung}
+\subfile{chapter/ehrenwörtliche_erklärung.tex}
+
+\end{document}
+

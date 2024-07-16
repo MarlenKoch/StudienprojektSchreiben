@@ -1,0 +1,268 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{SecurityVulnerabilities}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2a48ef379b58726d21c68c84f9272162}{%
+           family={Ahuja},
+           familyi={A\bibinitperiod},
+           given={Dharmendra},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a48ef379b58726d21c68c84f9272162}
+      \strng{fullhash}{2a48ef379b58726d21c68c84f9272162}
+      \strng{bibnamehash}{2a48ef379b58726d21c68c84f9272162}
+      \strng{authorbibnamehash}{2a48ef379b58726d21c68c84f9272162}
+      \strng{authornamehash}{2a48ef379b58726d21c68c84f9272162}
+      \strng{authorfullhash}{2a48ef379b58726d21c68c84f9272162}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Python Security Made Easy: Fixing Security Vulnerabilities with Checkmarx !}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/@dharmendradevops11/python-security-made-easy-fixing-security-vulnerabilities-with-checkmarx-aa7b3ff28b7a
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@dharmendradevops11/python-security-made-easy-fixing-security-vulnerabilities-with-checkmarx-aa7b3ff28b7a
+      \endverb
+    \endentry
+    \entry{SAPUsability}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7e51fa13213aa470285bfdc6f075b57d}{%
+           family={Biermann},
+           familyi={B\bibinitperiod},
+           given={Ingo},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e51fa13213aa470285bfdc6f075b57d}
+      \strng{fullhash}{7e51fa13213aa470285bfdc6f075b57d}
+      \strng{bibnamehash}{7e51fa13213aa470285bfdc6f075b57d}
+      \strng{authorbibnamehash}{7e51fa13213aa470285bfdc6f075b57d}
+      \strng{authornamehash}{7e51fa13213aa470285bfdc6f075b57d}
+      \strng{authorfullhash}{7e51fa13213aa470285bfdc6f075b57d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SAP Usability}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://mindsquare.de/knowhow/sap-usability/
+      \endverb
+      \verb{url}
+      \verb https://mindsquare.de/knowhow/sap-usability/
+      \endverb
+    \endentry
+    \entry{CorporateFactSheet}{report}{}
+      \name{author}{1}{}{%
+        {{hash=ee76429c6678dfb345fff26d210234c5}{%
+           family={Cummunications},
+           familyi={C\bibinitperiod},
+           given={SAP\bibnamedelimb Globale\bibnamedelima Corporate},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {SAP SE}%
+      }
+      \strng{namehash}{ee76429c6678dfb345fff26d210234c5}
+      \strng{fullhash}{ee76429c6678dfb345fff26d210234c5}
+      \strng{bibnamehash}{ee76429c6678dfb345fff26d210234c5}
+      \strng{authorbibnamehash}{ee76429c6678dfb345fff26d210234c5}
+      \strng{authornamehash}{ee76429c6678dfb345fff26d210234c5}
+      \strng{authorfullhash}{ee76429c6678dfb345fff26d210234c5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SAP Corporate Fact Sheet}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.sap.com/documents/2017/04/4666ecdd-b67c-0010-82c7-eda71af511fa.html
+      \endverb
+      \verb{url}
+      \verb https://www.sap.com/documents/2017/04/4666ecdd-b67c-0010-82c7-eda71af511fa.html
+      \endverb
+    \endentry
+    \entry{SASTTools}{online}{}
+      \name{author}{1}{}{%
+        {{hash=34bb981fb9871cd8faa7b1f60cd167b9}{%
+           family={John\bibnamedelima Breeden},
+           familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Florian\bibnamedelima Maler},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{34bb981fb9871cd8faa7b1f60cd167b9}
+      \strng{fullhash}{34bb981fb9871cd8faa7b1f60cd167b9}
+      \strng{bibnamehash}{34bb981fb9871cd8faa7b1f60cd167b9}
+      \strng{authorbibnamehash}{34bb981fb9871cd8faa7b1f60cd167b9}
+      \strng{authornamehash}{34bb981fb9871cd8faa7b1f60cd167b9}
+      \strng{authorfullhash}{34bb981fb9871cd8faa7b1f60cd167b9}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Die besten DAST- und SAST-Tools}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.csoonline.com/de/a/die-besten-dast-und-sast-tools,3673878
+      \endverb
+      \verb{url}
+      \verb https://www.csoonline.com/de/a/die-besten-dast-und-sast-tools,3673878
+      \endverb
+    \endentry
+    \entry{CloudProContra}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1853840cd1882f24780cedd18977bbe1}{%
+           family={Minnich},
+           familyi={M\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{fullhash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{bibnamehash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{authorbibnamehash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{authornamehash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{authorfullhash}{1853840cd1882f24780cedd18977bbe1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Die Vorteile und Nachteile des Cloud-Computing}
+      \field{urlday}{17}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.heise.de/download/blog/Die-Vorteile-und-Nachteile-des-Cloud-Computing-3713041
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/download/blog/Die-Vorteile-und-Nachteile-des-Cloud-Computing-3713041
+      \endverb
+    \endentry
+    \entry{Rego}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4353cfcbb3e2e700a10ee3278596bbab}{%
+           family={o.V.},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{fullhash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{bibnamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authorbibnamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authornamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authorfullhash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \field{extraname}{1}
+      \field{sortinit}{o}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Policy Language}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.openpolicyagent.org/docs/latest/policy-language/
+      \endverb
+      \verb{url}
+      \verb https://www.openpolicyagent.org/docs/latest/policy-language/
+      \endverb
+    \endentry
+    \entry{SAPCloudStrategy}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4353cfcbb3e2e700a10ee3278596bbab}{%
+           family={o.V.},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{fullhash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{bibnamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authorbibnamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authornamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authorfullhash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \field{extraname}{2}
+      \field{sortinit}{o}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SAP Cloud Strategy}
+      \field{urlday}{17}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sapinsider.org/topic/sap-platform-technology/sap-cloud-strategy/
+      \endverb
+      \verb{url}
+      \verb https://sapinsider.org/topic/sap-platform-technology/sap-cloud-strategy/
+      \endverb
+    \endentry
+    \entry{CI/CD}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4353cfcbb3e2e700a10ee3278596bbab}{%
+           family={o.V.},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{fullhash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{bibnamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authorbibnamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authornamehash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \strng{authorfullhash}{4353cfcbb3e2e700a10ee3278596bbab}
+      \field{extraname}{3}
+      \field{sortinit}{o}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is CI/CD?}
+      \field{urlday}{17}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.redhat.com/en/topics/devops/what-is-ci-cd
+      \endverb
+      \verb{url}
+      \verb https://www.redhat.com/en/topics/devops/what-is-ci-cd
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
