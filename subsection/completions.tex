@@ -11,9 +11,7 @@ Um dieses Problem der Erfassug der Semantik von Code anzugehen, wird der Indexin
 \end{figure}
 Dafür wird, wie in Abbildung \ref{fig:indexing} ilustriert, vor der Embedding Generierung ein weiters \gls{LLM} aufgerufen, welches eine Completion durchführt, die als Starttext ein Prompt und den Code Abschnitt erhält.
 Das Prompt fordert das \gls{LLM} auf, den erhaltenden Code zusammenzufassem und diese Zusammenfassung wird dann für das Embedding genutzt.
-Einerseits kann dem ersten \gls{LLM} durch diese Prompt mehr Kontext gegeben werden und anderseits ist das Ergebniss dieser ersten Analyse durch das \gls{LLM} ein Text in natürlicher Sprache, der besser von dem Embedding \gls{LLM} erfasst werden kann.
-\clearpage
-
+Einerseits kann dem ersten \gls{LLM} durch dieses Prompt mehr Kontext gegeben werden und anderseits ist das Ergebniss dieser ersten Analyse durch das \gls{LLM} ein Text in natürlicher Sprache, der besser von dem Embedding \gls{LLM} erfasst werden kann.
 Als Prompt wird folgender Text genutzt:
 
 \begin{lstlisting}

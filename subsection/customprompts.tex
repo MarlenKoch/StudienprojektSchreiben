@@ -7,15 +7,14 @@ Um den Kontext für die \glspl{LLM} weiter zu erhöhen, wird dem Prompt in \ref{
 The file path for the snippet is "<Pfad zur Datei des Codeabschnittes>".
 \end{lstlisting}
 \end{center}
-
 Dadurch wird auch der Dateiname übergeben, welcher Information darüber hält, was der Codeabschnitt in dieser Datei bedeuten kann.
 Deutlich wird dies zum Beispiel mit Frage 3 die nach der ESLint Konfiguration fragt.
-Alle vorherigen Tests mit sind an dieser Frage gescheitert.
-Die Antwort des Completion \gls{LLM} war stets das vorgegebene \enquote{NOTHING}, welches nur zurückgegeben werden soll, wenn kein Code übergeben wurde.
-Mit dieser Anpassung war es dem \gls{LLM} allerdings möglich Konfigurationen richtig einzuordnen und es würden neun von zehn Fragen richtig beantwortet.
+Alle vorherigen Tests sind an dieser Frage gescheitert.
+Die Antwort des Completion \gls{LLM} war stets das vorgegebene \enquote{NOTHING}, welches eigentlich nur zurückgegeben werden soll, wenn kein Code übergeben wurde.
+Mit dieser Anpassung war es dem \gls{LLM} allerdings möglich Konfigurationen richtig einzuordnen und es wurden neun von zehn Fragen richtig beantwortet.
 
 Dabei ist auffällig, dass die Frage 6, die fehlgeschlagen ist, bei allen anderen Tests richtig beantwortet wurde.
 Erklärbar ist dieses verhalten dadurch, dass der Codeabschnitt selber, sehr nah an der Frage dran ist (wie sage ich das richtig???) und deshalb in den meisten Tests erkannt wird.
-Doch bei \ref{test5} wird dieser Abschnitt so abstrakt beschrieben, dass die Embedding zu bedeutungsfern für eine erfolgreiche Suche sind.
+Doch bei \ref{test5} wird dieser Abschnitt so abstrakt beschrieben, dass die Embedding zu fern für eine erfolgreiche Suche sind.
 
 \end{document}

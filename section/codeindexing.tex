@@ -6,7 +6,8 @@ Dies wird mit der Tree-Sitter Bibliothek durchgeführt, die das Aufteilen von Co
 Als nächstes wird aus diesen Code Abschnitten Vektor Embeddings erzeugt und als Index gespeichert.
 
 Zum Erfassen der Funktionstüchtigkeit wird eine Metrik eingeführt.
-Es gibt ein im Anhang enthaltends Test Projekt und folgende zehn Test Fragen. Jede dieser Fragen zielt auf ein Codeabschnitt des Projektes ab und es sind alles \enquote{Where}-Fragen.
+Es gibt ein im Anhang enthaltends Test Projekt und folgende zehn Test Fragen.
+Jede dieser Fragen, die eine \enquote{Where}-Formulierungen aufweisen, zielt auf ein Codeabschnitt des Projektes ab.
 \begin{table}[H]
 \begin{center}
 \caption{Test Fragen für Suchen im Index}
@@ -40,7 +41,7 @@ Es gibt ein im Anhang enthaltends Test Projekt und folgende zehn Test Fragen. Je
 \end{table}
 \vspace*{-\baselineskip}
 
-Für einen ersten \ref{test1} wird für das Projekt nach vorgestelltem Verfahren ein Index erstellt, welcher dann mit den Fragen druchsucht wird.
+Für einen ersten \ref{test1} wird für das Projekt nach vorgestelltem Verfahren ein Index erstellt, welcher dann mit den Fragen durchsucht wird.
 Enthalten die drei besten Ergnisse, also jene dessen Embedding am meisten Kosinus-Ähnlichkeit mit dem Embedding der Frage habe, den Textabschnitt, der durch die Frage gemeint ist, wird das Ergebniss als richtig gewertet.
 Für richtige Ergebnisse wird die Kosinus-Ähnlichkeit multipliziert mit 100 notiert, sonst eine 0.
 
