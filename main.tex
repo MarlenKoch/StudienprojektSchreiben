@@ -1,3 +1,4 @@
+% !TeX TXS-program:bibliography = txs:///biber
 \documentclass[
 	12pt, %Schriftgröße
 	a4paper,
@@ -44,7 +45,7 @@
 \usepackage{csquotes}
 \usepackage[]{bookmark}
 \usepackage{scrhack}
-
+\usepackage{tabularx}
 \usepackage{listings,xcolor} %Codeanzeige
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
@@ -55,7 +56,18 @@
 
 \usepackage{subfiles}
 
-\usepackage{biblatex}
+\newcounter{mylabelcounter}
+
+\makeatletter
+\newcommand{\labeltext}[2]{%
+  \@bsphack
+  \csname phantomsection\endcsname % in case hyperref is used
+  \def\@currentlabel{#1}{\label{#2}}%
+  \@esphack
+}
+\makeatother
+ 
+\usepackage[backend=biber]{biblatex}
 \addbibresource{lit.bib}
 
 \definecolor{dkgreen}{rgb}{0,.6,0}
@@ -63,21 +75,24 @@
 \definecolor{dkyellow}{cmyk}{0,0,.8,.3}
 
 \lstset{
-    numbers=left, 
-    numberstyle=\tiny, 
-    numbersep=5pt,
+    % numbers=left, 
+    % numberstyle=\tiny, 
+    % numbersep=5pt,
     breaklines=true,
-    frame=single,
-    language=sh,
-    basicstyle=\ttfamily\fontsize{10}{12}\selectfont,
-    keywordstyle    = \color{dkblue},
-    stringstyle     = \color{red},
-    identifierstyle = \color{dkgreen},
-    commentstyle    = \color{gray},
-    emph            =[1]{php},
-    emphstyle       =[1]\color{black},
-    emph            =[2]{if,and,or,else},
-    emphstyle       =[2]\color{dkyellow}
+    frame=lines,
+    % language=sh,
+    basicstyle=\small\ttfamily,
+    columns=flexible,
+    showstringspaces=false
+    % basicstyle=\ttfamily\fontsize{10}{12}\selectfont,
+    % keywordstyle    = \color{dkblue},
+    % stringstyle     = \color{red},
+    % identifierstyle = \color{dkgreen},
+    % commentstyle    = \color{gray},
+    % emph            =[1]{php},
+    % emphstyle       =[1]\color{black},
+    % emph            =[2]{if,and,or,else},
+    % emphstyle       =[2]\color{dkyellow}
 } 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -296,7 +311,39 @@ Diese Formulierungen umfassen gleichermaßen weibliche und männliche Personen.
 %%%%%%%%%%% Einführung
 
 \chapter{Einleitung}\label{ch:einleitung}
+\label{chap:einleitung}
 \subfile{chapter/einleitung.tex}
+
+\chapter{Theoretischen Grundlagen}
+\label{chap:grundlagen}
+\subfile{chapter/theoretischenGrundlagen.tex}
+
+\section{Large Language Models}
+\subfile{section/llms.tex}
+
+\section{Vektor Embeddings}
+\subfile{section/vektorembeddings.tex}
+
+\section{Vektor Raum}
+\subfile{section/vektorspace.tex}
+
+\chapter{Indexing}
+\subfile{chapter/indexing.tex}
+\section{Suche}
+\subfile{section/search.tex}
+\section{Indexing von Code}
+\subfile{section/codeindexing.tex}
+\subsection{Problem der Code Semantik}
+\subfile{subsection/codesematic.tex}
+\subsection{Seperate Bedeutungserfassen via Completions}
+\subfile{subsection/completions.tex}
+\subsection{Datei spezifische Promtps}
+\subfile{subsection/customprompts.tex}
+\subsection{Embeddings aus erweiterten Erklärungen}
+\subfile{subsection/embeddings.tex}
+
+\chapter{Bewertung}
+\subfile{chapter/bewertung.tex}
 
 \chapter{Fazit}\label{ch:fazit}
 \subfile{chapter/fazit.tex}

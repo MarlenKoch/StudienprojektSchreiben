@@ -1,0 +1,58 @@
+{
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "latexmk (latexmkrc)",
+      "tools": ["latexmk_rconly"]
+    },
+    {
+      "name": "latexmk (lualatex)",
+      "tools": ["lualatexmk"]
+    },
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["xelatexmk"]
+    },
+    {
+      "name": "pdflatex -> biber -> pdflatex * 2",
+      "tools": ["pdflatex", "biber", "pdflatex", "pdflatex"]
+    },
+    {
+      "name": "Compile Rnw files",
+      "tools": ["rnw2tex", "latexmk"]
+    },
+    {
+      "name": "Compile Jnw files",
+      "tools": ["jnw2tex", "latexmk"]
+    },
+    {
+      "name": "Compile Pnw files",
+      "tools": ["pnw2tex", "latexmk"]
+    },
+    {
+      "name": "tectonic",
+      "tools": ["tectonic"]
+    }
+  ],
+  "latex-workshop.intellisense.citation.backend": "bibtex",
+  "files.exclude": {
+    "**/*.aux": true,
+    "**/*.bbl": true,
+    "**/*.bcf": true,
+    "**/*.blg": true,
+    "**/*.dvi": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.fls": true,
+    "**/*.gz": true,
+    "**/*.lof": true,
+    "**/*.log": true,
+    "**/*.out.ps": true,
+    "**/*.run.xml": true,
+    "**/*.toc": true
+  },
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

@@ -1,0 +1,85 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+Der erste Schritt zum Indexing ist das Einteilen der Codebasis in Abschnitte.
+Dies wird mit der Tree-Sitter Libary durchgeführt, die den Code aufteilt.
+\cite{treesitter}
+Als nächstes wird aus diesen Code Abschnitten ein Index erzeugt, welcher dann durscut werden kann..
+
+Zum Erfassen der Funktionstüchtigkeit wird eine Metrik eingeführt.
+Es gibt ein im Anhang enthaltends Test Projekt und folgende zehn Test Fragen. Jede dieser Fragen zielt auf ein Codeabschnitt des Projektes ab und es sind alles \enquote{Where}-Fragen.
+\begin{table}[!h]
+\begin{center}
+\caption{Test Fragen für bespielhafte Suchen im Index}
+\label{tab:testfragen}
+\begin{tabular}{| m {0.5cm} | m {0.9\textwidth} | }
+ 
+ \hline
+ 1. & \enquote{Where is the logger implemented?}\\ 
+ \hline
+ 2. & \enquote{Where are the setting changes for the logger handled?}\\ 
+ \hline
+ 3. & \enquote{Where is the linting configured?}\\ 
+ \hline
+ 4. & \enquote{Where is typescript configured?}\\ 
+ \hline
+ 5. & \enquote{Where are the styles for my app?}\\ 
+ \hline
+ 6. & \enquote{Where is my app created?}\\ 
+ \hline
+ 7. & \enquote{Where do I create the IDs for my web view context?}\\ 
+ \hline
+ 8. & \enquote{Where do I manage the state of my web view panels?}\\ 
+ \hline
+ 9. & \enquote{Where do I configure what commands will be available in my vs code extension?}\\ 
+ \hline
+ 10. & \enquote{Where do I retrieve information about vs code settings?}\\
+ \hline 
+
+\end{tabular}
+\end{center}
+\end{table}
+\vspace*{-\baselineskip}
+
+Für einen ersten \ref{test1} wird für das Projekt nach vorgestelltem Verfahren ein Index erstellt, welcher dann mit den Fragen druchsucht wird.
+Enthalten die drei besten Ergnisse, also jene dessen Embedding am meisten Kosinus-Ähnlichkeit mit dem Embedding der Frage habe, den Textabschnitt, der durch die Frage gemeint ist, wird das Ergebniss als richtig gewertet.
+Für richtige Ergebnisse wird die Kosinus-Ähnlichkeit multipliziert mit 100 notiert, sonst eine 0.
+
+Vollständigkeitshalber: Alle Ergebniss wurden mit Hilfe der gpt-35-turbo \cite{completionmodel} und text-embedding-ada-002 \cite{embeddingmodel} Modelle erzeugt.
+Für Completions wurde eine Temprature von 0.2 und ein Top-P-Wert von 0.3 gewählt. Alle anderen Einstellungen blieben unverändert.
+
+\begin{table}[H]
+\begin{center}
+\caption{Ergebnisse der Index und Such Tests}
+\label{tab:ergebnisse}
+\begin{tabular}{| m {1cm} | m {1,3cm} | m {1,3cm} |m {1,3cm} |m {1,3cm} |m {1,3cm} |m {1,3cm} | m {1,3cm} |}
+ \hline
+ Frage & Test 1\labeltext{Test 1}{test1} & Test 2\labeltext{Test 2}{test2} & Test 3\labeltext{Test 3}{test3} & Test 4\labeltext{Test 4}{test4} & Test 5\labeltext{Test 5}{test5} & Test 6\labeltext{Test 6}{test6} & Test 7\labeltext{Test 7}{test7} \\
+ \hline
+ 1. & 79,93 &0&79,93&79,37&80,08&79,25&80,62\\ 
+ \hline
+ 2. & 81,72 &79,3&81,72&79,56&83,07&80,49&82,29\\ 
+ \hline
+ 3. & 0 &0&0&0&84,36&0&0\\ 
+ \hline
+ 4. & 80,36 &80,39&86,06&86,06&85,56&85,2&84,28\\ 
+ \hline
+ 5. & 0 &0&0&0&81,38&75,76&79,12\\ 
+ \hline
+ 6. & 78,16 &78,96&77,7&77,7&0&78,95&79,12\\ 
+ \hline
+ 7. & 0 &0&80,87&0&80,87&78,44&0\\ 
+ \hline
+ 8. & 0 &0&0&0&85,96&0&75,33\\ 
+ \hline
+ 9. & 80,04 &0&85,4&89,28&85,16&0&0\\ 
+ \hline
+ 10. & 75,58 &75,89&84,34&83,36&84,34&83,37&82,27\\
+ \hline 
+
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}
+
+
