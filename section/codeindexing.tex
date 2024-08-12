@@ -3,14 +3,14 @@
 
 Der erste Schritt zum Indexing ist das Einteilen der Codebasis in Abschnitte.
 Dies wird mit der Tree-Sitter Bibliothek durchgeführt, die das Aufteilen von Code bereitstellt \cite{treesitter}.
-Als nächstes wird aus diesen Code Abschnitten Vektor Embeddings erzeugt und als Index gespeichert.
+Als Nächstes wird aus diesen Codeabschnitten Vektor Embeddings erzeugt und im Index gespeichert.
 
 Zum Erfassen der Funktionstüchtigkeit wird eine Metrik eingeführt.
-Es gibt ein im Anhang enthaltends Test Projekt und folgende zehn Test Fragen.
-Jede dieser Fragen, die eine \enquote{Where}-Formulierungen aufweisen, zielt auf ein Codeabschnitt des Projektes ab.
+Es gibt ein im Anhang enthaltendes Testprojekt und folgende zehn Testfragen.
+Jede dieser Fragen, die eine \enquote{Where}-Formulierungen aufweisen, zielt auf einen Codeabschnitt des Projektes ab.
 \begin{table}[H]
 \begin{center}
-\caption{Test Fragen für Suchen im Index}
+\caption{Testfragen für die Suchen im Index des Testprojekts}
 \label{tab:testfragen}
 \begin{tabular}{| m {0.5cm} | m {0.9\textwidth} | }
  
@@ -42,15 +42,15 @@ Jede dieser Fragen, die eine \enquote{Where}-Formulierungen aufweisen, zielt auf
 \vspace*{-\baselineskip}
 
 Für einen ersten \ref{test1} wird für das Projekt nach vorgestelltem Verfahren ein Index erstellt, welcher dann mit den Fragen durchsucht wird.
-Enthalten die drei besten Ergnisse, also jene dessen Embedding am meisten Kosinus-Ähnlichkeit mit dem Embedding der Frage habe, den Textabschnitt, der durch die Frage gemeint ist, wird das Ergebniss als richtig gewertet.
+Enthalten die drei besten Ergebnisse, also jene, dessen Embedding am meisten Kosinus-Ähnlichkeit mit dem Embedding der Frage habe, den Textabschnitt, der durch die Frage gemeint ist, wird das Ergebnis als richtig gewertet.
 Für richtige Ergebnisse wird die Kosinus-Ähnlichkeit multipliziert mit 100 notiert, sonst eine 0.
 
-Vollständigkeitshalber: Alle Ergebniss wurden mit Hilfe der gpt-35-turbo \cite{completionmodel} und text-embedding-ada-002 \cite{embeddingmodel} Modelle erzeugt.
-Für Completions wurde eine Temprature von 0.2 und ein Top-P-Wert von 0.3 gewählt. Alle anderen Einstellungen blieben unverändert.
+Vollständigkeitshalber: Alle Ergebnisse wurden mithilfe der gpt-35-turbo \cite{completionmodel} und text-embedding-ada-002 \cite{embeddingmodel} Modelle erzeugt.
+Für Completions wurde eine Temperature von 0.2 und ein Top-P-Wert von 0.3 gewählt. Alle anderen Einstellungen blieben unverändert.
 
 \begin{table}[H]
 \begin{center}
-\caption{Ergebnisse der Index und Such Tests}
+\caption{Ergebnisse der Index- und Suchtests}
 \label{tab:ergebnisse}
 \begin{tabular}{| m {1cm} | m {1,3cm} | m {1,3cm} |m {1,3cm} |m {1,3cm} |m {1,3cm} |m {1,3cm} | m {1,3cm} |}
  \hline
