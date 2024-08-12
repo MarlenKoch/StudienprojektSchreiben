@@ -1,4 +1,4 @@
-This is my very first ptb and i am keep track of my changes
+This is my second ptb and i am keep track of my changes
 
 Build pdf with pdflatex main
 To include bib pdflatex main -> biber main -> pdflatex main -> pdflatex main
