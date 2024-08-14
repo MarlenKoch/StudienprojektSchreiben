@@ -6,12 +6,13 @@ Um dieses Problem der Erfassung der Semantik von Code anzugehen, wird der Indexi
 \begin{figure}[H]
     \centering
     \includegraphics[scale=.6]{"bilder/prozess.png"}
-    \caption{Indexing Prozess aus einem Code Abschnitt(selbst gezeichnet)}
+    \caption{Indexing Prozess aus einem Code Abschnitt(eigene Darstellung)}
     \label{fig:indexing}
 \end{figure}
 Dafür wird, wie in Abbildung \ref{fig:indexing} illustriert, vor der Embedding Generierung ein weiteres \gls{LLM} aufgerufen, welches eine Completion durchführt, die als Starttext einen Prompt und den Codeabschnitt erhält.
 Das Prompt fordert das \gls{LLM} auf, den erhaltenden Code zusammenzufassen. Diese Zusammenfassung wird wiederum für das Embedding genutzt.
 Einerseits kann dem ersten \gls{LLM} durch dieses Prompt mehr Kontext gegeben werden und andererseits ist das Ergebnis dieser ersten Analyse durch das \gls{LLM} ein Text in natürlicher Sprache, der besser von dem Embedding \gls{LLM} erfasst werden kann.
+\clearpage
 Als Prompt wird folgender Text genutzt:
 
 \begin{lstlisting}
@@ -41,7 +42,7 @@ Do not start with "Here is the JSON object" or similar, just output plain JSON n
 
 Im \ref{test3} wird dieses neue Verfahren genutzt und sieben von zehn Fragen können richtig beantwortet werden.
 Beim \ref{test4} wird mit demselben Verfahren das Testprojekt im Zustand aus \ref{test2} untersucht und durch die Verbesserungen werden noch sechs von zehn Fragen richtig beantwortet.
-Dabei ist anzumerken, dass die Frage, die beim Vergleich von \ref{test3} und \ref{test4} wegfällt, selbst von einem Menschen nur durch die Dokumentation zu beantworten wäre, da der Codeabschnitt auch für andere Zwecke eingesetzt werden könnte als in der Dokumentation dargelegt und durch die Frage gemeint ist.
+Dabei ist anzumerken, dass die Frage, die beim Vergleich von \ref{test3} und \ref{test4} wegfällt, selbst von einem Menschen nur durch die Dokumentation zu beantworten wäre, da der Codeabschnitt auch für andere Zwecke eingesetzt werden könnte, als in der Dokumentation dargelegt und durch das Suchembedding erfragt.
 
 
 \end{document}
