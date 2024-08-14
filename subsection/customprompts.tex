@@ -1,20 +1,20 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-Um den Kontext für die \glspl{LLM} weiter zu erhöhen, wird dem Prompt in \ref{test5} der relative Dateipfad für den Codeabschnitt mitgegeben, indem das Prompt mit folgendem Satz ergänzt wird:
+Um den Kontext für die \glspl{LLM} weiter zu erhöhen, wird dem Prompt in \ref{test5} der relative Dateipfad zu den Codeabschnitt mitgegeben, indem der Prompt durch den folgenden Satz ergänzt wird:
 \begin{center}
 \begin{lstlisting}
 The file path for the snippet is "<Pfad zur Datei des Codeabschnittes>".
 \end{lstlisting}
 \end{center}
-Dadurch wird auch der Dateiname übergeben, welcher Information darüber hält, was der Codeabschnitt in dieser Datei bedeuten kann.
-Deutlich wird dies zum Beispiel mit Frage 3, die nach der ESLint Konfiguration fragt.
-Alle vorherigen Tests sind an dieser Frage gescheitert.
-Die Antwort des Completion \gls{LLM} war stets das vorgegebene \enquote{NOTHING}, welches eigentlich nur zurückgegeben werden soll, wenn kein Code übergeben wurde.
+Aufgrund dieser Änderung wird nun auch der Dateiname übergeben, der mehr Kontext über den Zweck der Datei bereitstellen kann.
+Deutlich wird dies am Beispiel von Frage 3, die nach der ESLint Konfiguration fragt.
+In den vorheringen Tests konnte diese Frage nicht beantwortet werden.
+Die Antwort des Completion \gls{LLM} war das vorgegebene \enquote{NOTHING}, welches nur zurückgegeben werden soll, wenn kein Code übergeben wurde.
 Mit dieser Anpassung war es dem \gls{LLM} allerdings möglich, Konfigurationen richtig einzuordnen und es wurden neun von zehn Fragen richtig beantwortet.
 
-Dabei ist auffällig, dass die Frage 6, die fehlgeschlagen ist, bei allen anderen Tests richtig beantwortet wurde.
-Erklärbar ist dieses Verhalten dadurch, dass der Codeabschnitt selber sehr nah an der Frage dran ist (wie sage ich das richtig???) und deshalb in den meisten Tests erkannt wird.
-Doch bei \ref{test5} wird dieser Abschnitt so abstrakt beschrieben, dass die Embedding zu fern für eine erfolgreiche Suche sind.
+Dabei ist auffällig, dass Frage 6 nicht beantwortet werden konnte, obwohl dies bei allen vorherigen Tests möglich war. 
+Erklärbar ist dieses Verhalten dadurch, dass der Codeabschnitt selber im Wortlaut ähnlich zu der Frage ist und deshalb in den meisten Tests erkannt wird.
+Doch bei \ref{test5} wird dieser Abschnitt so abstrakt beschrieben, dass die Embeddings zu fern für eine erfolgreiche Suche sind.
 
 \end{document}

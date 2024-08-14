@@ -4,6 +4,14 @@
 Ein weiterer Ansatz die Ergebnisse zu verbessern, war es neben einer Zusammenfassung auch Beispielfragen zu generieren, die dann zusammen in einen Embedding Vektor gewandelt werden.
 Dafür wurde mit den Completions Stand \ref{test3} und \ref{test4} gearbeitet.
 Die Ergebnisse von diesem \ref{test6} zeigen allerdings keine Verbesserung im Vergleich zu dem \ref{test3}.
+Gründe dafür könnten sein, dass die erzeugten Fragen teilweise nur einzelnen Detailaspekte des Codes erfassen(1.) oder sehr allgemein formuliert sind(2.).
+Beispiele für solche Fragen sind:
+\begin{center}
+\begin{lstlisting}
+1. "Where is the code that defines the configuration properties for logging level and source location tracking?"
+2. "What is the purpose of the JSON object?"
+\end{lstlisting}
+\end{center}
 
 In einem abschließenden Versuch wird nur das übergeben, was im Prompt Analyse bezeichnet ist und meist etwas ausführlicher als die Zusammenfassung war. 
 In diesem \ref{test7} kann allerdings auch keine Verbesserung festgestellt werden.

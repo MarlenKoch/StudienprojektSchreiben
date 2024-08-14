@@ -2,7 +2,7 @@
 \begin{document}
 
 Der erste Schritt zum Indexing ist das Einteilen der Codebasis in Abschnitte.
-Dies wird mit der Tree-Sitter Bibliothek durchgeführt, die das Aufteilen von Code bereitstellt \cite{treesitter}.
+Dies wird hier mit der Tree-Sitter Bibliothek durchgeführt, die das Aufteilen von Code bereitstellt \cite{treesitter}.
 Als Nächstes werden aus diesen Codeabschnitten Vektor Embeddings erzeugt und im Index gespeichert.
 
 Zum Erfassen der Funktionstüchtigkeit wird eine Metrik eingeführt.
@@ -43,9 +43,9 @@ Jede dieser Fragen, die \enquote{Where}-Formulierungen aufweisen, zielt auf eine
 
 Für einen ersten \ref{test1} wird für das Projekt nach vorgestelltem Verfahren ein Index erstellt, welcher dann mit den Fragen durchsucht wird.
 Enthalten die drei besten Ergebnisse, also jene, dessen Embedding am meisten Kosinus-Ähnlichkeit mit dem Embedding der Frage hat, den Textabschnitt, der durch die Frage gemeint ist, wird das Ergebnis als richtig gewertet.
-Für richtige Ergebnisse wird die Kosinus-Ähnlichkeit multipliziert mit 100 notiert, sonst eine 0.
+Für richtige Ergebnisse wird die Kosinus-Ähnlichkeit notiert, sonst eine 0.
 
-Vollständigkeitshalber: Alle Ergebnisse wurden mithilfe der gpt-35-turbo \cite{completionmodel} und text-embedding-ada-002 \cite{embeddingmodel} Modelle erzeugt.
+Alle Ergebnisse wurden mithilfe der gpt-35-turbo \cite{completionmodel} und text-embedding-ada-002 \cite{embeddingmodel} Modelle erzeugt.
 Für Completions wurde eine Temperature von 0.2 und ein Top-P-Wert von 0.3 gewählt. Alle anderen Einstellungen blieben unverändert.
 
 \begin{table}[H]
@@ -56,25 +56,25 @@ Für Completions wurde eine Temperature von 0.2 und ein Top-P-Wert von 0.3 gewä
  \hline
  Frage & Test 1\labeltext{Test 1}{test1} & Test 2\labeltext{Test 2}{test2} & Test 3\labeltext{Test 3}{test3} & Test 4\labeltext{Test 4}{test4} & Test 5\labeltext{Test 5}{test5} & Test 6\labeltext{Test 6}{test6} & Test 7\labeltext{Test 7}{test7} \\
  \hline
- 1. & 79,93 &0&79,93&79,37&80,08&79,25&80,62\\ 
+ 1. & 0,7993 &0&0,7993&0,7937&0,8008&0,7925&0,8062\\ 
  \hline
- 2. & 81,72 &79,3&81,72&79,56&83,07&80,49&82,29\\ 
+ 2. & 0,8172 &0,793&0,8172&0,7956&0,8307&0,8049&0,8229\\ 
  \hline
- 3. & 0 &0&0&0&84,36&0&0\\ 
+ 3. & 0 &0&0&0&0,8436&0&0\\ 
  \hline
- 4. & 80,36 &80,39&86,06&86,06&85,56&85,2&84,28\\ 
+ 4. & 0,8036 &0,8039&0,8606&0,8606&0,8556&0,852&0,8428\\ 
  \hline
- 5. & 0 &0&0&0&81,38&75,76&79,12\\ 
+ 5. & 0 &0&0&0&0,8138&0,7576&0,7912\\ 
  \hline
- 6. & 78,16 &78,96&77,7&77,7&0&78,95&79,12\\ 
+ 6. &0,7816 &0,7896&0,777&0,777&0&0,7895&0,7912\\ 
  \hline
- 7. & 0 &0&80,87&0&80,87&78,44&0\\ 
+ 7. & 0 &0&0,8087&0&0,8087&0,7844&0\\ 
  \hline
- 8. & 0 &0&0&0&85,96&0&75,33\\ 
+ 8. & 0 &0&0&0&0,8596&0&0,7533\\ 
  \hline
- 9. & 80,04 &0&85,4&89,28&85,16&0&0\\ 
+ 9. &0,8004 &0&0,854&0,8928&0,8516&0&0\\ 
  \hline
- 10. & 75,58 &75,89&84,34&83,36&84,34&83,37&82,27\\
+ 10. &0,7558 &0,7589&0,8434&0,8336&0,8434&0,8337&0,8227\\
  \hline 
 
 \end{tabular}
