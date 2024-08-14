@@ -1,12 +1,12 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-Das Wort \enquote{Index} hat in unterschiedlichsten Anwendungsbereichen unterschiedliche Bedeutung.
+Das Wort \enquote{Index} hat in unterschiedlichen Anwendungsbereichen jeweils verschiedene Bedeutungen.
 Gemein haben diese, dass ein Index eine Form von Daten hält, dessen Sinn eine Schlussfolgerung aus eben diesen Daten ist.
 \cite{Chatterjee2017Index,Lo2016What,Vickery1950THE}
 
-Unter dieser Definition stellt auch ein Vektor Embedding Raum, so wie hier vorgestellt, ein Index dar.
-In dem Vektor Embedding Raum werden Daten als Ausprägung von Information über Text gehalten und es kann aus diesen Daten geschlussfolgert werden, wie bedeutungsnah z. B zwei Textabschnitte sind.
+Unter dieser Definition stellt auch ein Vektor Embedding Raum, so wie hier vorgestellt, einen Index dar.
+In dem Vektor Embedding Raum werden Daten als Ausprägung von Informationen über Text gehalten und es kann aus diesen Daten geschlussfolgert werden, wie bedeutungsnah z. B. zwei Textabschnitte sind.
 
 Der Ablauf der Indizierung mit \glspl{LLM} wird im Allgemeinen so funktionieren, dass Text vorverarbeitet und in Abschnitte geteilt wird, aus denen für jeden Abschnitt durch ein \gls{LLM} sein  dazugehöriges Vektor Embedding erstellt wird, das dann die Bedeutung dieses Abschnitts repräsentiert.
 Die resultierenden Vektor Embeddings werden dann in einer Datenbank o. Ä. gespeichert, welche damit den Index beziehungweise den Vektor Embedding Raum hält.
