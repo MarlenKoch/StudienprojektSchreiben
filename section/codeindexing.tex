@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-Der erste Schritt zum Indexing ist das Einteilen der Codebasis in Abschnitte.
+Der erste Schritt zum Indizieren ist das Einteilen der Codebasis in Abschnitte.
 Dies wird hier mit der Tree-Sitter Bibliothek durchgeführt, die das Aufteilen von Code übernimmt \cite{treesitter}.
 Als Nächstes werden aus diesen Codeabschnitten Vektor Embeddings erzeugt und im Index gespeichert.
 
@@ -41,17 +41,16 @@ Jede dieser Fragen, die \enquote{Where}-Formulierungen aufweisen, zielt auf eine
 \end{table}
 \vspace*{-\baselineskip}
 
-Für einen ersten \ref{test1} wird für das Projekt nach vorgestelltem Verfahren ein Index erstellt, welcher dann mit den Fragen durchsucht wird.
+Für einen ersten~\ref{test1} wird für das Projekt nach vorgestelltem Verfahren ein Index erstellt, welcher dann mit den Fragen durchsucht wird.
 Enthalten die drei besten Ergebnisse, also jene, dessen Embedding am meisten Kosinus-Ähnlichkeit mit dem Embedding der Frage hat, den Textabschnitt, der durch die Frage gemeint ist, wird das Ergebnis als richtig gewertet.
 Für richtige Ergebnisse wird die Kosinus-Ähnlichkeit notiert, sonst eine 0.
 
-Alle Ergebnisse wurden mithilfe der gpt-35-turbo \cite{completionmodel} und text-embedding-ada-002 \cite{embeddingmodel} Modelle erzeugt.
+Alle Ergebnisse wurden mithilfe der gpt-35-turbo~\cite{completionmodel} und text-embedding-ada-002~\cite{embeddingmodel} Modelle erzeugt.
 Für Completions wurde eine Temperature von 0.2 und ein Top-P-Wert von 0.3 gewählt. Alle anderen Einstellungen blieben unverändert.
 
 \begin{table}[H]
 \begin{center}
-\caption{Ergebnisse der Index- und Suchtests}
-\label{tab:ergebnisse}
+\caption{Ergebnisse der Index- und Suchtests}\label{tab:ergebnisse}
 \begin{tabular}{| m {1cm} | m {1,3cm} | m {1,3cm} |m {1,3cm} |m {1,3cm} |m {1,3cm} |m {1,3cm} | m {1,3cm} |}
  \hline
  Frage & Test 1\labeltext{Test 1}{test1} & Test 2\labeltext{Test 2}{test2} & Test 3\labeltext{Test 3}{test3} & Test 4\labeltext{Test 4}{test4} & Test 5\labeltext{Test 5}{test5} & Test 6\labeltext{Test 6}{test6} & Test 7\labeltext{Test 7}{test7} \\

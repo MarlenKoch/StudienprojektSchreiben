@@ -54,5 +54,8 @@
     "**/*.toc": true
   },
   "latex-workshop.latex.autoBuild.run": "onSave",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[latex]": {
+    "editor.defaultFormatter": "mathematic.vscode-latex"
+  }
 }
