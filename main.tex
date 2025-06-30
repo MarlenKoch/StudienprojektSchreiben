@@ -166,16 +166,17 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\studentName}{Justin Becker}
-\newcommand{\matrnr}{77204368351}
-\newcommand{\type}{Praxistransferbericht}
-\newcommand{\topic}{Vereinfachung von Entwicklungsprozessen durch Large Language Models}
+\newcommand{\studentNameOne}{Marlen Koch}
+\newcommand{\studentNameTwo}{Amelie Hoffmann}
+\newcommand{\matnrOne}{123}
+\newcommand{\matnrTwo}{456}
+\newcommand{\type}{Studienprojekt}
+\newcommand{\topic}{Implementierung und Evaluation eines KI-basierten Schreibassistenten im akademischen Umfeld}
 \newcommand{\studiengangh}{Informatik}
 \newcommand{\fachbereich}{FB2: Duales Studium --- Technik}
 \newcommand{\studiengang}{Informatik}
 \newcommand{\company}{SAP SE}
-\newcommand{\betreuerHS}{Carl Dolling}
-\newcommand{\betreuerUnt}{Jonathan Busshoff}
+\newcommand{\betreuerHS}{Gert Faustmann}
 \newcommand{\jahrgang}{2023}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%>>>>>>>
 
@@ -218,14 +219,15 @@
 
 \publishers{
 	\begin{tabular}{l l}
-	\textbf{\normalsize{Name:}} & \normalsize{\studentName}  \tabularnewline%
-    \textbf{\normalsize{Matrikelnummer:}} & \normalsize{\matrnr}  \tabularnewline%
+	\textbf{\normalsize{Name:}} & \normalsize{\studentNameOne}  \tabularnewline%
+    \textbf{\normalsize{Name:}} & \normalsize{\studentNameTwo}  \tabularnewline%
+    \textbf{\normalsize{Matrikelnummer:}} & \normalsize{\matnrOne}  \tabularnewline%
+    \textbf{\normalsize{Matrikelnummer:}} & \normalsize{\matnrTwo}  \tabularnewline%
 	\textbf{\normalsize{Ausbildungsbetrieb:}} & \normalsize{\company}  \tabularnewline%
     \textbf{\normalsize{Fachbereich:}} & \normalsize{\fachbereich} \tabularnewline%
     \textbf{\normalsize{Studienjahrgang:}} & \normalsize{\jahrgang} \tabularnewline%
 	\textbf{\normalsize{Studiengang:}} & \normalsize{\studiengang}  \tabularnewline%
-	\textbf{\normalsize{Betreuer Unternehmen:}} & \normalsize{\betreuerUnt} \tabularnewline%
-	\textbf{\normalsize{Betreuer Hochschule:}} & \normalsize{\betreuerHS} \tabularnewline%
+    \textbf{\normalsize{Betreuer Hochschule:}} & \normalsize{\betreuerHS} \tabularnewline%
 	\textbf{\normalsize{Wortanzahl:}} & \normalsize{\quickwordcount{main}}
 	\end{tabular}
     
@@ -240,36 +242,41 @@
 
 \maketitle
 
-\onehalfspacing
+% \onehalfspacing
 
-\textbf{Sperrvermerk}
+% \textbf{Sperrvermerk}
 
-Der vorliegende Bericht enthält vertrauliche Daten des Unternehmens SAP SE.
-Auf Wunsch des Unternehmens SAP SE ist der vorliegende Bericht für die öffentliche Nutzung zu sperren.
-Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche Genehmigung des Unternehmen SAP SE, in 14469 Potsdam und des Verfassers Justin Becker nicht gestattet.
-Der Bericht ist nur den Gutachtern und den Mitgliedern des Prüfungsausschusses zugänglich zu machen.
+% Der vorliegende Bericht enthält vertrauliche Daten des Unternehmens SAP SE.
+% Auf Wunsch des Unternehmens SAP SE ist der vorliegende Bericht für die öffentliche Nutzung zu sperren.
+% Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche Genehmigung des Unternehmen SAP SE, in 14469 Potsdam und des Verfassers Justin Becker nicht gestattet.
+% Der Bericht ist nur den Gutachtern und den Mitgliedern des Prüfungsausschusses zugänglich zu machen.
 
 \vspace{20mm}
 
 \begin{tabular}{lp{2em}l} 
     \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
-    Ort, Datum     && \studentName{}
+    Ort, Datum     && \studentNameOne{}
 \end{tabular}
-
-\vspace{\fill}
-\normalsize{Von der betrieblichen Betreuung zur Kenntnis genommen:}
-\vspace*{20mm}
 
 \begin{tabular}{lp{2em}l} 
     \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
-    Ort, Datum     && \betreuerUnt
+    Ort, Datum     && \studentNameTwo{}
 \end{tabular}
-\vspace*{20mm}
 
-\begin{tabular}{lp{2em}l} 
-    \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
-    Ort, Datum     && Peter, Jenny
-\end{tabular}
+% \vspace{\fill}
+% \normalsize{Von der betrieblichen Betreuung zur Kenntnis genommen:}
+% \vspace*{20mm}
+
+% \begin{tabular}{lp{2em}l} 
+%     \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
+%     Ort, Datum     && \betreuerUnt
+% \end{tabular}
+% \vspace*{20mm}
+
+% \begin{tabular}{lp{2em}l} 
+%     \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
+%     Ort, Datum     && Peter, Jenny
+% \end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% Dokumenteninhalt START
@@ -298,8 +305,7 @@ Der Bericht ist nur den Gutachtern und den Mitgliedern des Prüfungsausschusses 
 
 \section*{Hinweis}
 
-In der vorliegenden Arbeit wird auf die Verwendung gendergerechter Sprachformen verzichtet, um eine bessere Lesbarkeit zu gewährleisten.
-Es wird in der Regel das generische Maskulinum verwendet, wobei alle Geschlechter gleichermaßen adressiert werden
+Aus Gründen der besseren Lesbarkeit wird im Text verallgemeinernd das generische Maskulinum verwendet. Diese Formulierungen umfassen gleichermaßen weibliche, männliche und diverse Personen.
 \clearpage
 
 %Tabellenverzeichnis, falls nötig: 
