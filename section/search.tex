@@ -1,9 +1,0 @@
-\documentclass[../main.tex]{subfiles}
-\begin{document}
-
-Zur Suche ist eine Frage in natürlicher Sprache gegeben.
-Aus dem Fragetext wird dann mit dem selben \gls{LLM}, das für das Indizieren genutzt wurde, ein Vektor Embedding erzeugt.
-Dieses Embedding wird mit den anderen Embeddings abgeglichen und die zu den ähnlichsten Embeddings gehörenden Textabschnitte werden als Suchergebnis zurückgegeben. 
-Für den Abgleich wird die Kosinus-Ähnlichkeit\cite{rahutomo2012semantic} zwischen allen Vektoren im Index und dem Frage-Vektor berechnet.
-
-\end{document}
