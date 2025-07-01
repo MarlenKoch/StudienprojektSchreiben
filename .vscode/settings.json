@@ -57,5 +57,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[latex]": {
     "editor.defaultFormatter": "mathematic.vscode-latex"
-  }
+  },
+  "latex-workshop.latex.outDir": "./build"
 }
