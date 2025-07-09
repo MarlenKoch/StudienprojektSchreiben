@@ -10,8 +10,8 @@ befinden sich mehrere sogenannte versteckte Schichten. Jedes Neuron ist über ge
 An jedem gegebenen Zeitpunkt hat ein Neuron einen bestimmten Wert zwischen 0 und 1, welcher dem Output des Neurons entspricht. Dieser Wert ergibt sich aus der Verarbeitung der Inputs welche 
 aus den Outputs der vorherigen Schicht berechnet werden, das heißt es wird eine Funktion auf die Summe aller Inputs ausgeführt. \\
 Jede Verbindung zwischen Neuronen verfügt über eine Gewichtung zwischen -1 und 1. Diese bestimmt, mit welcher Zahl der Wert eines Neurons multipliziert wird, bevor dieser an die Neuronen in 
-der folgenden Schicht weitergegeben wird. Die Gewichtungen der Verbindungen zwischen zwei Schichten können als Matrix dargestellt werden, dementsprechend entspricht der Übergang von einer 
-Schicht zu der darauf folgenden einer Matrixmultiplikation. \\
+der folgenden Schicht weitergegeben wird. Die Gewichtungen der Verbindungen zwischen zwei Schichten können als Matrix dargestellt werden. Der Übergang von einer 
+Schicht zu der darauf folgenden entspricht einer Matrixmultiplikation. \\
 Die Werte der Gewichtungen stehen zu Beginn noch nicht fest. Sie werden erst durch das sogenannte Training festgelegt. Das Training eines NNs beschreibt also die konkrete Anpassung der 
 Gewichtungen. Dies wird durch Backpropagation erreicht. Dafür werden die Gewichtungen zunächst mit zufälligen Werten initialisiert. Dann wird der NN-Algorithmus mit einer Vielzahl an 
 Trainingsdaten durchlaufen. Die erhaltenen werden mit den gewünschten Ergebnissen verglichen. Treten dabei zu starke Abweichungen auf, werden alle zu diesem Ergebnis beitragenden 
@@ -21,7 +21,7 @@ Gewichtungen erhöht. NN bilden die Grundlage für weitere Technologien wie beis
 \section{Large Language Models}
 
 Large Language Models (LLMs) sind eine Form der KI, welche auf natürlicher Sprache basiert. Da sie entwickelt wurden, um Texte zu generieren, werden LLMs auch als generative KI bezeichnet.
-Moderne LLMs wie ChatGPT basieren auf einer Transformer-Architektur. [welche auf einer Transformerarchitektur basiert] Diese berechnet aus einem Eingabetext eine Wahrscheinlichkeitsverteilung 
+Moderne LLMs wie ChatGPT basieren auf einer Transformer-Architektur. Diese berechnet aus einem Eingabetext eine Wahrscheinlichkeitsverteilung 
 über alle möglichen nächsten Tokens. Die Transformerarchitektur setzt sich aus folgenden Aspekten zusammen:\\
 
 \begin{itemize}
