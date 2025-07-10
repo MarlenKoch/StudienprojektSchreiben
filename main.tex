@@ -154,7 +154,7 @@
 \renewcommand*{\glspostdescription}{}
 
 %Glossar-Befehle anschalten
-% \makenoidxglossaries{}
+\makenoidxglossaries{}
 \loadglsentries{glossar.tex}
 
 % sorgt dafür, dass bei Leerzeile die Einrückung verhindert und stattdessen eine Leerzeile eingefügt wird % erspart bigskips und erhöht die Lesbarkeit im LaTeX-Text 
@@ -309,9 +309,10 @@
 
 \listoffigures
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\newpage
 
-\listoftables
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+% \listoftables
+% \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
 
 \section*{Hinweise}
 
@@ -335,7 +336,7 @@ Lesefluss stören, im Anhang platziert werden, auf den im Text zusätzlich verwi
 \pagenumbering{arabic}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%% Einführung
+%%%%%%%%%%% Kapitel
 
 \chapter{Einleitung}\label{ch:einleitung}
 \subfile{chapter/einleitung.tex}
@@ -349,32 +350,8 @@ Lesefluss stören, im Anhang platziert werden, auf den im Text zusätzlich verwi
 \chapter{Anforderungen}\label{ch:Anforderungen}
 \subfile{chapter/anforderungen.tex}
 
-% \section{Large Language Models}
-% \subfile{section/llms.tex}
-
-% \section{Vektor Embeddings}
-% \subfile{section/vektorembeddings.tex}
-
-% \section{Vektor Embedding Raum}
-% \subfile{section/vektorspace.tex}
-
-% \chapter{Indizieren}
-% \subfile{chapter/indexing.tex}
-% \section{Suche}
-% \subfile{section/search.tex}
-% \section{Indizierung von Code}
-% \subfile{section/codeindexing.tex}
-% \subsection{Problem der Code Semantik}
-% \subfile{subsection/codesematic.tex}
-% \subsection{Seperate Bedeutungserfassen via Completions}
-% \subfile{subsection/completions.tex}
-% \subsection{Datei spezifische Promtps}
-% \subfile{subsection/customprompts.tex}
-% \subsection{Embeddings aus erweiterten Erklärungen}
-% \subfile{subsection/embeddings.tex}
-
-% \chapter{Bewertung}
-% \subfile{chapter/bewertung.tex}
+\chapter{Bewertung}
+\subfile{chapter/bewertung.tex}
 
 \chapter{Fazit}\label{ch:fazit}
 \subfile{chapter/fazit.tex}
