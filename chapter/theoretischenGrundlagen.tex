@@ -6,42 +6,42 @@
 
 Neuronale Netzwerke (NNs) bilden die Basis für künstliche Intelligenz. Sie sind in ihrer Funktionsweise dem menschlichen Gehirn nachempfunden. Dementsprechend bestehen sie aus einer 
 bestimmten Anzahl von Neuronen. Diese sind in verschiedenen Schichten angeordnet. Die erste dieser Schichten wird als Eingabeschicht bezeichnet, die letzte als Ausgabeschicht. Dazwischen 
-befinden sich mehrere sogenannte versteckte Schichten. Jedes Neuron ist über gewichtete Verbindungen mit allen Neuronen aus vorherigen und der nachfolgenden Schicht verbunden. 
-An jedem gegebenen Zeitpunkt hat ein Neuron einen bestimmten Wert zwischen 0 und 1, welcher dem Output des Neurons entspricht. Dieser Wert ergibt sich aus der Verarbeitung der Inputs welche 
+befinden sich mehrere sogenannte versteckte Schichten. Jedes Neuron ist über gewichtete Verbindungen mit allen Neuronen aus der vorherigen und der nachfolgenden Schicht verbunden. 
+An jedem gegebenen Zeitpunkt hat ein Neuron einen bestimmten Wert zwischen 0 und 1, welcher dem Output des Neurons entspricht. Dieser Wert ergibt sich aus der Verarbeitung der Inputs, welche 
 aus den Outputs der vorherigen Schicht berechnet werden, das heißt es wird eine Funktion auf die Summe aller Inputs ausgeführt. \\
 Jede Verbindung zwischen Neuronen verfügt über eine Gewichtung zwischen -1 und 1. Diese bestimmt, mit welcher Zahl der Wert eines Neurons multipliziert wird, bevor dieser an die Neuronen in 
 der folgenden Schicht weitergegeben wird. Die Gewichtungen der Verbindungen zwischen zwei Schichten können als Matrix dargestellt werden. Der Übergang von einer 
 Schicht zu der darauf folgenden entspricht einer Matrixmultiplikation. \\
-Die Werte der Gewichtungen stehen zu Beginn noch nicht fest. Sie werden erst durch das sogenannte Training festgelegt. Das Training eines NNs beschreibt also die konkrete Anpassung der 
+Die Werte der Gewichtungen stehen zu Beginn noch nicht fest. Sie werden erst durch das sogenannte Training festgelegt. Das Training eines NN beschreibt also die konkrete Anpassung der 
 Gewichtungen. Dies wird durch Backpropagation erreicht. Dafür werden die Gewichtungen zunächst mit zufälligen Werten initialisiert. Dann wird der NN-Algorithmus mit einer Vielzahl an 
 Trainingsdaten durchlaufen. Die erhaltenen werden mit den gewünschten Ergebnissen verglichen. Treten dabei zu starke Abweichungen auf, werden alle zu diesem Ergebnis beitragenden 
 Gewichtungen reduziert, sodass sie weniger Einfluss auf die entstehenden Ergebnisse haben. Stimmen gewünschtes und erhaltenes Ergebnis annähernd überein, werden die dazu beitragenden 
-Gewichtungen erhöht. NN bilden die Grundlage für weitere Technologien wie beispielsweise Large Language Models, welche auch für KI-Schreibwerkzeuge verwendet werden. 
+Gewichtungen erhöht. NNs bilden die Grundlage für weitere Technologien wie beispielsweise Large Language Models, welche auch für KI-Schreibwerkzeuge verwendet werden. 
 
 \section{Large Language Models}
 
 Large Language Models (LLMs) sind eine Form der KI, welche auf natürlicher Sprache basiert. Da sie entwickelt wurden, um Texte zu generieren, werden LLMs auch als generative KI bezeichnet.
 Moderne LLMs wie ChatGPT basieren auf einer Transformer-Architektur. Diese berechnet aus einem Eingabetext eine Wahrscheinlichkeitsverteilung 
-über alle möglichen nächsten Tokens. Die Transformerarchitektur setzt sich aus folgenden Aspekten zusammen:\\
+über alle möglichen nächsten Tokens. Die Transformerarchitektur setzt sich aus folgenden Aspekten zusammen:\cite{architecture}\\
 
 \begin{itemize}
 
-\item Tokenisierung: Als erster Schritt wird der Eingabetext in einzelne Tokens unterteilt. Tokens können Wörter oder Wortteile, aber auch Satzzeichen oder einzelne Buchstaben sein. Sie sind die kleinstmögliche Einheit, welche das LLM verarbeiten kann. Jedes Token hat eine Token-ID. 
+\item \textbf{Tokenisierung:} Als erster Schritt wird der Eingabetext in einzelne Tokens unterteilt. Tokens können Wörter oder Wortteile, aber auch Satzzeichen oder einzelne Buchstaben sein. Sie sind die kleinstmögliche Einheit, welche das LLM verarbeiten kann. Jedes Token hat eine Token-ID.\cite{architecture}
 
-\item Embedding: Den Tokens werden vieldimensionale Vektoren zugeordnet. So werden sie anhand ihrer Bedeutung codiert. Die Richtungen der Vektoren im Vektorraum beinhalten semantische Bedeutungen. So liegen Wörter mit ähnlicher Bedeutung, beispielsweise Synonyme, nah beieinander.
+\item \textbf{Embedding:} Den Tokens werden vieldimensionale Vektoren zugeordnet. So werden sie anhand ihrer Bedeutung codiert. Die Richtungen der Vektoren im Vektorraum beinhalten semantische Bedeutungen. So liegen Wörter mit ähnlicher Bedeutung, beispielsweise Synonyme, nah beieinander.\cite{embedding}
 
-\item Attention: Die einzelnen als Vektoren codierten Tokens werden durch den umliegenden Text verändert, um den Kontext des Wortes und dessen semantische Bedeutung widerzuspiegeln. Dabei werden nacheinander die einzelnen Vektoren betrachtet und ein Skalarprodukt aus dem aktuellen und jeweils den anderen Vektoren des Textes gebildet. Das Skalarprodukt beschreibt die Relevanz des anderen Tokens für die Bedeutung des aktuellen Tokens. Je größer dieser Bedeutungwert ist, desto mehr wird der aktuelle Vektor auf Grundlage des anderen Vektors verändert.\\
-Die Attention-Funktion ist vollständig linear. Dieser Mechanismus lässt sich an folgendem Beispiel verdeutlichen: In den beiden Sätzen “Ich sitze auf der Bank” und “Ich habe in der Bank Geld abgehoben” hat das Wort “Bank” eine andere Bedeutung. Der Attention-Mechanismus passt die Vektoren, welche dieses Token codieren, so an, dass sie jeweils näher an den entsprechenden Synonymen “Parkbank” und “Kreditinstitut” liegen. Durch diese Codierung bleibt der Kontext, in welchem ein Wort verwendet wird, erhalten. 
+\item \textbf{Attention:} Die einzelnen als Vektoren codierten Tokens werden durch den umliegenden Text verändert, um den Kontext des Wortes und dessen semantische Bedeutung widerzuspiegeln. Dabei werden nacheinander die einzelnen Vektoren betrachtet und ein Skalarprodukt aus dem aktuellen und jeweils den anderen Vektoren des Textes gebildet. Das Skalarprodukt beschreibt die Relevanz des anderen Tokens für die Bedeutung des aktuellen Tokens. Je größer dieser Bedeutungwert ist, desto mehr wird der aktuelle Vektor auf Grundlage des anderen Vektors verändert.\\
+Die Attention-Funktion ist vollständig linear. Dieser Mechanismus lässt sich an folgendem Beispiel verdeutlichen: In den beiden Sätzen “Ich sitze auf der Bank” und “Ich habe in der Bank Geld abgehoben” hat das Wort “Bank” eine andere Bedeutung. Der Attention-Mechanismus passt die Vektoren, welche dieses Token codieren, so an, dass sie jeweils näher an den entsprechenden Synonymen “Parkbank” und “Kreditinstitut” liegen. Durch diese Codierung bleibt der Kontext, in welchem ein Wort verwendet wird, erhalten.\cite{attention, attention2} 
 
-\item Multi-Layer-Perceptron: Im Gegensatz zur ausschließlich linearen Attention-Funktion, kann das LLM mithilfe des Multi-Layer-Perceptrons (MLP) auch nicht-lineare Zusammenhänge darstellen. Das MLP ist ein kleines neuronales Netzwerk, meistens mit nur einer inneren Schicht sowie der Eingabe-und Ausgabeschicht. Jeder Vektor wird einmal als Input in dieses neuronale Netzwerk eingegeben und der Output zu dem ursprünglichen Vektor addiert. Mithilfe des MLPs kann die Komplexität der Sprache erfasst werden.
+\item \textbf{Multi-Layer-Perceptron:} Im Gegensatz zur ausschließlich linearen Attention-Funktion, kann das LLM mithilfe des Multi-Layer-Perceptrons (MLP) auch nicht-lineare Zusammenhänge darstellen. Das MLP ist ein kleines neuronales Netzwerk, meistens mit nur einer inneren Schicht sowie der Eingabe-und Ausgabeschicht. Jeder Vektor wird einmal als Input in dieses neuronale Netzwerk eingegeben und der Output zu dem ursprünglichen Vektor addiert. Mithilfe des MLPs kann die Komplexität der Sprache erfasst werden.
 
-\item Decoder: Die Architektur des LLMs besteht aus mehreren Attention- und MLP-Schichten, welche abwechselnd hintereinander angeordnet sind. Abschließend verfügt es über einen Decoder, welcher den Output aus der letzten MLP-Schicht als Input bekommt. Darauf wird eine Softmax-Funktion angewendet, welche eine Wahrscheinlichkeitsverteilung über alle Tokens ausgibt. Die Softmax-Funktion sorgt dafür, dass die Summe der Wahrscheinlichkeiten 1 beträgt, und jede einzelne Wahrscheinlichkeit im Intervall von 0 bis 1 liegt. 
+\item \textbf{Decoder:} Die Architektur des LLMs besteht aus mehreren Attention- und MLP-Schichten, welche abwechselnd hintereinander angeordnet sind. Abschließend verfügt es über einen Decoder, welcher den Output aus der letzten MLP-Schicht als Input bekommt. Darauf wird eine Softmax-Funktion angewendet, welche eine Wahrscheinlichkeitsverteilung über alle Tokens ausgibt. Die Softmax-Funktion sorgt dafür, dass die Summe der Wahrscheinlichkeiten 1 beträgt, und jede einzelne Wahrscheinlichkeit im Intervall von 0 bis 1 liegt.\cite{architecture} 
 \end{itemize}
 
 
 Entsprechend der sich aus diesem Prozess ergebenden Wahrscheinlichkeitsverteilung wird in einem LLM ein zufälliges nächstes Wort ausgewählt und an den generierten Text angefügt. 
 Der Prozess wird anschließend mit dem aktualisierten Text wiederholt, sodass immer neue Tokens angefügt werden, bis eine Abbruchbedingung erreicht ist. Diese kann unter anderem das 
-Erreichen der vom Nutzer festgelegten maximalen Anzahl generierter Tokens oder die Generierung eines Abbruchtokens vom LLM selbst sein.\\
+Erreichen der vom Nutzer festgelegten maximalen Anzahl generierter Tokens oder die Generierung eines Abbruchtokens vom LLM selbst sein.\cite{architecture}\\
 
 Mit dieser Architektur können erstaunliche Ergebnisse erzielt werden. Die generierten Texte ähneln menschengeschriebenen Texten sehr, wodurch sich viele Anwendungsgebiete für diese Technologie ergeben. Jedoch ergeben sich daraus auch einige Probleme und Risiken, welche im Folgenden erläutert werden sollen. 
 
@@ -87,7 +87,12 @@ des wissenschaftlichen Schreibens, immer überprüft werden.\cite{allgemHalluzin
 
 \subsection{Erklärbarkeitsproblem}
 
-blaBlalalablablblbabla lba bla bla blaBlalalablablblbabla
+Das Erklärbarkeitsproblem adressiert die Schwierigkeit, die Begründung für spezifische Entscheidungen KI nachvollziehbar zu machen. Aufgrund der Funktionsweise nach dem sogenannten 
+"`Black-Box"'-Prinzip ist die Rekonstruktion der kausalen Faktoren, die zu einem bestimmten Ergebnis geführt haben, limitiert. Diese Intransparenz kann die Akzeptanz und das Vertrauen in 
+KI-basierte Entscheidungen beeinträchtigen. Darüber hinaus erschwert sie die Identifizierung und Korrektur von Fehlern in der zugrundeliegenden Architektur. Aktuelle Forschungsansätze 
+im Bereich der "`erklärbaren KI"' (XAI) zielen darauf ab, dieses Problem zu adressieren, indem sie beispielsweise Mechanismen zur Visualisierung und Darstellung des 
+Entscheidungsfindungsprozesses entwickeln.
+ 
 
 \subsection{Ressourcenverbrauch}
 

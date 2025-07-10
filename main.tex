@@ -55,6 +55,7 @@
 \counterwithout{table}{chapter}
 
 \usepackage{subfiles}
+\usepackage{pgfmath}
 
 \newcounter{mylabelcounter}
 
@@ -168,8 +169,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\studentNameOne}{Marlen Koch}
 \newcommand{\studentNameTwo}{Amelie Hoffmann}
-\newcommand{\matnrOne}{123}
-\newcommand{\matnrTwo}{456}
+\newcommand{\matnrOne}{77209974343}
+\newcommand{\matnrTwo}{77206506798}
 \newcommand{\type}{Studienprojekt}
 \newcommand{\topic}{Implementierung und Evaluation eines KI-basierten Schreibassistenten im akademischen Umfeld}
 \newcommand{\studiengangh}{Informatik}
@@ -181,11 +182,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%>>>>>>>
 
 
+% \newcommand{\quickwordcount}[1]{%
+%   \immediate\write18{texcount -1 -sum -merge -q -relaxed #1.tex > #1-words.sum }%
+%   \input{#1-words.sum}%
+% }
+
+\pgfkeys{/pgf/number format/.cd, use comma=false, 1000 sep={}}
+
 \newcommand{\quickwordcount}[1]{%
   \immediate\write18{texcount -1 -sum -merge -q -relaxed #1.tex > #1-words.sum }%
-  \input{#1-words.sum}%
+  \newread\wordfile
+  \openin\wordfile=#1-words.sum
+  \read\wordfile to \wordcount
+  \closein\wordfile
+  \pgfmathparse{\wordcount-1000}%
+  \pgfmathprintnumber{\pgfmathresult}%
 }
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -219,10 +231,8 @@
 
 \publishers{
 	\begin{tabular}{l l}
-	\textbf{\normalsize{Name:}} & \normalsize{\studentNameOne}  \tabularnewline%
-    \textbf{\normalsize{Name:}} & \normalsize{\studentNameTwo}  \tabularnewline%
-    \textbf{\normalsize{Matrikelnummer:}} & \normalsize{\matnrOne}  \tabularnewline%
-    \textbf{\normalsize{Matrikelnummer:}} & \normalsize{\matnrTwo}  \tabularnewline%
+	\textbf{\normalsize{Namen:}} & \normalsize{\studentNameOne, \studentNameTwo}  \tabularnewline%
+    % \textbf{\normalsize{Matrikelnummern:}} & \normalsize{\matnrOne,\matnrTwo}  \tabularnewline%
 	\textbf{\normalsize{Ausbildungsbetrieb:}} & \normalsize{\company}  \tabularnewline%
     \textbf{\normalsize{Fachbereich:}} & \normalsize{\fachbereich} \tabularnewline%
     \textbf{\normalsize{Studienjahrgang:}} & \normalsize{\jahrgang} \tabularnewline%
