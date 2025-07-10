@@ -1,0 +1,1069 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Hochschulverband}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=865197e6e54e234c34e1ba833deb8b5e}{%
+           family={{Allgemeiner Fakultätentag (AFT)}},
+           familyi={A\bibinitperiod}}}%
+        {{hash=cc68b82460132d1a5e203c4e03e910cb}{%
+           family={{Fakultätentage}},
+           familyi={F\bibinitperiod}}}%
+        {{hash=0e6a7206c3a9fcb77e800a2ca4972c10}{%
+           family={{Deutscher Hochschulverband (DHV)}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9db7d69989c08dffcd27d1a382c6aabc}
+      \strng{fullhash}{9db7d69989c08dffcd27d1a382c6aabc}
+      \strng{fullhashraw}{9db7d69989c08dffcd27d1a382c6aabc}
+      \strng{bibnamehash}{9db7d69989c08dffcd27d1a382c6aabc}
+      \strng{authorbibnamehash}{9db7d69989c08dffcd27d1a382c6aabc}
+      \strng{authornamehash}{9db7d69989c08dffcd27d1a382c6aabc}
+      \strng{authorfullhash}{9db7d69989c08dffcd27d1a382c6aabc}
+      \strng{authorfullhashraw}{9db7d69989c08dffcd27d1a382c6aabc}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{note}{Verabschiedet am 9. Juli 2012}
+      \field{title}{Gute wissenschaftliche Praxis für das Verfassen wissenschaftlicher Qualifikationsarbeiten: Gemeinsames Positionspapier des Allgemeinen Fakultätentags (AFT), der Fakultätentage und des Deutschen Hochschulverbands (DHV)}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://www.hochschulverband.de/fileadmin/redaktion/download/pdf/resolutionen/Gute_wiss._Praxis_Fakultaetentage.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.hochschulverband.de/fileadmin/redaktion/download/pdf/resolutionen/Gute_wiss._Praxis_Fakultaetentage.pdf
+      \endverb
+    \endentry
+    \entry{ZukunftWissenschaftlichesPublizieren}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d4bb6823b5eda93b9c04f4e30b864849}{%
+           family={Arning},
+           familyi={A\bibinitperiod},
+           given={Ursula},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4bb6823b5eda93b9c04f4e30b864849}
+      \strng{fullhash}{d4bb6823b5eda93b9c04f4e30b864849}
+      \strng{fullhashraw}{d4bb6823b5eda93b9c04f4e30b864849}
+      \strng{bibnamehash}{d4bb6823b5eda93b9c04f4e30b864849}
+      \strng{authorbibnamehash}{d4bb6823b5eda93b9c04f4e30b864849}
+      \strng{authornamehash}{d4bb6823b5eda93b9c04f4e30b864849}
+      \strng{authorfullhash}{d4bb6823b5eda93b9c04f4e30b864849}
+      \strng{authorfullhashraw}{d4bb6823b5eda93b9c04f4e30b864849}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information – Wissenschaft \& Praxis}
+      \field{number}{2-3}
+      \field{title}{Künstliche Intelligenz und ChatGPT: Über die Zukunft des wissenschaftlichen Publizierens – Jubiläumssymposium zu 20 Jahren German Medical Science}
+      \field{volume}{75}
+      \field{year}{2024}
+      \field{pages}{129\bibrangedash 137}
+      \range{pages}{9}
+      \verb{doi}
+      \verb doi:10.1515/iwp-2024-2010
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515/iwp-2024-2010
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515/iwp-2024-2010
+      \endverb
+    \endentry
+    \entry{berensBolk}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=21624e29aee2da5de9bb0c31b511c0b5}{%
+           family={Berens},
+           familyi={B\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6412681e25e292af15655d0ae04e3fea}{%
+           family={Bolk},
+           familyi={B\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Rheinwerk Verlag}%
+      }
+      \strng{namehash}{bc44c5a01b5bacba3703f14cc3d1148a}
+      \strng{fullhash}{bc44c5a01b5bacba3703f14cc3d1148a}
+      \strng{fullhashraw}{bc44c5a01b5bacba3703f14cc3d1148a}
+      \strng{bibnamehash}{bc44c5a01b5bacba3703f14cc3d1148a}
+      \strng{authorbibnamehash}{bc44c5a01b5bacba3703f14cc3d1148a}
+      \strng{authornamehash}{bc44c5a01b5bacba3703f14cc3d1148a}
+      \strng{authorfullhash}{bc44c5a01b5bacba3703f14cc3d1148a}
+      \strng{authorfullhashraw}{bc44c5a01b5bacba3703f14cc3d1148a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Content Creation mit KI}
+      \field{year}{2023}
+    \endentry
+    \entry{SelfEfficacyBeliefs}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=abc91f20fa3f6fbf3d091cab9b435aab}{%
+           family={Blankenstein},
+           familyi={B\bibinitperiod},
+           given={Floris\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=21ff633e8ab7223df666807573dbe1a0}{%
+           family={Saab},
+           familyi={S\bibinitperiod},
+           given={Nadira},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b2db4cafb184309d6416d3a1714ea193}{%
+           family={Rijst},
+           familyi={R\bibinitperiod},
+           given={Roeland\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=6e66b04b2e7cdec25cea3d7dbc605026}{%
+           family={Danel},
+           familyi={D\bibinitperiod},
+           given={Marleen\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=0f0ef97891efa1cdb429e85ec6fa33c2}{%
+           family={Berg},
+           familyi={B\bibinitperiod},
+           given={Aaltje\bibnamedelimb S.\bibnamedelimi Bakker-van},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim B\bibinithyphendelim v\bibinitperiod},
+           prefix={den},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=2cb61c40616f3a31591389a5cae6f928}{%
+           family={Broek\bibnamedelima and},
+           familyi={B\bibinitperiod\bibinitdelim a\bibinitperiod},
+           given={Paul\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+           prefix={van\bibnamedelima den},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{166269bcb52c28b8bf4f62dd0e6164dd}
+      \strng{fullhash}{98e5e54626df78d3a439117109a84963}
+      \strng{fullhashraw}{98e5e54626df78d3a439117109a84963}
+      \strng{bibnamehash}{166269bcb52c28b8bf4f62dd0e6164dd}
+      \strng{authorbibnamehash}{166269bcb52c28b8bf4f62dd0e6164dd}
+      \strng{authornamehash}{166269bcb52c28b8bf4f62dd0e6164dd}
+      \strng{authorfullhash}{98e5e54626df78d3a439117109a84963}
+      \strng{authorfullhashraw}{98e5e54626df78d3a439117109a84963}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Educational Studies}
+      \field{number}{2}
+      \field{title}{How do self-efficacy beliefs for academic writing and collaboration and intrinsic motivation for academic writing and research develop during an undergraduate research project?}
+      \field{volume}{45}
+      \field{year}{2019}
+      \field{pages}{209\bibrangedash 225}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1080/03055698.2018.1446326
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/03055698.2018.1446326
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/03055698.2018.1446326
+      \endverb
+    \endentry
+    \entry{BucherSchwarzerHolzwweißig}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=1cdd4f7d9f9b6c2ba5d612fa2c807d17}{%
+           family={Bucher},
+           familyi={B\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod}}}%
+        {{hash=dc5ddf8d66307a1e4cbf3932f5f7aba8}{%
+           family={Schwarzer},
+           familyi={S\bibinitperiod},
+           given={LL.M.},
+           giveni={L\bibinitperiod},
+           suffix={Markus},
+           suffixi={M\bibinitperiod}}}%
+        {{hash=edb28597b2a6c6fe45de8bf4b8ebdf0e}{%
+           family={Holzweißig},
+           familyi={H\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {C.H.BECK}%
+      }
+      \strng{namehash}{7b4fee737658c725666f0ef6e93f7c81}
+      \strng{fullhash}{7b4fee737658c725666f0ef6e93f7c81}
+      \strng{fullhashraw}{7b4fee737658c725666f0ef6e93f7c81}
+      \strng{bibnamehash}{7b4fee737658c725666f0ef6e93f7c81}
+      \strng{authorbibnamehash}{7b4fee737658c725666f0ef6e93f7c81}
+      \strng{authornamehash}{7b4fee737658c725666f0ef6e93f7c81}
+      \strng{authorfullhash}{7b4fee737658c725666f0ef6e93f7c81}
+      \strng{authorfullhashraw}{7b4fee737658c725666f0ef6e93f7c81}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Künstliche Intelligenz und wissenschaftliches Arbeiten}
+      \field{year}{2024}
+    \endentry
+    \entry{softmax}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=c0068708356492b2067ffce1c8d3e9e6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Haw-Shiuan},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=17d73a3a5be48993791cbe4db8855331}{%
+           family={McCallum},
+           familyi={M\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=d0bc8f5f636cd15bd288897f91468b6e}{%
+           family={Muresan},
+           familyi={M\bibinitperiod},
+           given={Smaranda},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b1e0f88aae37cfd1c213a370797c03b3}{%
+           family={Nakov},
+           familyi={N\bibinitperiod},
+           given={Preslav},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f6f9fb78091bb2bfb2914d20d4cbd3ef}{%
+           family={Villavicencio},
+           familyi={V\bibinitperiod},
+           given={Aline},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dublin, Ireland}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{591669aadf507280f722130d2ee4cb54}
+      \strng{fullhash}{591669aadf507280f722130d2ee4cb54}
+      \strng{fullhashraw}{591669aadf507280f722130d2ee4cb54}
+      \strng{bibnamehash}{591669aadf507280f722130d2ee4cb54}
+      \strng{authorbibnamehash}{591669aadf507280f722130d2ee4cb54}
+      \strng{authornamehash}{591669aadf507280f722130d2ee4cb54}
+      \strng{authorfullhash}{591669aadf507280f722130d2ee4cb54}
+      \strng{authorfullhashraw}{591669aadf507280f722130d2ee4cb54}
+      \strng{editorbibnamehash}{fcdf09816a280b295b4bcc26f6453221}
+      \strng{editornamehash}{fcdf09816a280b295b4bcc26f6453221}
+      \strng{editorfullhash}{fcdf09816a280b295b4bcc26f6453221}
+      \strng{editorfullhashraw}{fcdf09816a280b295b4bcc26f6453221}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}
+      \field{title}{Softmax Bottleneck Makes Language Models Unable to Represent Multi-mode Word Distributions}
+      \field{year}{2022}
+      \field{pages}{8048\bibrangedash 8073}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.18653/v1/2022.acl-long.554
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/2022.acl-long.554/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/2022.acl-long.554/
+      \endverb
+    \endentry
+    \entry{influencingUsingAi}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=bdc70526f11fc72cf4ea819cf0ebcfdc}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Yulu},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{bdc70526f11fc72cf4ea819cf0ebcfdc}
+      \strng{fullhash}{bdc70526f11fc72cf4ea819cf0ebcfdc}
+      \strng{fullhashraw}{bdc70526f11fc72cf4ea819cf0ebcfdc}
+      \strng{bibnamehash}{bdc70526f11fc72cf4ea819cf0ebcfdc}
+      \strng{authorbibnamehash}{bdc70526f11fc72cf4ea819cf0ebcfdc}
+      \strng{authornamehash}{bdc70526f11fc72cf4ea819cf0ebcfdc}
+      \strng{authorfullhash}{bdc70526f11fc72cf4ea819cf0ebcfdc}
+      \strng{authorfullhashraw}{bdc70526f11fc72cf4ea819cf0ebcfdc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2666-920X}
+      \field{journaltitle}{Computers and Education: Artificial Intelligence}
+      \field{title}{What influences college students using AI for academic writing? - A quantitative analysis based on HISAM and TRI theory}
+      \field{volume}{8}
+      \field{year}{2025}
+      \field{pages}{100391}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.caeai.2025.100391
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666920X25000311
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666920X25000311
+      \endverb
+    \endentry
+    \entry{humanWritingToAi}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=2e41d28b016cd26aba4651991c768fe3}{%
+           family={Dergaa},
+           familyi={D\bibinitperiod},
+           given={Ismail},
+           giveni={I\bibinitperiod}}}%
+        {{hash=b5c80ce35721bacc10309ee8f4b3bb85}{%
+           family={Chamari},
+           familyi={C\bibinitperiod},
+           given={Karim},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5fee011cf4d77201ae2d11f6e63b3777}{%
+           family={Zmijewski},
+           familyi={Z\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod}}}%
+        {{hash=09cbfacd690d2016f3060fcddb4b80e7}{%
+           family={Ben\bibnamedelima Saad},
+           familyi={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Helmi},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3818af555a442815d950f5c29282bc0a}
+      \strng{fullhash}{d8d40c3883024268cfa514b91ffc54ed}
+      \strng{fullhashraw}{d8d40c3883024268cfa514b91ffc54ed}
+      \strng{bibnamehash}{3818af555a442815d950f5c29282bc0a}
+      \strng{authorbibnamehash}{3818af555a442815d950f5c29282bc0a}
+      \strng{authornamehash}{3818af555a442815d950f5c29282bc0a}
+      \strng{authorfullhash}{d8d40c3883024268cfa514b91ffc54ed}
+      \strng{authorfullhashraw}{d8d40c3883024268cfa514b91ffc54ed}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0860-021X}
+      \field{journaltitle}{Biology of Sport}
+      \field{number}{2}
+      \field{title}{From human writing to artificial intelligence generated text: examining the prospects and potential threats of ChatGPT in academic writing}
+      \field{volume}{40}
+      \field{year}{2023}
+      \field{pages}{615\bibrangedash 622}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.5114/biolsport.2023.125623
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.5114/biolsport.2023.125623
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.5114/biolsport.2023.125623
+      \endverb
+    \endentry
+    \entry{architecture}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{hash=56eb2bf7a9bc7fa0e05175ce12c2b744}{%
+           family={Ferraris},
+           familyi={F\bibinitperiod},
+           given={Andrea\bibnamedelima Filippo},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=b480c5bdf18292bec5ecdf28f1661a53}{%
+           family={Audrito},
+           familyi={A\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=58e2925deb31261b46f71490d44193e2}{%
+           family={Caro},
+           familyi={C\bibinitperiod},
+           given={Luigi\bibnamedelima Di},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=d552c848771c11bb448bb490654ab3f8}{%
+           family={Poncibò},
+           familyi={P\bibinitperiod},
+           given={Cristina},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{2da34607db2c5de0099698e48eacee74}
+      \strng{fullhash}{c7b54427d4c775aa800933cff647477e}
+      \strng{fullhashraw}{c7b54427d4c775aa800933cff647477e}
+      \strng{bibnamehash}{2da34607db2c5de0099698e48eacee74}
+      \strng{authorbibnamehash}{2da34607db2c5de0099698e48eacee74}
+      \strng{authornamehash}{2da34607db2c5de0099698e48eacee74}
+      \strng{authorfullhash}{c7b54427d4c775aa800933cff647477e}
+      \strng{authorfullhashraw}{c7b54427d4c775aa800933cff647477e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Comparative Perspectives on the Regulation of Large Language Models}
+      \field{note}{Published online by Cambridge University Press: 06 January 2025}
+      \field{title}{The architecture of language: Understanding the mechanics behind LLMs}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://doi.org/10.1017/9781009464601.005
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1017/9781009464601.005
+      \endverb
+    \endentry
+    \entry{hallucinationForewarning}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c193879012a9a877018841b0f5d3b010}{%
+           family={Hwang},
+           familyi={H\bibinitperiod},
+           given={Yoori},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=daf67658b58ff864d4c0c86c607bdf42}{%
+           family={Jeong},
+           familyi={J\bibinitperiod},
+           given={Se-Hoon},
+           giveni={S\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{30609d868550144fae71666842a7a3e4}
+      \strng{fullhash}{30609d868550144fae71666842a7a3e4}
+      \strng{fullhashraw}{30609d868550144fae71666842a7a3e4}
+      \strng{bibnamehash}{30609d868550144fae71666842a7a3e4}
+      \strng{authorbibnamehash}{30609d868550144fae71666842a7a3e4}
+      \strng{authornamehash}{30609d868550144fae71666842a7a3e4}
+      \strng{authorfullhash}{30609d868550144fae71666842a7a3e4}
+      \strng{authorfullhashraw}{30609d868550144fae71666842a7a3e4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cyberpsychology, Behavior, and Social Networking}
+      \field{note}{PMID: 39992238}
+      \field{number}{4}
+      \field{title}{Generative Artificial Intelligence and Misinformation Acceptance: An Experimental Test of the Effect of Forewarning About Artificial Intelligence Hallucination}
+      \field{volume}{28}
+      \field{year}{2025}
+      \field{pages}{284\bibrangedash 289}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1089/cyber.2024.0407
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1089/cyber.2024.0407
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1089/cyber.2024.0407
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1089/cyber.2024.0407
+      \endverb
+    \endentry
+    \entry{creativeWriting}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=f0b22a1a9ec5b2901f5e0cb457612e93}{%
+           family={Ippolito},
+           familyi={I\bibinitperiod},
+           given={Daphne},
+           giveni={D\bibinitperiod}}}%
+        {{hash=901ebfc90cc5f85da1cf9ea0d95ae9d0}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Ann},
+           giveni={A\bibinitperiod}}}%
+        {{hash=881851301df3b1750b1b994f11c53a00}{%
+           family={Coenen},
+           familyi={C\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8bcf311ece8a1b7e371559b072fef9bc}{%
+           family={Burnam},
+           familyi={B\bibinitperiod},
+           given={Sehmon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{25d86ad35ba52fa95dd0104325d8ac55}
+      \strng{fullhash}{b074f26559dc75a83e4c00598544739b}
+      \strng{fullhashraw}{b074f26559dc75a83e4c00598544739b}
+      \strng{bibnamehash}{25d86ad35ba52fa95dd0104325d8ac55}
+      \strng{authorbibnamehash}{25d86ad35ba52fa95dd0104325d8ac55}
+      \strng{authornamehash}{25d86ad35ba52fa95dd0104325d8ac55}
+      \strng{authorfullhash}{b074f26559dc75a83e4c00598544739b}
+      \strng{authorfullhashraw}{b074f26559dc75a83e4c00598544739b}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.HC}
+      \field{eprinttype}{arXiv}
+      \field{title}{Creative Writing with an AI-Powered Writing Assistant: Perspectives from Professional Writers}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2211.05030
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2211.05030
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2211.05030
+      \endverb
+    \endentry
+    \entry{allgemHalluzinationen}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=6eb829f9e680b9fcecfb24ca0d7d7e62}{%
+           family={Maleki},
+           familyi={M\bibinitperiod},
+           given={Negar},
+           giveni={N\bibinitperiod}}}%
+        {{hash=90cd3981c9a17f1962c51932d5edfd35}{%
+           family={Padmanabhan},
+           familyi={P\bibinitperiod},
+           given={Balaji},
+           giveni={B\bibinitperiod}}}%
+        {{hash=01d4a89addbe92721a4e64b49006b15a}{%
+           family={Dutta},
+           familyi={D\bibinitperiod},
+           given={Kaushik},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a3cd85434182addc21bed67ec9b452f}
+      \strng{fullhash}{3a3cd85434182addc21bed67ec9b452f}
+      \strng{fullhashraw}{3a3cd85434182addc21bed67ec9b452f}
+      \strng{bibnamehash}{3a3cd85434182addc21bed67ec9b452f}
+      \strng{authorbibnamehash}{3a3cd85434182addc21bed67ec9b452f}
+      \strng{authornamehash}{3a3cd85434182addc21bed67ec9b452f}
+      \strng{authorfullhash}{3a3cd85434182addc21bed67ec9b452f}
+      \strng{authorfullhashraw}{3a3cd85434182addc21bed67ec9b452f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 IEEE Conference on Artificial Intelligence (CAI)}
+      \field{title}{AI Hallucinations: A Misnomer Worth Clarifying}
+      \field{year}{2024}
+      \field{pages}{133\bibrangedash 138}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/CAI59869.2024.00033
+      \endverb
+    \endentry
+    \entry{teachers}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=9f99cd7289beb1d3a9af36f97d48a15b}{%
+           family={Marzuki},
+           familyi={M\bibinitperiod}}}%
+        {{hash=99a03ec2a13a0837366013f1a4c81481}{%
+           family={Widiati},
+           familyi={W\bibinitperiod},
+           given={Utami},
+           giveni={U\bibinitperiod}}}%
+        {{hash=cb21726a19e4305fe679c14823a9b23d}{%
+           family={Rusdin},
+           familyi={R\bibinitperiod},
+           given={Diyenti},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a4bd01593487c956f68d360c18cb68b3}{%
+           family={Darwin},
+           familyi={D\bibinitperiod}}}%
+        {{hash=e81c4db7b03d57e26fc3f7b00c41824e}{%
+           family={and},
+           familyi={a\bibinitperiod},
+           given={Inda\bibnamedelima Indrawati},
+           giveni={I\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cogent OA}%
+      }
+      \strng{namehash}{701b7359f3665afd28492c78b5dbfa68}
+      \strng{fullhash}{014b7b636ca5787cc6622e2bcb484c4f}
+      \strng{fullhashraw}{014b7b636ca5787cc6622e2bcb484c4f}
+      \strng{bibnamehash}{701b7359f3665afd28492c78b5dbfa68}
+      \strng{authorbibnamehash}{701b7359f3665afd28492c78b5dbfa68}
+      \strng{authornamehash}{701b7359f3665afd28492c78b5dbfa68}
+      \strng{authorfullhash}{014b7b636ca5787cc6622e2bcb484c4f}
+      \strng{authorfullhashraw}{014b7b636ca5787cc6622e2bcb484c4f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cogent Education}
+      \field{number}{2}
+      \field{title}{The impact of AI writing tools on the content and organization of students’ writing: EFL teachers’ perspective}
+      \field{volume}{10}
+      \field{year}{2023}
+      \field{pages}{2236469}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1080/2331186X.2023.2236469
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/2331186X.2023.223646
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/2331186X.2023.2236469
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/2331186X.2023.2236469
+      \endverb
+    \endentry
+    \entry{embedding}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=a2d359b12ca2fadf0b40136a73f021bb}{%
+           family={Mikolov},
+           familyi={M\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ee3f7d7b96add98106db907e189d6c13}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3d11e6f2a0d0a1183b2cf62996525afc}{%
+           family={Corrado},
+           familyi={C\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4aecfb0cc2e1e3b7899129fa2a94e2b8}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4849f6d57e38d9b9846cfb360e45131}
+      \strng{fullhash}{f24c60896b6daa69474b40efb61f4e88}
+      \strng{fullhashraw}{f24c60896b6daa69474b40efb61f4e88}
+      \strng{bibnamehash}{d4849f6d57e38d9b9846cfb360e45131}
+      \strng{authorbibnamehash}{d4849f6d57e38d9b9846cfb360e45131}
+      \strng{authornamehash}{d4849f6d57e38d9b9846cfb360e45131}
+      \strng{authorfullhash}{f24c60896b6daa69474b40efb61f4e88}
+      \strng{authorfullhashraw}{f24c60896b6daa69474b40efb61f4e88}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1301.3781}
+      \field{note}{arXiv:1301.3781 [cs.CL]}
+      \field{title}{Efficient Estimation of Word Representations in Vector Space}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1301.3781
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1301.3781
+      \endverb
+    \endentry
+    \entry{nationalcommissionwriting}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=216c13337887781352838846bfd50f4b}{%
+           family={{National Commission on Writing in America's Schools and Colleges}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {College Entrance Examination Board}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \strng{namehash}{216c13337887781352838846bfd50f4b}
+      \strng{fullhash}{216c13337887781352838846bfd50f4b}
+      \strng{fullhashraw}{216c13337887781352838846bfd50f4b}
+      \strng{bibnamehash}{216c13337887781352838846bfd50f4b}
+      \strng{authorbibnamehash}{216c13337887781352838846bfd50f4b}
+      \strng{authornamehash}{216c13337887781352838846bfd50f4b}
+      \strng{authorfullhash}{216c13337887781352838846bfd50f4b}
+      \strng{authorfullhashraw}{216c13337887781352838846bfd50f4b}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The neglected "R": The need for a writing revolution. Report of the National Commission on Writing in America's Schools and Colleges}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb http://www.writingcommission.org/prod_downloads/writingcom/neglectedr.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.writingcommission.org/prod_downloads/writingcom/neglectedr.pdf
+      \endverb
+    \endentry
+    \entry{writingSelfBeliefs}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=3de3b12d6aa2abfc4974bcdcfcb2b6bd}{%
+           family={Pajares},
+           familyi={P\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e62c1ba3241c14916314048f6bc080ab}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={M\bibnamedelima David},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=1a39119d22e37b732c9cd89af6a599dd}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Margaret\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{63fd298baf7f5f355415d53032fddb3d}
+      \strng{fullhash}{63fd298baf7f5f355415d53032fddb3d}
+      \strng{fullhashraw}{63fd298baf7f5f355415d53032fddb3d}
+      \strng{bibnamehash}{63fd298baf7f5f355415d53032fddb3d}
+      \strng{authorbibnamehash}{63fd298baf7f5f355415d53032fddb3d}
+      \strng{authornamehash}{63fd298baf7f5f355415d53032fddb3d}
+      \strng{authorfullhash}{63fd298baf7f5f355415d53032fddb3d}
+      \strng{authorfullhashraw}{63fd298baf7f5f355415d53032fddb3d}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of educational Psychology}
+      \field{number}{1}
+      \field{title}{Gender differences in writing self-beliefs of elementary school students.}
+      \field{volume}{91}
+      \field{year}{1999}
+      \field{pages}{50}
+      \range{pages}{1}
+    \endentry
+    \entry{writingSelfBeliefsMiddleSchool}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=3de3b12d6aa2abfc4974bcdcfcb2b6bd}{%
+           family={Pajares},
+           familyi={P\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d35b012b9691f3ae17478c7f8fba4e81}{%
+           family={Valiante},
+           familyi={V\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fdf4b74697f7dfe22e8630857d91b37a}
+      \strng{fullhash}{fdf4b74697f7dfe22e8630857d91b37a}
+      \strng{fullhashraw}{fdf4b74697f7dfe22e8630857d91b37a}
+      \strng{bibnamehash}{fdf4b74697f7dfe22e8630857d91b37a}
+      \strng{authorbibnamehash}{fdf4b74697f7dfe22e8630857d91b37a}
+      \strng{authornamehash}{fdf4b74697f7dfe22e8630857d91b37a}
+      \strng{authorfullhash}{fdf4b74697f7dfe22e8630857d91b37a}
+      \strng{authorfullhashraw}{fdf4b74697f7dfe22e8630857d91b37a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Contemporary educational psychology}
+      \field{number}{4}
+      \field{title}{Grade level and gender differences in the writing self-beliefs of middle school students}
+      \field{volume}{24}
+      \field{year}{1999}
+      \field{pages}{390\bibrangedash 405}
+      \range{pages}{16}
+    \endentry
+    \entry{halluzinationenFraunhofer}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f719847015a2a8859c5aa18be0d19f2d}{%
+           family={Siebert},
+           familyi={S\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f719847015a2a8859c5aa18be0d19f2d}
+      \strng{fullhash}{f719847015a2a8859c5aa18be0d19f2d}
+      \strng{fullhashraw}{f719847015a2a8859c5aa18be0d19f2d}
+      \strng{bibnamehash}{f719847015a2a8859c5aa18be0d19f2d}
+      \strng{authorbibnamehash}{f719847015a2a8859c5aa18be0d19f2d}
+      \strng{authornamehash}{f719847015a2a8859c5aa18be0d19f2d}
+      \strng{authorfullhash}{f719847015a2a8859c5aa18be0d19f2d}
+      \strng{authorfullhashraw}{f719847015a2a8859c5aa18be0d19f2d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{9}
+      \field{note}{Fraunhofer IESE Blog, Zugriff am 20. Juni 2024}
+      \field{title}{Halluzinationen von generativer KI und großen Sprachmodellen (LLMs)}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.iese.fraunhofer.de/blog/halluzinationen-generative-ki-llm/
+      \endverb
+      \verb{url}
+      \verb https://www.iese.fraunhofer.de/blog/halluzinationen-generative-ki-llm/
+      \endverb
+    \endentry
+    \entry{attention2}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=52927a7ab0822bed52ead71ca393c6a8}{%
+           family={Soydaner},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{52927a7ab0822bed52ead71ca393c6a8}
+      \strng{fullhash}{52927a7ab0822bed52ead71ca393c6a8}
+      \strng{fullhashraw}{52927a7ab0822bed52ead71ca393c6a8}
+      \strng{bibnamehash}{52927a7ab0822bed52ead71ca393c6a8}
+      \strng{authorbibnamehash}{52927a7ab0822bed52ead71ca393c6a8}
+      \strng{authornamehash}{52927a7ab0822bed52ead71ca393c6a8}
+      \strng{authorfullhash}{52927a7ab0822bed52ead71ca393c6a8}
+      \strng{authorfullhashraw}{52927a7ab0822bed52ead71ca393c6a8}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Computing and Applications}
+      \field{title}{Attention mechanism in neural networks: where it comes and where it goes}
+      \field{volume}{34}
+      \field{year}{2022}
+      \field{pages}{13371\bibrangedash 13385}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/s00521-022-07366-3
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00521-022-07366-3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00521-022-07366-3
+      \endverb
+    \endentry
+    \entry{Energieverbrauch}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e7f3e888001aeb2b2857348478e78893}{%
+           family={Steinacher},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7f3e888001aeb2b2857348478e78893}
+      \strng{fullhash}{e7f3e888001aeb2b2857348478e78893}
+      \strng{fullhashraw}{e7f3e888001aeb2b2857348478e78893}
+      \strng{bibnamehash}{e7f3e888001aeb2b2857348478e78893}
+      \strng{authorbibnamehash}{e7f3e888001aeb2b2857348478e78893}
+      \strng{authornamehash}{e7f3e888001aeb2b2857348478e78893}
+      \strng{authorfullhash}{e7f3e888001aeb2b2857348478e78893}
+      \strng{authorfullhashraw}{e7f3e888001aeb2b2857348478e78893}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{©~2025 Markus Steinacher}
+      \field{title}{ChatGPT Rechenleistung und Energieverbrauch im Vergleich zu anderen alltäglichen Ressourcen}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.markus-steinacher.at/chatgpt-rechenleistung-und-energieverbrauch-im-vergleich-zu-anderen-alltaeglichen-ressourcen/
+      \endverb
+      \verb{url}
+      \verb https://www.markus-steinacher.at/chatgpt-rechenleistung-und-energieverbrauch-im-vergleich-zu-anderen-alltaeglichen-ressourcen/
+      \endverb
+    \endentry
+    \entry{KINachhaltigkeit}{online}{}{}
+      \name{author}{3}{}{%
+        {{hash=dbb22d46058bcae463a3945734e7503f}{%
+           family={Summer},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b74ac7c3cbbdabf222f76255e476eb12}{%
+           family={Bentele},
+           familyi={B\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=070b647c75599317a3194b01ed400456}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Sabrina},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {FHV – Vorarlberg University of Applied Sciences, DBT Research}%
+      }
+      \strng{namehash}{bacb501f5c509b57e04fb29c51360a9a}
+      \strng{fullhash}{bacb501f5c509b57e04fb29c51360a9a}
+      \strng{fullhashraw}{bacb501f5c509b57e04fb29c51360a9a}
+      \strng{bibnamehash}{bacb501f5c509b57e04fb29c51360a9a}
+      \strng{authorbibnamehash}{bacb501f5c509b57e04fb29c51360a9a}
+      \strng{authornamehash}{bacb501f5c509b57e04fb29c51360a9a}
+      \strng{authorfullhash}{bacb501f5c509b57e04fb29c51360a9a}
+      \strng{authorfullhashraw}{bacb501f5c509b57e04fb29c51360a9a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Künstliche Intelligenz im Spannungsfeld von Nachhaltigkeit und Ressourcenverbrauch}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://opus.fhv.at/frontdoor/deliver/index/docId/6967/file/BeitraguDaySummer.pdf
+      \endverb
+      \verb{url}
+      \verb https://opus.fhv.at/frontdoor/deliver/index/docId/6967/file/BeitraguDaySummer.pdf
+      \endverb
+    \endentry
+    \entry{NYTimes}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7419624a3abdd8c12bad966a445b5329}{%
+           family={{United States District Court, Southern District of New York}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{7419624a3abdd8c12bad966a445b5329}
+      \strng{fullhash}{7419624a3abdd8c12bad966a445b5329}
+      \strng{fullhashraw}{7419624a3abdd8c12bad966a445b5329}
+      \strng{bibnamehash}{7419624a3abdd8c12bad966a445b5329}
+      \strng{authorbibnamehash}{7419624a3abdd8c12bad966a445b5329}
+      \strng{authornamehash}{7419624a3abdd8c12bad966a445b5329}
+      \strng{authorfullhash}{7419624a3abdd8c12bad966a445b5329}
+      \strng{authorfullhashraw}{7419624a3abdd8c12bad966a445b5329}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Exhibit J, Case 1:23-cv-11195, Document 1-68}
+      \field{note}{Filed 12/27/2023}
+      \field{title}{ONE HUNDRED EXAMPLES OF GPT-4 MEMORIZING CONTENT FROM THE NEW YORK TIMES}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://storage.courtlistener.com/recap/gov.uscourts.nysd.612697/gov.uscourts.nysd.612697.1.68.pdf
+      \endverb
+      \verb{url}
+      \verb https://storage.courtlistener.com/recap/gov.uscourts.nysd.612697/gov.uscourts.nysd.612697.1.68.pdf
+      \endverb
+    \endentry
+    \entry{attention}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={{Ł}ukasz},
+           giveni={Ł\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{fullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \strng{bibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorbibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authorfullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems (NeurIPS)}
+      \field{title}{Attention Is All You Need}
+      \field{year}{2017}
+      \field{pages}{5998\bibrangedash 6008}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+      \endverb
+    \endentry
+    \entry{Plagiate}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e7b2688a951b7345c34d868138ddbbf6}{%
+           family={Verch},
+           familyi={V\bibinitperiod},
+           given={Ulrike},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7b2688a951b7345c34d868138ddbbf6}
+      \strng{fullhash}{e7b2688a951b7345c34d868138ddbbf6}
+      \strng{fullhashraw}{e7b2688a951b7345c34d868138ddbbf6}
+      \strng{bibnamehash}{e7b2688a951b7345c34d868138ddbbf6}
+      \strng{authorbibnamehash}{e7b2688a951b7345c34d868138ddbbf6}
+      \strng{authornamehash}{e7b2688a951b7345c34d868138ddbbf6}
+      \strng{authorfullhash}{e7b2688a951b7345c34d868138ddbbf6}
+      \strng{authorfullhashraw}{e7b2688a951b7345c34d868138ddbbf6}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{API Magazin}
+      \field{number}{1}
+      \field{title}{Per Prompt zum Plagiat? : Rechtssicheres Publizieren von KI-generierten Inhalten}
+      \field{volume}{5}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.15460/apimagazin.2024.5.1.191
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.sub.uni-hamburg.de/hup3/apimagazin/article/view/191
+      \endverb
+      \verb{url}
+      \verb https://journals.sub.uni-hamburg.de/hup3/apimagazin/article/view/191
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

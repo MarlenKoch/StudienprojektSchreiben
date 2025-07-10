@@ -55,6 +55,7 @@
 \counterwithout{table}{chapter}
 
 \usepackage{subfiles}
+\usepackage{pgfmath}
 
 \newcounter{mylabelcounter}
 
@@ -153,7 +154,7 @@
 \renewcommand*{\glspostdescription}{}
 
 %Glossar-Befehle anschalten
-% \makenoidxglossaries{}
+\makenoidxglossaries{}
 \loadglsentries{glossar.tex}
 
 % sorgt dafür, dass bei Leerzeile die Einrückung verhindert und stattdessen eine Leerzeile eingefügt wird % erspart bigskips und erhöht die Lesbarkeit im LaTeX-Text 
@@ -168,8 +169,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\studentNameOne}{Marlen Koch}
 \newcommand{\studentNameTwo}{Amelie Hoffmann}
-\newcommand{\matnrOne}{123}
-\newcommand{\matnrTwo}{456}
+\newcommand{\matnrOne}{77209974343}
+\newcommand{\matnrTwo}{77206506798}
 \newcommand{\type}{Studienprojekt}
 \newcommand{\topic}{Implementierung und Evaluation eines KI-basierten Schreibassistenten im akademischen Umfeld}
 \newcommand{\studiengangh}{Informatik}
@@ -181,11 +182,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%>>>>>>>
 
 
+% \newcommand{\quickwordcount}[1]{%
+%   \immediate\write18{texcount -1 -sum -merge -q -relaxed #1.tex > #1-words.sum }%
+%   \input{#1-words.sum}%
+% }
+
+\pgfkeys{/pgf/number format/.cd, use comma=false, 1000 sep={}}
+
 \newcommand{\quickwordcount}[1]{%
   \immediate\write18{texcount -1 -sum -merge -q -relaxed #1.tex > #1-words.sum }%
-  \input{#1-words.sum}%
+  \newread\wordfile
+  \openin\wordfile=#1-words.sum
+  \read\wordfile to \wordcount
+  \closein\wordfile
+  \pgfmathparse{\wordcount-1000}%
+  \pgfmathprintnumber{\pgfmathresult}%
 }
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -219,10 +231,8 @@
 
 \publishers{
 	\begin{tabular}{l l}
-	\textbf{\normalsize{Name:}} & \normalsize{\studentNameOne}  \tabularnewline%
-    \textbf{\normalsize{Name:}} & \normalsize{\studentNameTwo}  \tabularnewline%
-    \textbf{\normalsize{Matrikelnummer:}} & \normalsize{\matnrOne}  \tabularnewline%
-    \textbf{\normalsize{Matrikelnummer:}} & \normalsize{\matnrTwo}  \tabularnewline%
+	\textbf{\normalsize{Namen:}} & \normalsize{\studentNameOne, \studentNameTwo}  \tabularnewline%
+    % \textbf{\normalsize{Matrikelnummern:}} & \normalsize{\matnrOne,\matnrTwo}  \tabularnewline%
 	\textbf{\normalsize{Ausbildungsbetrieb:}} & \normalsize{\company}  \tabularnewline%
     \textbf{\normalsize{Fachbereich:}} & \normalsize{\fachbereich} \tabularnewline%
     \textbf{\normalsize{Studienjahrgang:}} & \normalsize{\jahrgang} \tabularnewline%
@@ -299,9 +309,10 @@
 
 \listoffigures
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\newpage
 
-\listoftables
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+% \listoftables
+% \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
 
 \section*{Hinweise}
 
@@ -325,7 +336,7 @@ Lesefluss stören, im Anhang platziert werden, auf den im Text zusätzlich verwi
 \pagenumbering{arabic}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%% Einführung
+%%%%%%%%%%% Kapitel
 
 \chapter{Einleitung}\label{ch:einleitung}
 \subfile{chapter/einleitung.tex}
@@ -339,32 +350,8 @@ Lesefluss stören, im Anhang platziert werden, auf den im Text zusätzlich verwi
 \chapter{Anforderungen}\label{ch:Anforderungen}
 \subfile{chapter/anforderungen.tex}
 
-% \section{Large Language Models}
-% \subfile{section/llms.tex}
-
-% \section{Vektor Embeddings}
-% \subfile{section/vektorembeddings.tex}
-
-% \section{Vektor Embedding Raum}
-% \subfile{section/vektorspace.tex}
-
-% \chapter{Indizieren}
-% \subfile{chapter/indexing.tex}
-% \section{Suche}
-% \subfile{section/search.tex}
-% \section{Indizierung von Code}
-% \subfile{section/codeindexing.tex}
-% \subsection{Problem der Code Semantik}
-% \subfile{subsection/codesematic.tex}
-% \subsection{Seperate Bedeutungserfassen via Completions}
-% \subfile{subsection/completions.tex}
-% \subsection{Datei spezifische Promtps}
-% \subfile{subsection/customprompts.tex}
-% \subsection{Embeddings aus erweiterten Erklärungen}
-% \subfile{subsection/embeddings.tex}
-
-% \chapter{Bewertung}
-% \subfile{chapter/bewertung.tex}
+\chapter{Bewertung}
+\subfile{chapter/bewertung.tex}
 
 \chapter{Fazit}\label{ch:fazit}
 \subfile{chapter/fazit.tex}
