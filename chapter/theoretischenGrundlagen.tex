@@ -45,6 +45,26 @@ Erreichen der vom Nutzer festgelegten maximalen Anzahl generierter Tokens oder d
 
 Mit dieser Architektur können erstaunliche Ergebnisse erzielt werden. Die generierten Texte ähneln menschengeschriebenen Texten sehr, wodurch sich viele Anwendungsgebiete für diese Technologie ergeben. Jedoch ergeben sich daraus auch einige Probleme und Risiken, welche im Folgenden erläutert werden sollen. 
 
+\section{Prompt und Kontext}
+
+Um nun zu bestimmen, was für einen Text das \glslink{glos:llm}{LLM} generieren soll, erhält es einen Input. Dieser wird als Prompt bezeichnet. Da KI-Modelle verschiedene Prompts bearbeiten können, ist es 
+möglich, ein Modell zum Lösen unterschiedlichster Aufgaben einzusetzen. Der Prompt setzt sich aus dem System-Prompt sowie dem User-Prompt zusammen. Zudem können noch weiteren Kontext-Angaben 
+ergänzt werden.\cite{systemprompt}\\
+Der System-Prompt stellt die Grundstruktur des Prompts dar und gibt dem \glslink{glos:llm}{LLM} einen grundlegenden Kontext für die Generierung des Textes mit. Zuerst wird die Information mitgeteilt, dass eine 
+Frage beantwortet beziehungsweise auf eine Nutzereingabe reagiert werden soll. Darüber hinaus wird dem Modell mitgeteilt, dass es im folgenden Chat die Rolle des KI-Assistenten übernimmt. 
+Meistens werden im System-Prompt noch weitere Informationen mitgegeben, wie zum Beispiel der Stil oder Ton des Textes. Außerdem kann dem \glslink{glos:llm}{LLM} hier mitgeteilt werden, dass bestimmte Wörter 
+nicht benutzt oder bestimmte Themen nicht angesprochen werden sollen, also eine erste Stufe von Filtern eingebaut werden.\cite{systemprompt}\\
+Der System-Prompt wird meist durch die Entwickler des \glslink{glos:llm}{LLM}s festgelegt und ändert sich nicht. Deswegen wird er auch als “Fixed Prompt” bezeichnet. Er ist für den Nutzer meist nicht sichtbar.\\
+Der zweite Bestandteil des Prompts ist der User-Prompt, welcher konkret vom Nutzer eingegeben wird. Dieser kann sich bei jeder neuen Anfrage ändern und ist für den Nutzer nicht nur sichtbar, sondern 
+auch veränderbar. Verändert man den Prompt, um ein besseres oder passenderes Ergebnis zu erzielen, wird dies als Prompt-Engineering bezeichnet. Um den Prompt effektiv anpassen zu können, um 
+ein gewünschtes Ergebnis zu erreichen, sind oft viele Versuche nötig sowie ein tief gehendes Verständnis für die Funktionsweise des \glslink{glos:llm}{LLM}s.\cite{promptengineering}\\
+Zusätzlich zum System-Prompt und User-Prompt können dem \glslink{glos:llm}{LLM} noch mehr Informationen mitgegeben werden. Die Summe aus dem Prompt und weiteren Angaben wird als Kontext bezeichnet. Dazu zählen 
+zum Beispiel der vorherige Chatverlauf, damit das \glslink{glos:llm}{LLM} sich auf die vorherige Konversation beziehen kann. Auch Texte, die für die Generierung der Antwort relevant sind, können im Kontext 
+übergeben werden. Ein weiteres Beispiel ist das sogenannte Few-Shot-Learning, bei dem eine  beispielhafte Konversation zwischen dem Nutzer und dem \glslink{glos:llm}{LLM} dargestellt wird, um Beispiele für das 
+gewünschte Format oder den Stil der Antwort zu geben.\\
+Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{glos:llm}{LLM} als Input mitgegeben werden können. Wird diese Anzahl überschritten, wird der Inhalt nicht vollständig mitgegeben, 
+was zu ungewünschten und unvollständigen Ergebnissen führen kann.
+
 \section{Wirkungen und Nebenrisiken}
 
 \subsection{Abhängigkeit von den Trainingsdaten}

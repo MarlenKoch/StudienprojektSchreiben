@@ -1,5 +1,101 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
+\section{Sinn}
+
+\subsection{Ziel der Implementierung}
+
+Die Entwicklung des hier beschriebenen Schreibassistenten verfolgt das Ziel, ein innovatives \glslink{glos:ki}{KI}-Werkzeug zu entwickeln, welches vor allem Schüler und Studenten bei dem Verfassen 
+unterschiedlicher Texte unterstützt. Es soll wie in Abschnitt 3.2.2 beschrieben eine Art Augmented Intelligence geschaffen werden, welche die Effizienz während des Schreibprozesses 
+steigert, jedoch nicht das Verfassen des gesamten Textes übernimmt. Im Gegensatz zu den in Kapitel xxx beschriebenen bereits bestehenden Lösungen, sollen die verschiedenen \glslink{glos:ki}{KI}-Chats 
+übersichtlich und spezifisch zu Textabschnitten angelegt werden können. Zu einem Textabschnitt sollen mehrere \glslink{glos:ki}{KI}-Chats mit unterschiedlichen Modellen erstellt und abgespeichert 
+werden können. Durch das Sammeln der \glslink{glos:ki}{KI}-Gespräche soll ein übersichtlicheres Arbeiten ermöglicht werden. Zudem kann der Nutzer die von der \glslink{glos:ki}{KI} erhaltenen Antworten kommentieren, um 
+sich Gedanken zu möglichen Verbesserungen oder der Relevanz der generierten Antwort für den entstehenden Text zu merken.\\
+Das Nutzerinterface des Schreibassistenten soll intuitiv und verständlich gestaltet sein. Dazu wird ein schlichtes Design verwendet. Um auch unerfahrenen Nutzern den Umgang mit 
+generativer \glslink{glos:ki}{KI} zu vereinfachen, werden die in Kapitel xxx (4) identifizierten Anforderungen an ein \glslink{glos:ki}{KI}-Werkzeug umgesetzt. Dies beinhaltet Tooltips an Knöpfen, welche mit der 
+\glslink{glos:ki}{KI}-Funktionalität verbunden sind. Diese sollen die Funktionalität für den Nutzer verständlich erklären. Jeder Nutzer soll so nachvollziehen können, welchen Einfluss eine Eingabe in 
+einem bestimmten Textfeld oder eine Auswahl aus einem Drop-Down Menü auf die generierte Antwort haben. Zudem wird der Nutzer bei dem Anlegen eines neuen Projektes gewarnt, dass 
+\glslink{glos:ki}{KI}-Modell halluzinieren können. Damit soll, ähnlich wie in der in Kapitel xxx (4) behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Missinformationen verringert werden. Dadurch 
+soll das Risiko, dass Fehlinformationen in die Arbeiten der Schüler und Studenten gelangen, verringert werden. Die Nutzer sollen angeregt werden, die von der \glslink{glos:ki}{KI} generierten Inhalte 
+kritisch zu hinterfragen.\\
+Auch bei der Formulierung von Prompts sollen die Nutzer unterstützt werden. Da bereits die kleinste Änderung im Prompt oder in der Reihenfolge der mitgegebenen Informationen großen 
+Einfluss auf die \glslink{glos:ki}{KI}-Antwort haben kann, sind verlässliche und reproduzierbare Arbeitsabläufe schwer zu erreichen\cite{creativeWriting}. Dies soll durch das Zusammensetzen vorgefertigter 
+Prompts im Backend umgangen werden. Zudem soll so die Nutzung auch für \glslink{glos:ki}{KI}-Unerfahrene erleichtert werden. Dazu werden Prompts für folgende in Abschnitt 3.2.1 identifizierten 
+Einsatzmöglichkeiten bereitgestellt: umformulieren, zusammenfassen, Text aus Stichpunkten formulieren, Synonyme finden, Grammatik und Rechtschreibung prüfen, Feedback geben und 
+erklären.
+
+
+\subsection{Anwendungsfälle}
+
+Der Schreibassistent wird für unterschiedliche Anwendungsfälle entwickelt: \\
+Zum einen soll dem Nutzer ein Werkzeug geboten werden, mit welchem er strukturiert verschiedene \glslink{glos:ki}{KI}-Modelle nutzen kann. Die bereitgestellten vorgefertigten Prompts sollen die 
+Effizienz während des Schreibprozesses weiter steigern. Darüber hinaus sind jedoch auch nutzerdefinierte Prompts möglich. Das generierte \glslink{glos:ki}{KI}-Nutzungsverzeichnis kann an als eine Art 
+Quellenverzeichnis an wissenschaftliche Arbeiten angehangen werden. Abgebildet wird dort das verwendete \glslink{glos:ki}{KI}-Modell, die Aufgabe welche das Modell 
+übernehmen sollte beziehungsweise der Prompt, welchen der Nutzer eingegeben hat, sowie das Datum, an welchem die Anfrage gestellt wurde. In diesem Promptverzeichnis werden nur 
+Prompts zu den gespeicherten Chats angeführt. Dadurch wird vermieden, dass Chats vermerkt werden, deren Ergebnisse nicht in die Arbeit eingeflossen sind, und entstehende Verzeichnis 
+bleibt übersichtlicher.\\ 
+Der zweite Anwendungsfall ist der sogenannte Schülermodus. Durch das Einschränken der Funktionalität soll ein Werkzeug zur Verfügung gestellt werden, welches auch zu 
+Unterrichtszwecken verwendet werden kann. So sollen Schüler den Umgang mit generativer \glslink{glos:ki}{KI} erlernen, ohne dabei den gesamten Text von dem \glslink{glos:ki}{KI}-Modell schreiben zu lassen. Die 
+entstandenen Texte sind immer noch die Eigenleistung des Schülers, jedoch kann durch den Einsatz des Schreibassistenten der Schreibprozess effizienter gestaltet werden, was die in 
+Kapitel xxx beschriebenen Vorteile mit sich bringt. Der Schüler kann aus den bereits vorgefertigten Aufgaben für die \glslink{glos:ki}{KI} wählen, jedoch keinen eigenen Prompt verwenden. Dadurch soll 
+verhindert werden, dass gesamte Texte \glslink{glos:ki}{KI}-generiert werden. Zudem wird anders als im normalen Modus jeder Chat im \glslink{glos:ki}{KI}-Nutzungsverzeichnis vermerkt. Dies sorgt für bessere 
+Nachvollziehbarkeit der \glslink{glos:ki}{KI}-Nutzung für Lehrkräfte.\\ 
+Zuletzt soll der Schreibassistent auch beim Schreiben von benoteten Arbeiten während des Unterrichts eingesetzt werden können. Dazu dient der Prüfungsmodus. Es kann eine bestimmte 
+Zeit eingestellt werden, in welcher der Schüler seinen Text bearbeiten kann. Ist diese Zeit abgelaufen, wird der entstandene Text automatisch abgegeben. Das \glslink{glos:ki}{KI}-Nutzungsverzeichnis 
+wird wie im Schülermodus erstellt, sodass alle \glslink{glos:ki}{KI}-Chats später erkennbar sind. Zudem wird das öffnen anderer Projekte oder Tabs verhindert. Sollte ein Schüler versuchen, über ein 
+anderes Projekt im Schreibassistenten oder über eine andere Anwendung \glslink{glos:ki}{KI} oder andere Hilfsmittel zu verwenden, wird die Arbeit automatisch abgegeben. Dadurch sollsichergestellt 
+werden, dass das Schreiben der Arbeit weiterhin eine eigene Leistung des Schülers ist. Die \glslink{glos:ki}{KI} hilft bei der Formulierung und mit der Rechtschreibung des Textes, den Inhalt selbst 
+muss jedoch der Schüler verfassen. Insgesamt soll eine sichere Umgebung zur Verfügung gestellt werden, wodurch der Einsatz generativer \glslink{glos:ki}{KI} auch während des Unterrichts ermöglicht wird.
+
+
+\section{Verwendete Technologien}
+
+Das Frontend des Schreibassistenten ist mithilfe des Frameworks React erstellt worden. Diese JavaScript Bibliothek verfolgt einen komponentenbasierten Ansatz. Da jedes Element als 
+eigene Komponente behandelt wird, erhöht sich die Wiederverwendbarkeit des Codes. Alle benutzerdefinierten Komponenten werden direkt oder indirekt der von React bereitgestellten 
+App-Komponente untergeordnet. So entsteht eine Baumstruktur mit der App-Komponente als Startknoten. (Alex Banks, 2020; Hutsulyak, 2024; Ks, 2022)\\
+React TSX wurde für die Entwicklung des Schreibassistenten vor allem aufgrund seiner Performanz und Dynamik gewählt. React TypeScript bringt den Vorteil der Typisierung mit sich, 
+wodurch der geschriebene Code weniger fehleranfällig ist.\cite{react1,react2} \\
+Zur Umsetzung des Designs wird Cascading Style Cheats (CSS) verwendet. Diese Sprache bietet ebenfalls den Vorteil der Wiederverwendbarkeit durch das erstellen eigener CSS-Klassen. 
+Im Gegensatz zur Verwendung von CSS-Frameworks ermöglicht die Nutzung von reinem CSS eine größere Flexibilität. \\ 
+Das Backend ist mit dem Web-Framework FastAPI erstellt worden. Dieses Python-Framework zeichnet sich vor allem durch gute Performanz aus. Die bereitgestellte Typisierung sowie die 
+Verwendung von Datenmodellen sorgen für eine verbesserte Code-Qualität\cite{fastapi}.\\ Python als verwendete Programmiersprache sorgt ebenfalls für eine erhöhte Effizienz. Die Einfachheit dieser 
+Programmiersprache sowie die weite Verbreitung erleichtern den Entwicklungsprozess. Zudem gibt es viele zusätzliche Bibliotheken für Python.\cite{python}\\
+Eine dieser Bibliotheken, welche auch für die Implementierung des Schreibassistenten genutzt wurde, ist SQLAlchemy. Diese bietet eine objektorientierte Abstraktionsschicht für den 
+Zugriff auf die Datenbank. Somit kann mit Python-Klassen statt mit reinen SQL-Abfragen gearbeitet werden. Zudem können komplexe Abfragen und Bedingungen mit Python-Code formuliert 
+werden. Somit wird der Code übersichtlicher und einfacher zu warten. Der Zugriff auf die verwendete SQLite Datenbank wird damit vereinfacht, jedoch wäre auch ein späterer Umstieg auf 
+eine andere Datenbank mit wenig Aufwand möglich, falls eine leistungsfähigere Datenbank benötigt werden sollte.\cite{SQLAlchemy}\\
+Für die Einbindung der \glslink{glos:ki}{KI}-Modelle wurde Ollama verwendet. Ollama ist eine Open-Source-Software, welche die Ausführung von \glslink{glos:llm}{LLM}s lokal auf dem Rechner ermöglicht. Ollama stellt eine 
+API zur Verfügung, durch die diese Funktionalitäten eingebunden werden können. So können verschiedene Modelle genutzt werden. Ollama übernimmt während der Nutzung den Wechsel 
+zwischen den Modellen. Dies verhindert, dass zwei Modelle gleichzeitig Rechenressourcen beanspruchen und erhöht somit die Performanz.\cite{ollamaSchreibassi,ollamaTechnologie}
+
+\section{Verwendete \glslink{glos:ki}{KI}-Modelle}
+
+Mit Ollama können verschiedene KI-Modelle während des Schreibprozesses verwendet werden. Alle diese Modell laufen lokal auf dem Rechner des Nutzers, wodurch mögliche Datenschutzprobleme, 
+wie in Kapitel xxx beschrieben, umgangen werden. So kann der implementierte Schreibassistent beispielsweise auch im Rahmen eines duales Studiums zum Verfassen von 
+Praxisphasenberichten ohne datenschutzrechtliche Bedenken des Partnerunternehmens verwendet werden.\\ 
+Der Nutzer soll frei zwischen mehreren KI-Modellen wählen können. Durch die Verwendung von Ollama ist es dem Nutzer auch möglich, selber zu entscheiden, welche Modelle zur Verfügung 
+stehen sollen. Um jedoch unerfahrenen Nutzern die Arbeit mit dem KI-Werkzeug zu vereinfachen, soll zu jeder Aufgabe mit bereits vorgefertigtem Prompt ein bestimmtes KI-Modell 
+vorgeschlagen werden, welches diese Aufgabe wahrscheinlich am erfolgreichsten löst.\\ 
+Dazu wurden einige Modelle miteinander verglichen. Diese wurden aufgrund der Spezialisierung auf die deutsche Sprache und wegen ihrer Größe ausgewählt. Modelle mit einer 
+Parameteranzahl zwischen acht und zwölf Milliarden bieten qualitative Antworten und laufen dennoch auf neueren Laptops relativ performant. Aufgrund des zeitlichen Rahmens dieses 
+Studienprojektes wurden die Modelle nicht einzeln gebenchmarkt, sondern lediglich stichprobenartig für jeden Aufgabentyp getestet und die gegebenen Antworten anschließend auf 
+Ausdruck, grammatikalische Korrektheit und Inhalt überprüft. Dabei ergaben sich folgende Ergebnisse: 
+
+\begin{itemize}
+
+\item \textbf{lukasmalkmus/llama3-sauerkraut:} Dies ist ein acht Milliarden Parameter großes Llama-3 Modell mit Feinabstimmung auf die deutsche Sprache\cite{sauerkraut}. Im Test antwortet das Modell stellenweise auf Englisch, obwohl im Prompt eine deutsche Antwort gefordert wird. Einige deutsche Begriffe aus dem Prompt gehen verloren oder werden durch ähnlich klingende englische Begriffe ersetzt. Das Modell wird im Schreibassistenten für keine Aufgabe verwendet.
+
+\item \textbf{mayflowergmbh/wiedervereinigung:} Dieses Modell ist die Kombination aus mehreren auf Mistral-basierenden KI-Modellen mit einer Größe von sieben Milliarden Parametern und ebenfalls auf die deutsche Sprache abgestimmt\cite{wiedervereinigung}. Im Test fügt es häufig neuen Inhalt hinzu, statt sich auf die eigentlich geforderte Aufgabe zu begrenzen. Das Modell wird im Schreibassistenten für keine Aufgabe verwendet.
+
+\item \textbf{mayflowergmbh/wiederchat:} Diese sieben Milliarden Parameter große erweiterte Variante des Wiedervereinigungs-Modells führt während des Tests Prompts meist nicht vollständig aus\cite{wiederchat}. Für das Zusammenfassen von Texten gibt es jedoch die beste Antwort, da lediglich Inhalt aus dem Text widergegeben wurde und das Format den geforderten Stichpunkten entsprach. Dieses Modell wird im Schreibassistenten für das Zusammenfassen von Texten vorgeschlagen.
+
+\item \textbf{jobautomation/OpenEuroLLM-German:} Dies ist eine für deutschsprachige Antworten optimierte Version von Gemma 3, welche trainiert wurde, grammatikalisch korrekte Antworten ohne fremdsprachige Fachwörter zu geben\cite{openeurollm}. Während des Tests antwortet es vollständig, gut strukturiert und meist dem gegebenen Prompt entsprechend. Es wird für die Aufgabe, einen Text aus Stichpunkten zu formulieren, als Standard-Modell verwendet, da der entstehende Text gut formuliert und besser strukturiert war als der anderer Modelle. Ebenfalls wird es zum umformulieren des Textes vorgeschlagen, da der gegebene Text lediglich neu formuliert und nicht ergänzt wurde.  
+
+\item \textbf{Gemma3:} Dies ist ein von Google entwickeltes Open Source KI-Modell, welches aufgrund seiner Architektur auch auf Laptops performant läuft, und mit zwölf Milliarden Parametern das größte getestete Modell\cite{gemma3}. Da dieses Modell nicht auf die deutsche Sprache spezialisiert wurde, sind die Texte meist nicht gut formuliert. Als allgemeines Modell zum Finden von Synonymen und Geben von Feedback ist es jedoch sehr gut geeignet und wird daher für diese Aufgaben vorgeschlagen. 
+
+\end{itemize}
+
+[vllt noch was dazu sagen, wie man sich neue modelle ziehen kann]
+
 
 \end{document}
