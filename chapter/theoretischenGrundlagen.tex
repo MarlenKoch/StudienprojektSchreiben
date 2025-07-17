@@ -9,19 +9,10 @@
   \caption{Neuronales Netzwerk}
   \label{fig:NN}
 \end{figure}
-\glspl{nn} bilden die Basis für \glslink{glos:ki}{KI}. Sie sind in ihrer Funktionsweise dem menschlichen Gehirn nachempfunden. Dementsprechend bestehen sie aus einer 
-bestimmten Anzahl von Neuronen. Diese sind, wie in Abb \ref{fig:NN} dargestellt, in verschiedenen Schichten angeordnet. Die erste dieser Schichten wird als Eingabeschicht bezeichnet, die letzte als Ausgabeschicht. Dazwischen 
-befinden sich mehrere sogenannte versteckte Schichten. Jedes Neuron ist über gewichtete Verbindungen mit allen Neuronen aus der vorherigen und der nachfolgenden Schicht verbunden. 
-An jedem gegebenen Zeitpunkt hat ein Neuron einen bestimmten Wert zwischen 0 und 1, welcher dem Output des Neurons entspricht. Dieser Wert ergibt sich aus der Verarbeitung der Inputs, welche 
-aus den Outputs der vorherigen Schicht berechnet werden, das heißt es wird eine Funktion auf die Summe aller Inputs ausgeführt. \\
-Jede Verbindung zwischen Neuronen verfügt über eine Gewichtung zwischen -1 und 1. Diese bestimmt, mit welcher Zahl der Wert eines Neurons multipliziert wird, bevor dieser an die Neuronen in 
-der folgenden Schicht weitergegeben wird. Die Gewichtungen der Verbindungen zwischen zwei Schichten können als Matrix dargestellt werden. Der Übergang von einer 
-Schicht zu der darauf folgenden entspricht einer Matrixmultiplikation. \\
-Die Werte der Gewichtungen stehen zu Beginn noch nicht fest. Sie werden erst durch das sogenannte Training festgelegt. Das Training eines \glslink{glos:nn}{NN} beschreibt also die konkrete Anpassung der 
-Gewichtungen. Dies wird durch Backpropagation erreicht. Dafür werden die Gewichtungen zunächst mit zufälligen Werten initialisiert. Dann wird der \glslink{glos:nn}{NN}-Algorithmus mit einer Vielzahl an 
-Trainingsdaten durchlaufen. Die erhaltenen werden mit den gewünschten Ergebnissen verglichen. Treten dabei zu starke Abweichungen auf, werden alle zu diesem Ergebnis beitragenden 
-Gewichtungen reduziert, sodass sie weniger Einfluss auf die entstehenden Ergebnisse haben. Stimmen gewünschtes und erhaltenes Ergebnis annähernd überein, werden die dazu beitragenden 
-Gewichtungen erhöht. \glslink{glos:nn}{NN}s bilden die Grundlage für weitere Technologien wie beispielsweise \glspl{llm}, welche auch für \glslink{glos:ki}{KI}-Schreibwerkzeuge verwendet werden. 
+
+\glspl{nn} bilden die Basis für \glslink{glos:ki}{KI} und sind in ihrer Funktionsweise dem menschlichen Gehirn nachempfunden. Sie bestehen aus einer Anzahl von Neuronen, die – wie in Abb. \ref{fig:NN} dargestellt – in verschiedenen Schichten angeordnet sind. Die erste Schicht heißt Eingabeschicht, die letzte Ausgabeschicht, dazwischen liegen sogenannte versteckte Schichten. Jedes Neuron ist über gewichtete Verbindungen mit allen Neuronen der vorherigen und nachfolgenden Schicht verbunden. Ein Neuron nimmt zu jedem Zeitpunkt einen Wert zwischen 0 und 1 an, welcher dem Output des Neurons entspricht. Dieser Wert wird aus der Verarbeitung der Inputs errechnet, also aus den Outputs der vorherigen Schicht, auf deren Summe eine Funktion angewandt wird. \\
+Jede Verbindung zwischen Neuronen verfügt über eine Gewichtung zwischen -1 und 1, die bestimmt, mit welcher Zahl der Wert eines Neurons multipliziert wird, bevor er an die nächste Schicht weitergegeben wird. Die Gewichtungen zwischen zwei Schichten können als Matrix dargestellt werden, und der Übergang zwischen Schichten entspricht einer Matrixmultiplikation. \\
+Die Gewichtungen stehen zu Beginn noch nicht fest, sondern werden durch das Training bestimmt. Das Training eines \glslink{glos:nn}{NN} ist die Anpassung dieser Gewichtungen mittels Backpropagation. Dazu werden die Gewichtungen zunächst zufällig gewählt und das \glslink{glos:nn}{NN} durchläuft viele Trainingsdaten. Die erhaltenen Ergebnisse werden mit den gewünschten verglichen. Bei zu großen Abweichungen werden alle zugehörigen Gewichtungen reduziert, bei Übereinstimmung werden sie erhöht. \glslink{glos:nn}{NN}s sind die Grundlage für Technologien wie \glspl{llm}, die auch für \glslink{glos:ki}{KI}-Schreibwerkzeuge verwendet werden. 
 
 \section{Large Language Models}
 \label{sec:llm}
@@ -31,30 +22,32 @@ Gewichtungen erhöht. \glslink{glos:nn}{NN}s bilden die Grundlage für weitere T
   \caption{Transformer}
   \label{fig:trans}
 \end{figure}
-\glspl{llm} sind eine Form der \glslink{glos:ki}{KI}, welche auf natürlicher Sprache basiert. Da sie entwickelt wurden, um Texte zu generieren, werden \glspl{llm} auch als generative \glslink{glos:ki}{KI} bezeichnet.
-Moderne \glslink{glos:llm}{LLM}s wie ChatGPT basieren auf einer Transformer-Architektur, welche in Abb \ref{fig:trans} schematisch dargestellt ist. Diese berechnet aus einem Eingabetext eine Wahrscheinlichkeitsverteilung 
-über alle möglichen nächsten Tokens. Die Transformerarchitektur setzt sich aus folgenden Aspekten zusammen:\cite{architecture}\\
+
+\glspl{llm} sind eine Form der \glslink{glos:ki}{KI}, die auf natürlicher Sprache basiert. Da sie entwickelt wurden, um Texte zu generieren, werden \glspl{llm} als generative 
+\glslink{glos:ki}{KI} bezeichnet. Moderne \glslink{glos:llm}{LLM}s wie ChatGPT basieren auf einer Transformer-Architektur, die in Abb. \ref{fig:trans} schematisch dargestellt ist. Diese 
+berechnet aus einem Eingabetext eine Wahrscheinlichkeitsverteilung über mögliche nächste Tokens. Die Transformerarchitektur besteht aus folgenden Komponenten:\cite{architecture}\\
 
 \begin{itemize}
 
-\item \textbf{Tokenisierung:} Als erster Schritt wird der Eingabetext in einzelne Tokens unterteilt. Tokens können Wörter oder Wortteile, aber auch Satzzeichen oder einzelne Buchstaben sein. Sie sind die kleinstmögliche Einheit, welche das \glslink{glos:llm}{LLM} verarbeiten kann. Jedes Token hat eine Token-ID.\cite{architecture}
+\item \textbf{Tokenisierung:} Zuerst wird der Eingabetext in Tokens unterteilt. Tokens können Wörter, Wortteile, Satzzeichen oder einzelne Buchstaben sein. Sie sind die kleinste Einheit, 
+die das \glslink{glos:llm}{LLM} verarbeiten kann.\cite{architecture}
 
-\item \textbf{Embedding:} Den Tokens werden vieldimensionale Vektoren zugeordnet. So werden sie anhand ihrer Bedeutung codiert. Die Richtungen der Vektoren im Vektorraum beinhalten semantische Bedeutungen. So liegen Wörter mit ähnlicher Bedeutung, beispielsweise Synonyme, nah beieinander.\cite{embedding}
+\item \textbf{Embedding:} Tokens werden vieldimensionalen Vektoren zugeordnet. So werden sie anhand ihrer Bedeutung codiert. Die Richtungen der Vektoren im
+Vektorraum beinhalten semantische Bedeutungen. Wörter mit ähnlicher Bedeutung liegen als Vektoren im Vektorraum nahe beieinander.\cite{embedding}
 
-\item \textbf{Attention:} Die einzelnen als Vektoren codierten Tokens werden durch den umliegenden Text verändert, um den Kontext des Wortes und dessen semantische Bedeutung widerzuspiegeln. Dabei werden nacheinander die einzelnen Vektoren betrachtet und ein Skalarprodukt aus dem aktuellen und jeweils den anderen Vektoren des Textes gebildet. Das Skalarprodukt beschreibt die Relevanz des anderen Tokens für die Bedeutung des aktuellen Tokens. Je größer dieser Bedeutungwert ist, desto mehr wird der aktuelle Vektor auf Grundlage des anderen Vektors verändert.\\
-Die Attention-Funktion ist vollständig linear. Dieser Mechanismus lässt sich an folgendem Beispiel verdeutlichen: In den beiden Sätzen "`Ich sitze auf der Bank"' und "`Ich habe in der Bank Geld abgehoben"' hat das Wort "`Bank"' eine andere Bedeutung. Der Attention-Mechanismus passt die Vektoren, welche dieses Token codieren, so an, dass sie jeweils näher an den entsprechenden Synonymen "`Parkbank"' und "`Kreditinstitut"' liegen. Durch diese Codierung bleibt der Kontext, in welchem ein Wort verwendet wird, erhalten.\cite{attention, attention2} 
+\item \textbf{Attention:} Die vektorcodierten Tokens werden durch den umliegenden Text verändert, um den Wortkontext und die semantische Bedeutung widerzuspiegeln.\\
+Ein Beispiel: In den Sätzen "`Ich sitze auf der Bank"' und "`Ich habe in der Bank Geld abgehoben"' erhält "`Bank"' jeweils eine andere Vektorrepräsentation, je nach Kontext liegen die codierenden 
+Vektoren nahe der Tokens "`Parkbank"' oder "`Kreditinstitut"'. So bleibt der Kontext des verwendeten Wortes erhalten.\cite{attention, attention2} 
 
-\item \textbf{\acrfull{mlp}:} Im Gegensatz zur ausschließlich linearen Attention-Funktion, kann das \glslink{glos:llm}{LLM} mithilfe des \acrshort{mlp}s auch nicht-lineare Zusammenhänge darstellen. Das \acrshort{mlp} ist ein kleines neuronales Netzwerk, meistens mit nur einer inneren Schicht sowie der Eingabe-und Ausgabeschicht. Jeder Vektor wird einmal als Input in dieses neuronale Netzwerk eingegeben und der Output zu dem ursprünglichen Vektor addiert. Mithilfe des \acrshort{mlp}s kann die Komplexität der Sprache erfasst werden.
+\item \textbf{\acrfull{mlp}:} Neben der linearen Attention-Funktion können mit dem \acrshort{mlp}, einem kleinen neuronalen Netzwerk mit meist nur einer inneren Schicht, auch nichtlineare Zusammenhänge 
+erfasst werden. Jeder Vektor durchläuft das \acrshort{mlp}, dessen Ausgabe zum ursprünglichen Vektor addiert wird. Somit kann die Komplexität der Sprache erfasst werden.
 
-\item \textbf{Decoder:} Die Architektur des \glslink{glos:llm}{LLM}s besteht aus mehreren Attention- und MLP-Schichten, welche abwechselnd hintereinander angeordnet sind, wie in Abb \ref{fig:trans} dargestellt wird. Abschließend verfügt es über einen Decoder, welcher den Output aus der letzten \acrshort{mlp}-Schicht als Input bekommt. Darauf wird eine Softmax-Funktion angewendet, welche eine Wahrscheinlichkeitsverteilung über alle Tokens ausgibt. Die Softmax-Funktion sorgt dafür, dass die Summe der Wahrscheinlichkeiten 1 beträgt, und jede einzelne Wahrscheinlichkeit im Intervall von 0 bis 1 liegt.\cite{architecture} 
+\item \textbf{Decoder:} Ein \glslink{glos:llm}{LLM} besteht aus abwechselnden Attention- und MLP-Schichten (Abb. \ref{fig:trans}). Abschließend erhält der Decoder die Ausgabe aus der letzten 
+\acrshort{mlp}-Schicht, worauf die Softmax-Funktion eine Wahrscheinlichkeitsverteilung über alle Tokens berechnet. Durch die Anwendung dieser Funktion ist die Summe der Wahrscheinlichkeiten 1 und jede liegt im Intervall zwischen 0 und 1.\cite{architecture} 
 \end{itemize}
 
-
-Entsprechend der sich aus diesem Prozess ergebenden Wahrscheinlichkeitsverteilung wird in einem \glslink{glos:llm}{LLM} ein zufälliges nächstes Wort ausgewählt und an den generierten Text angefügt. 
-Der Prozess wird anschließend mit dem aktualisierten Text wiederholt, sodass immer neue Tokens angefügt werden, bis eine Abbruchbedingung erreicht ist. Diese kann unter anderem das 
-Erreichen der vom Nutzer festgelegten maximalen Anzahl generierter Tokens oder die Generierung eines Abbruchtokens vom \glslink{glos:llm}{LLM} selbst sein.\cite{architecture}\\
-
-Mit dieser Architektur können erstaunliche Ergebnisse erzielt werden. Die generierten Texte ähneln menschengeschriebenen Texten sehr, wodurch sich viele Anwendungsgebiete für diese Technologie ergeben. Jedoch ergeben sich daraus auch einige Probleme und Risiken, welche im Folgenden erläutert werden sollen. 
+Basierend auf der sich so ergebenen Wahrscheinlichkeitsverteilung wählt das \glslink{glos:llm}{LLM} zufällig ein nächstes Wort und fügt es dem Text an. Der Vorgang wiederholt sich mit dem aktualisierten Text, 
+bis eine Abbruchbedingung eintritt, etwa eine maximale Tokenanzahl oder ein spezielles Abbruchtoken.\cite{architecture}\\
 
 \section{\gls{glos:prompt} und Kontext}
 
@@ -77,6 +70,8 @@ Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{gl
 was zu ungewünschten und unvollständigen Ergebnissen führen kann.
 
 \section{Wirkungen und Nebenrisiken}
+Mit dieser Architektur entstehen Texte, die menschengeschriebenen stark ähneln und zahlreiche Anwendungsgebiete eröffnen. Gleichzeitig ergeben sich daraus auch Herausforderungen und Risiken, 
+die im Folgenden behandelt werden.
 
 \subsection{Abhängigkeit von den Trainingsdaten}
 
