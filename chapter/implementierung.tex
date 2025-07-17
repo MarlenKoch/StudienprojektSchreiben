@@ -6,23 +6,24 @@
 \subsection{Ziel der Implementierung}
 
 Die Entwicklung des hier beschriebenen Schreibassistenten verfolgt das Ziel, ein innovatives \glslink{glos:ki}{KI}-Werkzeug zu entwickeln, welches vor allem Schüler und Studenten bei dem Verfassen 
-unterschiedlicher Texte unterstützt. Es soll wie in Abschnitt 3.2.2 beschrieben eine Art Augmented Intelligence geschaffen werden, welche die Effizienz während des Schreibprozesses 
-steigert, jedoch nicht das Verfassen des gesamten Textes übernimmt. Im Gegensatz zu den in Kapitel xxx beschriebenen bereits bestehenden Lösungen, sollen die verschiedenen \glslink{glos:ki}{KI}-Chats 
+unterschiedlicher Texte unterstützt. Die von Studenten häufig genutzten Text-Editoren wie beispielsweise Overleaf sollen nicht ersetzt werden. Stattdessen soll eine Möglichkeit geboten werden, 
+\glslink{glos:ki}{KI}-Chats mit unterschiedlichen \glslink{glos:llm}{LLM}s übersichtlich zu sammeln. Es soll wie in \autoref{sec:nachteile} beschrieben eine Art "`Augmented Intelligence"' geschaffen werden, welche die Effizienz während des Schreibprozesses 
+steigert, jedoch nicht das Verfassen des gesamten Textes übernimmt. Im Gegensatz zu den in \autoref{sec:bereitsBestehendeLoesungen} beschriebenen bereits bestehenden Lösungen, sollen die verschiedenen \glslink{glos:ki}{KI}-Chats 
 übersichtlich und spezifisch zu Textabschnitten angelegt werden können. Zu einem Textabschnitt sollen mehrere \glslink{glos:ki}{KI}-Chats mit unterschiedlichen Modellen erstellt und abgespeichert 
 werden können. Durch das Sammeln der \glslink{glos:ki}{KI}-Gespräche soll ein übersichtlicheres Arbeiten ermöglicht werden. Zudem kann der Nutzer die von der \glslink{glos:ki}{KI} erhaltenen Antworten kommentieren, um 
 sich Gedanken zu möglichen Verbesserungen oder der Relevanz der generierten Antwort für den entstehenden Text zu merken.\\
 Das Nutzerinterface des Schreibassistenten soll intuitiv und verständlich gestaltet sein. Dazu wird ein schlichtes Design verwendet. Um auch unerfahrenen Nutzern den Umgang mit 
-generativer \glslink{glos:ki}{KI} zu vereinfachen, werden die in Kapitel xxx (4) identifizierten Anforderungen an ein \glslink{glos:ki}{KI}-Werkzeug umgesetzt. Dies beinhaltet Tooltips an Knöpfen, welche mit der 
+generativer \glslink{glos:ki}{KI} zu vereinfachen, werden die in \autoref{ch:anforderungen} identifizierten Anforderungen an ein \glslink{glos:ki}{KI}-Werkzeug umgesetzt. Dies beinhaltet Tooltips an Knöpfen, welche mit der 
 \glslink{glos:ki}{KI}-Funktionalität verbunden sind. Diese sollen die Funktionalität für den Nutzer verständlich erklären. Jeder Nutzer soll so nachvollziehen können, welchen Einfluss eine Eingabe in 
 einem bestimmten Textfeld oder eine Auswahl aus einem Drop-Down Menü auf die generierte Antwort haben. Zudem wird der Nutzer bei dem Anlegen eines neuen Projektes gewarnt, dass 
-\glslink{glos:ki}{KI}-Modell halluzinieren können. Damit soll, ähnlich wie in der in Kapitel xxx (4) behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Missinformationen verringert werden. Dadurch 
+\glslink{glos:ki}{KI}-Modell halluzinieren können. Damit soll, ähnlich wie in der in \autoref{ch:anforderungen} behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Missinformationen verringert werden. Dadurch 
 soll das Risiko, dass Fehlinformationen in die Arbeiten der Schüler und Studenten gelangen, verringert werden. Die Nutzer sollen angeregt werden, die von der \glslink{glos:ki}{KI} generierten Inhalte 
 kritisch zu hinterfragen.\\
 Auch bei der Formulierung von Prompts sollen die Nutzer unterstützt werden. Da bereits die kleinste Änderung im Prompt oder in der Reihenfolge der mitgegebenen Informationen großen 
 Einfluss auf die \glslink{glos:ki}{KI}-Antwort haben kann, sind verlässliche und reproduzierbare Arbeitsabläufe schwer zu erreichen\cite{creativeWriting}. Dies soll durch das Zusammensetzen vorgefertigter 
-Prompts im Backend umgangen werden. Zudem soll so die Nutzung auch für \glslink{glos:ki}{KI}-Unerfahrene erleichtert werden. Dazu werden Prompts für folgende in Abschnitt 3.2.1 identifizierten 
-Einsatzmöglichkeiten bereitgestellt: umformulieren, zusammenfassen, Text aus Stichpunkten formulieren, Synonyme finden, Grammatik und Rechtschreibung prüfen, Feedback geben und 
-erklären.
+Prompts im Backend umgangen werden. Zudem soll so die Nutzung auch für \glslink{glos:ki}{KI}-Unerfahrene erleichtert werden. Dazu werden Prompts für folgende in \autoref{sec:vorteile} identifizierten 
+Einsatzmöglichkeiten bereitgestellt: umformulieren, zusammenfassen, Text aus Stichpunkten formulieren, Synonyme finden, Grammatik und Rechtschreibung prüfen und Feedback geben. Zudem soll das KI-Modell
+Schülern Sachverhältnisse erklären können, um das Textverständnis zu fördern. 
 
 
 \subsection{Anwendungsfälle}
@@ -31,13 +32,13 @@ Der Schreibassistent wird für unterschiedliche Anwendungsfälle entwickelt: \\
 Zum einen soll dem Nutzer ein Werkzeug geboten werden, mit welchem er strukturiert verschiedene \glslink{glos:ki}{KI}-Modelle nutzen kann. Die bereitgestellten vorgefertigten Prompts sollen die 
 Effizienz während des Schreibprozesses weiter steigern. Darüber hinaus sind jedoch auch nutzerdefinierte Prompts möglich. Das generierte \glslink{glos:ki}{KI}-Nutzungsverzeichnis kann an als eine Art 
 Quellenverzeichnis an wissenschaftliche Arbeiten angehangen werden. Abgebildet wird dort das verwendete \glslink{glos:ki}{KI}-Modell, die Aufgabe welche das Modell 
-übernehmen sollte beziehungsweise der Prompt, welchen der Nutzer eingegeben hat, sowie das Datum, an welchem die Anfrage gestellt wurde. In diesem Promptverzeichnis werden nur 
+übernehmen sollte beziehungsweise der Prompt, welchen der Nutzer eingegeben hat, sowie das Datum, an welchem die Anfrage gestellt wurde. In diesem KI-Nutzungsverzeichnis werden nur 
 Prompts zu den gespeicherten Chats angeführt. Dadurch wird vermieden, dass Chats vermerkt werden, deren Ergebnisse nicht in die Arbeit eingeflossen sind, und entstehende Verzeichnis 
 bleibt übersichtlicher.\\ 
 Der zweite Anwendungsfall ist der sogenannte Schülermodus. Durch das Einschränken der Funktionalität soll ein Werkzeug zur Verfügung gestellt werden, welches auch zu 
 Unterrichtszwecken verwendet werden kann. So sollen Schüler den Umgang mit generativer \glslink{glos:ki}{KI} erlernen, ohne dabei den gesamten Text von dem \glslink{glos:ki}{KI}-Modell schreiben zu lassen. Die 
 entstandenen Texte sind immer noch die Eigenleistung des Schülers, jedoch kann durch den Einsatz des Schreibassistenten der Schreibprozess effizienter gestaltet werden, was die in 
-Kapitel xxx beschriebenen Vorteile mit sich bringt. Der Schüler kann aus den bereits vorgefertigten Aufgaben für die \glslink{glos:ki}{KI} wählen, jedoch keinen eigenen Prompt verwenden. Dadurch soll 
+\autoref{sec:vorteile} beschriebenen Vorteile mit sich bringt. Der Schüler kann aus den bereits vorgefertigten Aufgaben für die \glslink{glos:ki}{KI} wählen, jedoch keinen eigenen Prompt verwenden. Dadurch soll 
 verhindert werden, dass gesamte Texte \glslink{glos:ki}{KI}-generiert werden. Zudem wird anders als im normalen Modus jeder Chat im \glslink{glos:ki}{KI}-Nutzungsverzeichnis vermerkt. Dies sorgt für bessere 
 Nachvollziehbarkeit der \glslink{glos:ki}{KI}-Nutzung für Lehrkräfte.\\ 
 Zuletzt soll der Schreibassistent auch beim Schreiben von benoteten Arbeiten während des Unterrichts eingesetzt werden können. Dazu dient der Prüfungsmodus. Es kann eine bestimmte 
@@ -69,9 +70,10 @@ API zur Verfügung, durch die diese Funktionalitäten eingebunden werden können
 zwischen den Modellen. Dies verhindert, dass zwei Modelle gleichzeitig Rechenressourcen beanspruchen und erhöht somit die Performanz.\cite{ollamaSchreibassi,ollamaTechnologie}
 
 \section{Verwendete \glslink{glos:ki}{KI}-Modelle}
+\label{sec:kiModelle}
 
 Mit Ollama können verschiedene \glslink{glos:ki}{KI}-Modelle während des Schreibprozesses verwendet werden. Alle diese Modell laufen lokal auf dem Rechner des Nutzers, wodurch mögliche Datenschutzprobleme, 
-wie in Kapitel xxx beschrieben, umgangen werden. So kann der implementierte Schreibassistent beispielsweise auch im Rahmen eines duales Studiums zum Verfassen von 
+wie in \autoref{sec:datenschutz} beschrieben, umgangen werden. So kann der implementierte Schreibassistent beispielsweise auch im Rahmen eines duales Studiums zum Verfassen von 
 Praxisphasenberichten ohne datenschutzrechtliche Bedenken des Partnerunternehmens verwendet werden.\\ 
 Der Nutzer soll frei zwischen mehreren \glslink{glos:ki}{KI}-Modellen wählen können. Durch die Verwendung von Ollama ist es dem Nutzer auch möglich, selber zu entscheiden, welche Modelle zur Verfügung 
 stehen sollen. Um jedoch unerfahrenen Nutzern die Arbeit mit dem \glslink{glos:ki}{KI}-Werkzeug zu vereinfachen, soll zu jeder Aufgabe mit bereits vorgefertigtem Prompt ein bestimmtes KI-Modell 
@@ -138,14 +140,14 @@ notwendigen Informationen zurückgibt. Dieses wird im Frontend als PDF formatier
 
 \section{KI-Funktionalität}
 
-Die \glslink{glos:ki}{KI}-Modelle werden, wie in xxx beschrieben, mithilfe von Ollama eingebunden. Um einen \glslink{glos:ki}{KI}-Aufruf zu tätigen, wird eine Anfrage vom Backend an die lokale 
+Die \glslink{glos:ki}{KI}-Modelle werden, wie in \autoref{sec:kiModelle} beschrieben, mithilfe von Ollama eingebunden. Um einen \glslink{glos:ki}{KI}-Aufruf zu tätigen, wird eine Anfrage vom Backend an die lokale 
 Ollama-API geschickt. Dafür benötigt Ollama die Information, welches \glslink{glos:ki}{KI}-Modell verwendet werden soll, und welcher Inhalt mitgegeben werden soll. Dabei wird zwischen dem User-Prompt 
 und dem System-Prompt unterschieden. Insgesamt müssen aus dem Backend also drei verschiedene Variablen mitgegeben werden. Dazu werden folgende Angaben zusammengefasst: Die Aufgabe, 
 der bisherige Chatverlauf, der Inhalt des Paragraphen, eventuell die Nutzerkommentare zu den \glslink{glos:ki}{KI}-Antworten, sowie weitere im Frontend bestimmte Felder. Bevor diese Informationen dem 
 \glslink{glos:ki}{KI}-Modell geschickt werden, müssen sie zusammengesetzt werden. Dabei wird für jede der vorgegebenen Aufgaben ein Prompt angefügt, welcher der \glslink{glos:ki}{KI} 
 mitteilt, was für eine Art Inhalt generiert werden soll. Diese Prompts wurden manuell getestet. Die Antwort des \glslink{glos:ki}{KI}-Modells wurde bewertet und der Prompt entsprechend angepasst, bis der generierte Inhalt zufriedenstellend war.
-Außerdem wird für jede Aufgabe ein empfohlenes \glslink{glos:llm}{LLM} gewählt, welches die Aufgabe am besten erfüllt. Die Wahl der Modell wird in Abschnitt xxx beschrieben. Die Prompts sind auf Deutsch,
-da der Schreibassistent auf deutsche Sprache spezialisiert ist. Zudem lieferten englische Prompts während der Tests keine signifikant anderen Ergebnisse. 
+Außerdem wird für jede Aufgabe ein empfohlenes \glslink{glos:llm}{LLM} gewählt, welches die Aufgabe am besten erfüllt. Die Prompts sind auf Deutsch,da der Schreibassistent auf deutsche 
+Sprache spezialisiert ist. Zudem lieferten englische Prompts während der Tests keine signifikant anderen Ergebnisse. 
 
 \section{Problema}
 
@@ -162,8 +164,8 @@ Dafür gibt es verschiedene Möglichkeiten: Eine Option ist, den Input direkt zu
 Es wurde sich gegen diese Optionen entschieden, da das zwischengeschaltete \glslink{glos:ki}{KI}-Modell die Performanz einschränken würde. Das Verbieten einzelner Phrasen könnte während des 
 Schreibprozesses sehr einschränkend wirken.\cite{promptinjection}\\
 Eine andere Möglichkeit wäre das Filtern des Outputs. Da sich der Output eines umformulierten Textes jedoch kaum von dem eines neu generierten unterscheidet, ist dies auch keine 
-zureichende Lösung. Schließlich wurde eine Kombination aus Parametrisierung und Prompt Engineering umgesetzt. Bei den meisten Eingabefeldern werden die Möglichkeiten auf wenige 
+zureichende Lösung. Schließlich wurde eine Kombination aus Parametrisierung und Prompt-Engineering umgesetzt. Bei den meisten Eingabefeldern werden die Möglichkeiten auf wenige 
 festgelegte Optionen reduziert, sodass dort keine Eingabe von benutzerdefinierten Texten möglich ist. Bei einigen Feldern lässt sich dies jedoch nicht vermeiden. In diesem Fall wurde 
-Prompt Engineering angewendet, um der \glslink{glos:ki}{KI} möglichst genau aufzuzeigen, welche Teile des Prompts vom Nutzer kommen und was die eigentliche Aufgabe ist.\\
+Prompt-Engineering angewendet, um der \glslink{glos:ki}{KI} möglichst genau aufzuzeigen, welche Teile des Prompts vom Nutzer kommen und was die eigentliche Aufgabe ist.\\
 
 \end{document}

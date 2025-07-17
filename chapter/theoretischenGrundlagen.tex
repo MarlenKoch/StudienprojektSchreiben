@@ -24,6 +24,7 @@ Gewichtungen reduziert, sodass sie weniger Einfluss auf die entstehenden Ergebni
 Gewichtungen erhöht. \glslink{glos:nn}{NN}s bilden die Grundlage für weitere Technologien wie beispielsweise \glspl{llm}, welche auch für \glslink{glos:ki}{KI}-Schreibwerkzeuge verwendet werden. 
 
 \section{Large Language Models}
+\label{sec:llm}
 
 \begin{figure}[h!]
   \includegraphics[scale=0.37]{bilder/Transformer.png}
@@ -41,7 +42,7 @@ Moderne \glslink{glos:llm}{LLM}s wie ChatGPT basieren auf einer Transformer-Arch
 \item \textbf{Embedding:} Den Tokens werden vieldimensionale Vektoren zugeordnet. So werden sie anhand ihrer Bedeutung codiert. Die Richtungen der Vektoren im Vektorraum beinhalten semantische Bedeutungen. So liegen Wörter mit ähnlicher Bedeutung, beispielsweise Synonyme, nah beieinander.\cite{embedding}
 
 \item \textbf{Attention:} Die einzelnen als Vektoren codierten Tokens werden durch den umliegenden Text verändert, um den Kontext des Wortes und dessen semantische Bedeutung widerzuspiegeln. Dabei werden nacheinander die einzelnen Vektoren betrachtet und ein Skalarprodukt aus dem aktuellen und jeweils den anderen Vektoren des Textes gebildet. Das Skalarprodukt beschreibt die Relevanz des anderen Tokens für die Bedeutung des aktuellen Tokens. Je größer dieser Bedeutungwert ist, desto mehr wird der aktuelle Vektor auf Grundlage des anderen Vektors verändert.\\
-Die Attention-Funktion ist vollständig linear. Dieser Mechanismus lässt sich an folgendem Beispiel verdeutlichen: In den beiden Sätzen “Ich sitze auf der Bank” und “Ich habe in der Bank Geld abgehoben” hat das Wort “Bank” eine andere Bedeutung. Der Attention-Mechanismus passt die Vektoren, welche dieses Token codieren, so an, dass sie jeweils näher an den entsprechenden Synonymen “Parkbank” und “Kreditinstitut” liegen. Durch diese Codierung bleibt der Kontext, in welchem ein Wort verwendet wird, erhalten.\cite{attention, attention2} 
+Die Attention-Funktion ist vollständig linear. Dieser Mechanismus lässt sich an folgendem Beispiel verdeutlichen: In den beiden Sätzen "`Ich sitze auf der Bank"' und "`Ich habe in der Bank Geld abgehoben"' hat das Wort "`Bank"' eine andere Bedeutung. Der Attention-Mechanismus passt die Vektoren, welche dieses Token codieren, so an, dass sie jeweils näher an den entsprechenden Synonymen "`Parkbank"' und "`Kreditinstitut"' liegen. Durch diese Codierung bleibt der Kontext, in welchem ein Wort verwendet wird, erhalten.\cite{attention, attention2} 
 
 \item \textbf{\acrfull{mlp}:} Im Gegensatz zur ausschließlich linearen Attention-Funktion, kann das \glslink{glos:llm}{LLM} mithilfe des \acrshort{mlp}s auch nicht-lineare Zusammenhänge darstellen. Das \acrshort{mlp} ist ein kleines neuronales Netzwerk, meistens mit nur einer inneren Schicht sowie der Eingabe-und Ausgabeschicht. Jeder Vektor wird einmal als Input in dieses neuronale Netzwerk eingegeben und der Output zu dem ursprünglichen Vektor addiert. Mithilfe des \acrshort{mlp}s kann die Komplexität der Sprache erfasst werden.
 
@@ -55,23 +56,23 @@ Erreichen der vom Nutzer festgelegten maximalen Anzahl generierter Tokens oder d
 
 Mit dieser Architektur können erstaunliche Ergebnisse erzielt werden. Die generierten Texte ähneln menschengeschriebenen Texten sehr, wodurch sich viele Anwendungsgebiete für diese Technologie ergeben. Jedoch ergeben sich daraus auch einige Probleme und Risiken, welche im Folgenden erläutert werden sollen. 
 
-\section{Prompt und Kontext}
+\section{\gls{glos:prompt} und Kontext}
 
-Um nun zu bestimmen, was für einen Text das \glslink{glos:llm}{LLM} generieren soll, erhält es einen Input. Dieser wird als Prompt bezeichnet. Da KI-Modelle verschiedene Prompts bearbeiten können, ist es 
+Um nun zu bestimmen, was für einen Text das \glslink{glos:llm}{LLM} generieren soll, erhält es einen Input. Dieser wird als \gls{glos:prompt} bezeichnet. Da \glslink{glos:ki}{KI}-Modelle verschiedene Prompts bearbeiten können, ist es 
 möglich, ein Modell zum Lösen unterschiedlichster Aufgaben einzusetzen. Der Prompt setzt sich aus dem System-Prompt sowie dem User-Prompt zusammen. Zudem können noch weiteren Kontext-Angaben 
 ergänzt werden.\cite{systemprompt}\\
 Der System-Prompt stellt die Grundstruktur des Prompts dar und gibt dem \glslink{glos:llm}{LLM} einen grundlegenden Kontext für die Generierung des Textes mit. Zuerst wird die Information mitgeteilt, dass eine 
-Frage beantwortet beziehungsweise auf eine Nutzereingabe reagiert werden soll. Darüber hinaus wird dem Modell mitgeteilt, dass es im folgenden Chat die Rolle des KI-Assistenten übernimmt. 
+Frage beantwortet beziehungsweise auf eine Nutzereingabe reagiert werden soll. Darüber hinaus wird dem Modell mitgeteilt, dass es im folgenden Chat die Rolle des \glslink{glos:ki}{KI}-Assistenten übernimmt. 
 Meistens werden im System-Prompt noch weitere Informationen mitgegeben, wie zum Beispiel der Stil oder Ton des Textes. Außerdem kann dem \glslink{glos:llm}{LLM} hier mitgeteilt werden, dass bestimmte Wörter 
 nicht benutzt oder bestimmte Themen nicht angesprochen werden sollen, also eine erste Stufe von Filtern eingebaut werden.\cite{systemprompt}\\
-Der System-Prompt wird meist durch die Entwickler des \glslink{glos:llm}{LLM}s festgelegt und ändert sich nicht. Deswegen wird er auch als “Fixed Prompt” bezeichnet. Er ist für den Nutzer meist nicht sichtbar.\\
+Der System-Prompt wird meist durch die Entwickler des \glslink{glos:llm}{LLM}s festgelegt und ändert sich nicht. Deswegen wird er auch als "`Fixed-Prompt"' bezeichnet. Er ist für den Nutzer meist nicht sichtbar.\\
 Der zweite Bestandteil des Prompts ist der User-Prompt, welcher konkret vom Nutzer eingegeben wird. Dieser kann sich bei jeder neuen Anfrage ändern und ist für den Nutzer nicht nur sichtbar, sondern 
 auch veränderbar. Verändert man den Prompt, um ein besseres oder passenderes Ergebnis zu erzielen, wird dies als Prompt-Engineering bezeichnet. Um den Prompt effektiv anpassen zu können, um 
 ein gewünschtes Ergebnis zu erreichen, sind oft viele Versuche nötig sowie ein tief gehendes Verständnis für die Funktionsweise des \glslink{glos:llm}{LLM}s.\cite{promptengineering}\\
 Zusätzlich zum System-Prompt und User-Prompt können dem \glslink{glos:llm}{LLM} noch mehr Informationen mitgegeben werden. Die Summe aus dem Prompt und weiteren Angaben wird als Kontext bezeichnet. Dazu zählen 
 zum Beispiel der vorherige Chatverlauf, damit das \glslink{glos:llm}{LLM} sich auf die vorherige Konversation beziehen kann. Auch Texte, die für die Generierung der Antwort relevant sind, können im Kontext 
 übergeben werden. Ein weiteres Beispiel ist das sogenannte Few-Shot-Learning, bei dem eine  beispielhafte Konversation zwischen dem Nutzer und dem \glslink{glos:llm}{LLM} dargestellt wird, um Beispiele für das 
-gewünschte Format oder den Stil der Antwort zu geben.\\
+gewünschte Format oder den Stil der Antwort zu geben.\cite{kontext,FewShot}\\
 Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{glos:llm}{LLM} als Input mitgegeben werden können. Wird diese Anzahl überschritten, wird der Inhalt nicht vollständig mitgegeben, 
 was zu ungewünschten und unvollständigen Ergebnissen führen kann.
 
@@ -101,7 +102,7 @@ Wahrscheinlichkeit für unplausible oder falsche Inhalte größer. Ein Artikel d
 und somit auch ähnliche Wahrscheinlichkeiten haben. Dazu zählten zum Beispiel "`ähnliche numerische Werte wie Preise (9,99 EUR; 10,00 EUR), nahe beieinander liegende 
 Daten (2020, 2021), ähnlich klingende Namen, oder technische Begriffe und Abkürzungen (\glslink{glos:ki}{KI}, ML)"'\cite{halluzinationenFraunhofer}. Eine Verwechslung dieser Daten kann ebenfalls zu inkorrekten Aussagen 
 führen.\\
-Darüber hinaus können bei der Auswahl des nächsten Tokens aufgrund der Wahrscheinlichkeit, wie in Abschnitt xxx beschrieben, unpassende Wörter bevorzugt werden, welche 
+Darüber hinaus können bei der Auswahl des nächsten Tokens aufgrund der Wahrscheinlichkeit, wie in \autoref{sec:llm}  beschrieben, unpassende Wörter bevorzugt werden, welche 
 daraufhin die Grundlage für Halluzinationen bilden. Technisch begründet ist dieses Phänomen mit dem sogenannten Softmax-Bottleneck. Bei der Generierung der Liste von 
 Wahrscheinlichkeiten für das nächste Wort wird der Softmax-Algorithmus auf einen mehrdimensionalen Vektor angewendet. Aufgrund der Natur dieses Algorithmus kann nur 
 ein Ausschnitt aller möglichen Wahrscheinlichkeitsverteilungen dargestellt werden. Dadurch kann es passieren, dass die Verteilung nicht korrekt abgebildet und 
@@ -116,23 +117,25 @@ des wissenschaftlichen Schreibens, immer überprüft werden.\cite{allgemHalluzin
 
 
 \subsection{Erklärbarkeitsproblem}
+\label{sec:erklärbarkeitsproblem}
 
 Das Erklärbarkeitsproblem adressiert die Schwierigkeit, die Begründung für spezifische Entscheidungen \glslink{glos:ki}{KI} nachvollziehbar zu machen. Aufgrund der Funktionsweise nach dem sogenannten 
 "`Black-Box"'-Prinzip ist die Rekonstruktion der kausalen Faktoren, die zu einem bestimmten Ergebnis geführt haben, limitiert. Diese Intransparenz kann die Akzeptanz und das Vertrauen in 
 KI-basierte Entscheidungen beeinträchtigen. Darüber hinaus erschwert sie die Identifizierung und Korrektur von Fehlern in der zugrundeliegenden Architektur. Aktuelle Forschungsansätze 
-im Bereich der "`erklärbaren KI"' (XAI) zielen darauf ab, dieses Problem zu adressieren, indem sie beispielsweise Mechanismen zur Visualisierung und Darstellung des 
-Entscheidungsfindungsprozesses entwickeln.
+im Bereich der "`erklärbaren KI"' zielen darauf ab, dieses Problem zu adressieren, indem sie beispielsweise Mechanismen zur Visualisierung und Darstellung des 
+Entscheidungsfindungsprozesses entwickeln.\cite{explainable}
  
 
 \subsection{Ressourcenverbrauch}
 
 KI-Modelle verbrauchen sowohl während des Trainings als auch beim Bearbeiten der Anfragen viele Ressourcen. Desto größer das verwendete Modell, desto höher ist auch der Ressourcenverbrauch. 
-Der Stromverbrauch von GPT4 0.1 liegt laut eines im Jahr 2025 veröffentlichten Artikels bei bis zu 1 KWH pro Anfrage\cite{Energieverbrauch}. Für die oben beschriebene Anpassung der Parameter sind während des Bearbeitens einer Anfrage viele 
+Der Stromverbrauch von GPT4 0.1 liegt laut eines im Jahr 2025 veröffentlichten Artikels bei bis zu einer Kilowattstunde pro Anfrage\cite{Energieverbrauch}. Für die oben beschriebene Anpassung der Parameter sind während des Bearbeitens einer Anfrage viele 
 komplexe Berechnungen in möglichst kurzer Zeit notwendig. Auch das Training ist durch die große Menge benötigter Daten und die häufig wochen- bis monatelangen Trainingszeiten 
 energieintensiv. In den Rechenzentren wird zudem Wasser zur Kühlung verwendet. Der Wasser-und Ressourcenverbrauch der Nutzung eines \glslink{glos:ki}{KI}-Modells ist im Vergleich zu dem der Nutzung einer 
 Suchmaschine wie Google sehr hoch\cite{KINachhaltigkeit}. 
 
 \subsection{Datenschutz}
+\label{sec:datenschutz}
 
 Zudem besteht beim Training sowie bei der Nutzung von \glslink{glos:ki}{KI} das Problem des Datenschutzes. Die Trainingsdaten können personenbezogene Daten beinhalten. Das \glslink{glos:ki}{KI}-Modell kann bestimmte sensible 
 Informationen aus den Trainingsinhalten wiedergeben, auch wenn diese nicht absichtlich gespeichert werden sollen. Einige \glslink{glos:llm}{LLM}-Anbieter behalten sich das Recht vor, das Modell anhand der 
