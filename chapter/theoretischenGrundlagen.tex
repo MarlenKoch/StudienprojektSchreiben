@@ -4,8 +4,13 @@
 
 \section{Neuronale Netze}
 
+\begin{figure}[h!]
+  \includegraphics[scale=0.6]{bilder/NeuralNetwork.png}
+  \caption{Neuronales Netzwerk}
+  \label{fig:NN}
+\end{figure}
 \glspl{nn} bilden die Basis für \glslink{glos:ki}{KI}. Sie sind in ihrer Funktionsweise dem menschlichen Gehirn nachempfunden. Dementsprechend bestehen sie aus einer 
-bestimmten Anzahl von Neuronen. Diese sind in verschiedenen Schichten angeordnet. Die erste dieser Schichten wird als Eingabeschicht bezeichnet, die letzte als Ausgabeschicht. Dazwischen 
+bestimmten Anzahl von Neuronen. Diese sind, wie in Abb \ref{fig:NN} dargestellt, in verschiedenen Schichten angeordnet. Die erste dieser Schichten wird als Eingabeschicht bezeichnet, die letzte als Ausgabeschicht. Dazwischen 
 befinden sich mehrere sogenannte versteckte Schichten. Jedes Neuron ist über gewichtete Verbindungen mit allen Neuronen aus der vorherigen und der nachfolgenden Schicht verbunden. 
 An jedem gegebenen Zeitpunkt hat ein Neuron einen bestimmten Wert zwischen 0 und 1, welcher dem Output des Neurons entspricht. Dieser Wert ergibt sich aus der Verarbeitung der Inputs, welche 
 aus den Outputs der vorherigen Schicht berechnet werden, das heißt es wird eine Funktion auf die Summe aller Inputs ausgeführt. \\
@@ -20,8 +25,13 @@ Gewichtungen erhöht. \glslink{glos:nn}{NN}s bilden die Grundlage für weitere T
 
 \section{Large Language Models}
 
+\begin{figure}[h!]
+  \includegraphics[scale=0.37]{bilder/Transformer.png}
+  \caption{Transformer}
+  \label{fig:trans}
+\end{figure}
 \glspl{llm} sind eine Form der \glslink{glos:ki}{KI}, welche auf natürlicher Sprache basiert. Da sie entwickelt wurden, um Texte zu generieren, werden \glspl{llm} auch als generative \glslink{glos:ki}{KI} bezeichnet.
-Moderne \glslink{glos:llm}{LLM}s wie ChatGPT basieren auf einer Transformer-Architektur. Diese berechnet aus einem Eingabetext eine Wahrscheinlichkeitsverteilung 
+Moderne \glslink{glos:llm}{LLM}s wie ChatGPT basieren auf einer Transformer-Architektur, welche in Abb \ref{fig:trans} schematisch dargestellt ist. Diese berechnet aus einem Eingabetext eine Wahrscheinlichkeitsverteilung 
 über alle möglichen nächsten Tokens. Die Transformerarchitektur setzt sich aus folgenden Aspekten zusammen:\cite{architecture}\\
 
 \begin{itemize}
@@ -35,7 +45,7 @@ Die Attention-Funktion ist vollständig linear. Dieser Mechanismus lässt sich a
 
 \item \textbf{\acrfull{mlp}:} Im Gegensatz zur ausschließlich linearen Attention-Funktion, kann das \glslink{glos:llm}{LLM} mithilfe des \acrshort{mlp}s auch nicht-lineare Zusammenhänge darstellen. Das \acrshort{mlp} ist ein kleines neuronales Netzwerk, meistens mit nur einer inneren Schicht sowie der Eingabe-und Ausgabeschicht. Jeder Vektor wird einmal als Input in dieses neuronale Netzwerk eingegeben und der Output zu dem ursprünglichen Vektor addiert. Mithilfe des \acrshort{mlp}s kann die Komplexität der Sprache erfasst werden.
 
-\item \textbf{Decoder:} Die Architektur des \glslink{glos:llm}{LLM}s besteht aus mehreren Attention- und MLP-Schichten, welche abwechselnd hintereinander angeordnet sind. Abschließend verfügt es über einen Decoder, welcher den Output aus der letzten \acrshort{mlp}-Schicht als Input bekommt. Darauf wird eine Softmax-Funktion angewendet, welche eine Wahrscheinlichkeitsverteilung über alle Tokens ausgibt. Die Softmax-Funktion sorgt dafür, dass die Summe der Wahrscheinlichkeiten 1 beträgt, und jede einzelne Wahrscheinlichkeit im Intervall von 0 bis 1 liegt.\cite{architecture} 
+\item \textbf{Decoder:} Die Architektur des \glslink{glos:llm}{LLM}s besteht aus mehreren Attention- und MLP-Schichten, welche abwechselnd hintereinander angeordnet sind, wie in Abb \ref{fig:trans} dargestellt wird. Abschließend verfügt es über einen Decoder, welcher den Output aus der letzten \acrshort{mlp}-Schicht als Input bekommt. Darauf wird eine Softmax-Funktion angewendet, welche eine Wahrscheinlichkeitsverteilung über alle Tokens ausgibt. Die Softmax-Funktion sorgt dafür, dass die Summe der Wahrscheinlichkeiten 1 beträgt, und jede einzelne Wahrscheinlichkeit im Intervall von 0 bis 1 liegt.\cite{architecture} 
 \end{itemize}
 
 
