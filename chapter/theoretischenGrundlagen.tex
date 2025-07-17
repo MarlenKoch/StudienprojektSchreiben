@@ -21,7 +21,8 @@ Die Werte der Gewichtungen stehen zu Beginn noch nicht fest. Sie werden erst dur
 Gewichtungen. Dies wird durch Backpropagation erreicht. Dafür werden die Gewichtungen zunächst mit zufälligen Werten initialisiert. Dann wird der \glslink{glos:nn}{NN}-Algorithmus mit einer Vielzahl an 
 Trainingsdaten durchlaufen. Die erhaltenen werden mit den gewünschten Ergebnissen verglichen. Treten dabei zu starke Abweichungen auf, werden alle zu diesem Ergebnis beitragenden 
 Gewichtungen reduziert, sodass sie weniger Einfluss auf die entstehenden Ergebnisse haben. Stimmen gewünschtes und erhaltenes Ergebnis annähernd überein, werden die dazu beitragenden 
-Gewichtungen erhöht. \glslink{glos:nn}{NN}s bilden die Grundlage für weitere Technologien wie beispielsweise \glspl{llm}, welche auch für \glslink{glos:ki}{KI}-Schreibwerkzeuge verwendet werden. 
+Gewichtungen erhöht. Auf diese Art und Weise festgelegte Werte werden als Parameter des \glslink{glos:nn}{NN} bezeichnet.
+\glslink{glos:nn}{NN}s bilden die Grundlage für weitere Technologien wie beispielsweise \glspl{llm}, welche auch für \glslink{glos:ki}{KI}-Schreibwerkzeuge verwendet werden. 
 
 \section{Large Language Models}
 
@@ -48,12 +49,11 @@ Die Attention-Funktion ist vollständig linear. Dieser Mechanismus lässt sich a
 \item \textbf{Decoder:} Die Architektur des \glslink{glos:llm}{LLM}s besteht aus mehreren Attention- und MLP-Schichten, welche abwechselnd hintereinander angeordnet sind, wie in Abb \ref{fig:trans} dargestellt wird. Abschließend verfügt es über einen Decoder, welcher den Output aus der letzten \acrshort{mlp}-Schicht als Input bekommt. Darauf wird eine Softmax-Funktion angewendet, welche eine Wahrscheinlichkeitsverteilung über alle Tokens ausgibt. Die Softmax-Funktion sorgt dafür, dass die Summe der Wahrscheinlichkeiten 1 beträgt, und jede einzelne Wahrscheinlichkeit im Intervall von 0 bis 1 liegt.\cite{architecture} 
 \end{itemize}
 
+Die beschriebenen Bestandteile besitzen jeweils durch Training festgelegte Parameter. Da die Anzahl der Parameter insgesamt häufig in einem Bereich von mehreren Milliarden liegt, wird die Größe des LLM im Namen vor einem B (kurz für Billion, engl. für Milliarde) vermerkt. Eine Verson des LLMs Gemma3, welches etwa 12 Milliarden Parameter hat, wird zum Beispiel als gemma3:12B bezeichnet.\\
 
 Entsprechend der sich aus diesem Prozess ergebenden Wahrscheinlichkeitsverteilung wird in einem \glslink{glos:llm}{LLM} ein zufälliges nächstes Wort ausgewählt und an den generierten Text angefügt. 
 Der Prozess wird anschließend mit dem aktualisierten Text wiederholt, sodass immer neue Tokens angefügt werden, bis eine Abbruchbedingung erreicht ist. Diese kann unter anderem das 
 Erreichen der vom Nutzer festgelegten maximalen Anzahl generierter Tokens oder die Generierung eines Abbruchtokens vom \glslink{glos:llm}{LLM} selbst sein.\cite{architecture}\\
-
-Mit dieser Architektur können erstaunliche Ergebnisse erzielt werden. Die generierten Texte ähneln menschengeschriebenen Texten sehr, wodurch sich viele Anwendungsgebiete für diese Technologie ergeben. Jedoch ergeben sich daraus auch einige Probleme und Risiken, welche im Folgenden erläutert werden sollen. 
 
 \section{Prompt und Kontext}
 
@@ -76,6 +76,7 @@ Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{gl
 was zu ungewünschten und unvollständigen Ergebnissen führen kann.
 
 \section{Wirkungen und Nebenrisiken}
+Mit der beschriebenen Architektur können erstaunliche Ergebnisse erzielt werden. Die generierten Texte ähneln menschengeschriebenen Texten sehr, wodurch sich viele Anwendungsgebiete für diese Technologie ergeben. Jedoch ergeben sich daraus auch einige Probleme und Risiken, welche im Folgenden erläutert werden sollen. \\
 
 \subsection{Abhängigkeit von den Trainingsdaten}
 
