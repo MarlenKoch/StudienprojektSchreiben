@@ -119,9 +119,13 @@ Paragraphen gespeichert werden, was die Nachvollziehbarkeit für den benotenden 
 
 
 \section{Frontend und Backend}
-
+\begin{figure}[h!]
+  \includegraphics[scale=0.6]{bilder/Architektur.png}
+  \caption{Architekturschema}
+  \label{fig:architecture}
+\end{figure}
 Das Backend stellt die nötigen Endpunkte für das Frontend zur Verfügung, um Projekte, Paragraphen, Chats und Answers zu erstellen, zu löschen und abzurufen, oder bereits gespeicherte 
-Informationen zu ändern. Das Frontend nutzt diese Endpunkte, um die Funktionalität dem Nutzer bereitzustellen.\\
+Informationen zu ändern, sowie Aufrufe an Ollama zu senden (Abb \ref{fig:architecture}). Das Frontend nutzt diese Endpunkte, um die Funktionalität dem Nutzer bereitzustellen.\\
 
 Beim Erstellen eines Projektes in Modus 2 kann eine Zeit festgelegt werden, in welcher der Text bearbeitet werden kann. Die verbleibende Zeit wird über einen Timer angezeigt. Ist 
 dieser abgelaufen, wird der Modus automatisch auf Modus 3 gesetzt, sowie das \glslink{glos:ki}{KI}-Nutzungsverzeichnis und die Text-PDF generiert und heruntergeladen. Um zu verhindern, dass Schüler 
