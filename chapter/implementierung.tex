@@ -16,7 +16,7 @@ Das Nutzerinterface des Schreibassistenten soll intuitiv und verständlich gesta
 generativer \glslink{glos:ki}{KI} zu vereinfachen, werden die in \autoref{ch:anforderungen} identifizierten Anforderungen an ein \glslink{glos:ki}{KI}-Werkzeug umgesetzt. Dies beinhaltet Tooltips an Knöpfen, welche mit der 
 \glslink{glos:ki}{KI}-Funktionalität verbunden sind. Diese sollen die Funktionalität für den Nutzer verständlich erklären. Jeder Nutzer soll so nachvollziehen können, welchen Einfluss eine Eingabe in 
 einem bestimmten Textfeld oder eine Auswahl aus einem Drop-Down Menü auf die generierte Antwort haben. Zudem wird der Nutzer bei dem Anlegen eines neuen Projektes gewarnt, dass 
-\glslink{glos:ki}{KI}-Modell halluzinieren können. Damit soll, ähnlich wie in der in \autoref{ch:anforderungen} behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Missinformationen verringert werden. Dadurch 
+\glslink{glos:ki}{KI}-Modell halluzinieren können. Damit soll, ähnlich wie in der in \autoref{ch:anforderungen} behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Misinformationen verringert werden. Dadurch 
 soll das Risiko, dass Fehlinformationen in die Arbeiten der Schüler und Studenten gelangen, verringert werden. Die Nutzer sollen angeregt werden, die von der \glslink{glos:ki}{KI} generierten Inhalte 
 kritisch zu hinterfragen.\\
 Auch bei der Formulierung von Prompts sollen die Nutzer unterstützt werden. Da bereits die kleinste Änderung im Prompt oder in der Reihenfolge der mitgegebenen Informationen großen 
@@ -43,8 +43,8 @@ verhindert werden, dass gesamte Texte \glslink{glos:ki}{KI}-generiert werden. Zu
 Nachvollziehbarkeit der \glslink{glos:ki}{KI}-Nutzung für Lehrkräfte.\\ 
 Zuletzt soll der Schreibassistent auch beim Schreiben von benoteten Arbeiten während des Unterrichts eingesetzt werden können. Dazu dient der Prüfungsmodus. Es kann eine bestimmte 
 Zeit eingestellt werden, in welcher der Schüler seinen Text bearbeiten kann. Ist diese Zeit abgelaufen, wird der entstandene Text automatisch abgegeben. Das \glslink{glos:ki}{KI}-Nutzungsverzeichnis 
-wird wie im Schülermodus erstellt, sodass alle \glslink{glos:ki}{KI}-Chats später erkennbar sind. Zudem wird das öffnen anderer Projekte oder Tabs verhindert. Sollte ein Schüler versuchen, über ein 
-anderes Projekt im Schreibassistenten oder über eine andere Anwendung \glslink{glos:ki}{KI} oder andere Hilfsmittel zu verwenden, wird die Arbeit automatisch abgegeben. Dadurch sollsichergestellt 
+wird wie im Schülermodus erstellt, sodass alle \glslink{glos:ki}{KI}-Chats später erkennbar sind. Zudem wird das Öffnen anderer Projekte oder Tabs verhindert. Sollte ein Schüler versuchen, über ein 
+anderes Projekt im Schreibassistenten oder über eine andere Anwendung \glslink{glos:ki}{KI} oder andere Hilfsmittel zu verwenden, wird die Arbeit automatisch abgegeben. Dadurch soll sichergestellt 
 werden, dass das Schreiben der Arbeit weiterhin eine eigene Leistung des Schülers ist. Die \glslink{glos:ki}{KI} hilft bei der Formulierung und mit der Rechtschreibung des Textes, den Inhalt selbst 
 muss jedoch der Schüler verfassen. Insgesamt soll eine sichere Umgebung zur Verfügung gestellt werden, wodurch der Einsatz generativer \glslink{glos:ki}{KI} auch während des Unterrichts ermöglicht wird.
 
@@ -87,7 +87,7 @@ Ausdruck, grammatikalische Korrektheit und Inhalt überprüft. Dabei ergaben sic
 
 \item \textbf{lukasmalkmus/llama3-sauerkraut} ist ein acht Milliarden Parameter großes Llama-3 Modell mit Feinabstimmung auf die deutsche Sprache\cite{sauerkraut}. Im Test antwortet das Modell stellenweise auf Englisch, obwohl im Prompt eine deutsche Antwort gefordert wird. Einige deutsche Begriffe aus dem Prompt gehen verloren oder werden durch ähnlich klingende englische Begriffe ersetzt. Das Modell wird im Schreibassistenten für keine Aufgabe verwendet.
 
-\item \textbf{mayflowergmbh/wiedervereinigung} ist die Kombination aus mehreren auf Mistral-basierenden \glslink{glos:ki}{KI}-Modellen mit einer Größe von sieben Milliarden Parametern und ebenfalls auf die deutsche Sprache abgestimmt\cite{wiedervereinigung}. Im Test fügt es häufig neuen Inhalt hinzu, statt sich auf die eigentlich geforderte Aufgabe zu begrenzen. Das Modell wird im Schreibassistenten für keine Aufgabe verwendet.
+\item \textbf{mayflowergmbh/wiedervereinigung} ist die Kombination aus mehreren auf Mistral basierenden \glslink{glos:ki}{KI}-Modellen mit einer Größe von sieben Milliarden Parametern und ebenfalls auf die deutsche Sprache abgestimmt\cite{wiedervereinigung}. Im Test fügt es häufig neuen Inhalt hinzu, statt sich auf die eigentlich geforderte Aufgabe zu begrenzen. Das Modell wird im Schreibassistenten für keine Aufgabe verwendet.
 
 \item \textbf{mayflowergmbh/wiederchat} ist eine sieben Milliarden Parameter große erweiterte Variante des Wiedervereinigungs-Modells führt während des Tests Prompts meist nicht vollständig aus\cite{wiederchat}. Für das Zusammenfassen von Texten gibt es jedoch die beste Antwort, da lediglich Inhalt aus dem Text widergegeben wurde und das Format den geforderten Stichpunkten entsprach. Dieses Modell wird im Schreibassistenten für das Zusammenfassen von Texten vorgeschlagen.
 
@@ -110,7 +110,7 @@ Informationen. Neben der ID und dem Projekttitel hat diese Tabelle noch das Feld
 Einschränkungen. Modus 1 und 2 haben die Einschränkungen des Schülermodus, wobei in Modus 2 der Text nur in einer bestimmten Zeit bearbeitet werden kann. Um im Frontend einen Timer 
 zu ermöglichen, werden im Backend die Startzeit sowie die Dauer des Timers vermerkt. Schließlich gibt es noch den Modus 3, welcher der Abgegeben-Modus ist. In diesem kann das Projekt 
 nicht weiter bearbeitet, sondern nur gelesen und das \glslink{glos:ki}{KI}-Nutzungsverzeichnis generiert werden.\\
-Jedes Projekt kann mehrere Paragraphen haben. Diese sind der vom Nutzer geschriebene Text. Jedem Paragraphen können wiederum mehrere K\glslink{glos:ki}{KI}-Chats zugeordnet werden. Die Chats haben 
+Jedes Projekt kann mehrere Paragraphen haben. Diese sind der vom Nutzer geschriebene Text. Jedem Paragraphen können wiederum mehrere \glslink{glos:ki}{KI}-Chats zugeordnet werden. Die Chats haben 
 jeweils einen Titel und können mehrere "`Answers"' beinhalten. Die "`Answers"' stellen die eigentliche Konversation mit der \glslink{glos:ki}{KI} dar. Sie bestehen aus der Anfrage des Nutzers mit allen 
 Informationen die gespeichert werden sollen, sowie einem optionalen Kommentar, welcher aktiviert sein kann. Ist der Kommentar aktiviert, so wird er der \glslink{glos:ki}{KI} bei den nächsten Anfragen 
 im Chat mitgegeben, sonst nicht. Außerdem hat jede Answer einen Zeitstempel, welcher für das \glslink{glos:ki}{KI}-Nutzungsverzeichnis relevant ist.\\
@@ -159,11 +159,11 @@ Ein weiteres Problem bestand darin, dass Variablen im Frontend nur temporär ges
 Timers. Um dies zu umgehen werden im Backend die Werte "`Starttime"' und "`Duration"', also der Startzeitpunkt des Timers und die Dauer der Bearbeitungszeit, gespeichert.\\ 
 Schließlich besteht bei der Nutzung des Schreibassistenten noch die Gefahr des sogenannten Prompt-Injectings, also dass Schüler im Falle von eingeschränkter Funktionalität versuchen 
 könnten, diese Einschränkungen zu umgehen, indem sie im Paragraphen oder in bestimmten Eingabefeldern ganze Prompts eingeben. Dies soll so gut es geht verhindert werden.\\ 
-Dafür gibt es verschiedene Möglichkeiten: Eine Option ist, den Input direkt zu filtern, um vorher zu überprüfen, ob ein Prompt-Injection-Versuch stattfindet. Dies könnte zum Beispiel 
+Dafür gibt es verschiedene Möglichkeiten: Eine Option ist, die Eingabe direkt zu filtern, um vorher zu überprüfen, ob ein Prompt-Injection-Versuch stattfindet. Dies könnte zum Beispiel 
 über ein zwischengeschaltetes \glslink{glos:llm}{LLM} geschehen, welches darauf trainiert wurde, Prompt-Injection zu erkennen. Des Weiteren könnten bestimmte Wörter oder Phrasen statisch verboten werden. 
 Es wurde sich gegen diese Optionen entschieden, da das zwischengeschaltete \glslink{glos:ki}{KI}-Modell die Performanz einschränken würde. Das Verbieten einzelner Phrasen könnte während des 
 Schreibprozesses sehr einschränkend wirken.\cite{promptinjection}\\
-Eine andere Möglichkeit wäre das Filtern des Outputs. Da sich der Output eines umformulierten Textes jedoch kaum von dem eines neu generierten unterscheidet, ist dies auch keine 
+Eine andere Möglichkeit wäre das Filtern der Ausgabe. Da sich die Ausgabe eines umformulierten Textes jedoch kaum von der eines neu generierten unterscheidet, ist dies auch keine 
 zureichende Lösung. Schließlich wurde eine Kombination aus Parametrisierung und Prompt-Engineering umgesetzt. Bei den meisten Eingabefeldern werden die Möglichkeiten auf wenige 
 festgelegte Optionen reduziert, sodass dort keine Eingabe von benutzerdefinierten Texten möglich ist. Bei einigen Feldern lässt sich dies jedoch nicht vermeiden. In diesem Fall wurde 
 Prompt-Engineering angewendet, um der \glslink{glos:ki}{KI} möglichst genau aufzuzeigen, welche Teile des Prompts vom Nutzer kommen und was die eigentliche Aufgabe ist.\\
