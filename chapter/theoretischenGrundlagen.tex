@@ -12,8 +12,8 @@
 \glspl{nn} bilden die Basis für \glslink{glos:ki}{KI}. Sie sind in ihrer Funktionsweise dem menschlichen Gehirn nachempfunden. Dementsprechend bestehen sie aus einer 
 bestimmten Anzahl von Neuronen. Diese sind, wie in Abb \ref{fig:NN} dargestellt, in verschiedenen Schichten angeordnet. Die erste dieser Schichten wird als Eingabeschicht bezeichnet, die letzte als Ausgabeschicht. Dazwischen 
 befinden sich mehrere sogenannte versteckte Schichten. Jedes Neuron ist über gewichtete Verbindungen mit allen Neuronen aus der vorherigen und der nachfolgenden Schicht verbunden. 
-An jedem gegebenen Zeitpunkt hat ein Neuron einen bestimmten Wert zwischen 0 und 1, welcher dem Output des Neurons entspricht. Dieser Wert ergibt sich aus der Verarbeitung der Inputs, welche 
-aus den Outputs der vorherigen Schicht berechnet werden, das heißt es wird eine Funktion auf die Summe aller Inputs ausgeführt. \\
+An jedem gegebenen Zeitpunkt hat ein Neuron einen bestimmten Wert zwischen 0 und 1, welcher der Ausgabe des Neurons entspricht. Dieser Wert ergibt sich aus der Verarbeitung der Eingaben, welche 
+aus den Ausgaben der vorherigen Schicht berechnet werden, das heißt es wird eine Funktion auf die Summe aller Eingaben ausgeführt. \\
 Jede Verbindung zwischen Neuronen verfügt über eine Gewichtung zwischen -1 und 1. Diese bestimmt, mit welcher Zahl der Wert eines Neurons multipliziert wird, bevor dieser an die Neuronen in 
 der folgenden Schicht weitergegeben wird. Die Gewichtungen der Verbindungen zwischen zwei Schichten können als Matrix dargestellt werden. Der Übergang von einer 
 Schicht zu der darauf folgenden entspricht einer Matrixmultiplikation. \\
@@ -44,20 +44,18 @@ Moderne \glslink{glos:llm}{LLM}s wie ChatGPT basieren auf einer Transformer-Arch
 \item \textbf{Attention:} Die einzelnen als Vektoren codierten Tokens werden durch den umliegenden Text verändert, um den Kontext des Wortes und dessen semantische Bedeutung widerzuspiegeln. Dabei werden nacheinander die einzelnen Vektoren betrachtet und ein Skalarprodukt aus dem aktuellen und jeweils den anderen Vektoren des Textes gebildet. Das Skalarprodukt beschreibt die Relevanz des anderen Tokens für die Bedeutung des aktuellen Tokens. Je größer dieser Bedeutungwert ist, desto mehr wird der aktuelle Vektor auf Grundlage des anderen Vektors verändert.\\
 Die Attention-Funktion ist vollständig linear. Dieser Mechanismus lässt sich an folgendem Beispiel verdeutlichen: In den beiden Sätzen “Ich sitze auf der Bank” und “Ich habe in der Bank Geld abgehoben” hat das Wort “Bank” eine andere Bedeutung. Der Attention-Mechanismus passt die Vektoren, welche dieses Token codieren, so an, dass sie jeweils näher an den entsprechenden Synonymen “Parkbank” und “Kreditinstitut” liegen. Durch diese Codierung bleibt der Kontext, in welchem ein Wort verwendet wird, erhalten.\cite{attention, attention2} 
 
-\item \textbf{\acrfull{mlp}:} Im Gegensatz zur ausschließlich linearen Attention-Funktion, kann das \glslink{glos:llm}{LLM} mithilfe des \acrshort{mlp}s auch nicht-lineare Zusammenhänge darstellen. Das \acrshort{mlp} ist ein kleines neuronales Netzwerk, meistens mit nur einer inneren Schicht sowie der Eingabe-und Ausgabeschicht. Jeder Vektor wird einmal als Input in dieses neuronale Netzwerk eingegeben und der Output zu dem ursprünglichen Vektor addiert. Mithilfe des \acrshort{mlp}s kann die Komplexität der Sprache erfasst werden.
+\item \textbf{\acrfull{mlp}:} Im Gegensatz zur ausschließlich linearen Attention-Funktion, kann das \glslink{glos:llm}{LLM} mithilfe des \acrshort{mlp}s auch nicht-lineare Zusammenhänge darstellen. Das \acrshort{mlp} ist ein kleines neuronales Netzwerk, meistens mit nur einer inneren Schicht sowie der Eingabe-und Ausgabeschicht. Jeder Vektor wird einmal als Eingabe in dieses neuronale Netzwerk eingegeben und das Ergebnis zu dem ursprünglichen Vektor addiert. Mithilfe des \acrshort{mlp}s kann die Komplexität der Sprache erfasst werden.
 
-\item \textbf{Decoder:} Die Architektur des \glslink{glos:llm}{LLM}s besteht aus mehreren Attention- und MLP-Schichten, welche abwechselnd hintereinander angeordnet sind, wie in Abb \ref{fig:trans} dargestellt wird. Abschließend verfügt es über einen Decoder, welcher den Output aus der letzten \acrshort{mlp}-Schicht als Input bekommt. Darauf wird eine Softmax-Funktion angewendet, welche eine Wahrscheinlichkeitsverteilung über alle Tokens ausgibt. Die Softmax-Funktion sorgt dafür, dass die Summe der Wahrscheinlichkeiten 1 beträgt, und jede einzelne Wahrscheinlichkeit im Intervall von 0 bis 1 liegt.\cite{architecture} 
+\item \textbf{Decoder:} Die Architektur des \glslink{glos:llm}{LLM}s besteht aus mehreren Attention- und MLP-Schichten, welche abwechselnd hintereinander angeordnet sind, wie in Abb \ref{fig:trans} dargestellt wird. Abschließend verfügt es über einen Decoder, welcher die Ausgabe aus der letzten \acrshort{mlp}-Schicht als Eingabe bekommt. Darauf wird eine Softmax-Funktion angewendet, welche eine Wahrscheinlichkeitsverteilung über alle Tokens ausgibt. Die Softmax-Funktion sorgt dafür, dass die Summe der Wahrscheinlichkeiten 1 beträgt, und jede einzelne Wahrscheinlichkeit im Intervall von 0 bis 1 liegt.\cite{architecture} 
 \end{itemize}
 
-Die beschriebenen Bestandteile besitzen jeweils durch Training festgelegte Parameter. Da die Anzahl der Parameter insgesamt häufig in einem Bereich von mehreren Milliarden liegt, wird die Größe des LLM im Namen vor einem B (kurz für Billion, engl. für Milliarde) vermerkt. Eine Verson des LLMs Gemma3, welches etwa 12 Milliarden Parameter hat, wird zum Beispiel als gemma3:12B bezeichnet.\\
-
-Entsprechend der sich aus diesem Prozess ergebenden Wahrscheinlichkeitsverteilung wird in einem \glslink{glos:llm}{LLM} ein zufälliges nächstes Wort ausgewählt und an den generierten Text angefügt. 
+Die beschriebenen Bestandteile besitzen jeweils durch Training festgelegte Parameter. Entsprechend der sich aus diesem Prozess ergebenden Wahrscheinlichkeitsverteilung wird in einem \glslink{glos:llm}{LLM} ein zufälliges nächstes Wort ausgewählt und an den generierten Text angefügt. 
 Der Prozess wird anschließend mit dem aktualisierten Text wiederholt, sodass immer neue Tokens angefügt werden, bis eine Abbruchbedingung erreicht ist. Diese kann unter anderem das 
 Erreichen der vom Nutzer festgelegten maximalen Anzahl generierter Tokens oder die Generierung eines Abbruchtokens vom \glslink{glos:llm}{LLM} selbst sein.\cite{architecture}\\
 
 \section{Prompt und Kontext}
 
-Um nun zu bestimmen, was für einen Text das \glslink{glos:llm}{LLM} generieren soll, erhält es einen Input. Dieser wird als Prompt bezeichnet. Da KI-Modelle verschiedene Prompts bearbeiten können, ist es 
+Um nun zu bestimmen, was für einen Text das \glslink{glos:llm}{LLM} generieren soll, erhält es eine Eingabe. Diese wird als Prompt bezeichnet. Da KI-Modelle verschiedene Prompts bearbeiten können, ist es 
 möglich, ein Modell zum Lösen unterschiedlichster Aufgaben einzusetzen. Der Prompt setzt sich aus dem System-Prompt sowie dem User-Prompt zusammen. Zudem können noch weiteren Kontext-Angaben 
 ergänzt werden.\cite{systemprompt}\\
 Der System-Prompt stellt die Grundstruktur des Prompts dar und gibt dem \glslink{glos:llm}{LLM} einen grundlegenden Kontext für die Generierung des Textes mit. Zuerst wird die Information mitgeteilt, dass eine 
@@ -72,7 +70,7 @@ Zusätzlich zum System-Prompt und User-Prompt können dem \glslink{glos:llm}{LLM
 zum Beispiel der vorherige Chatverlauf, damit das \glslink{glos:llm}{LLM} sich auf die vorherige Konversation beziehen kann. Auch Texte, die für die Generierung der Antwort relevant sind, können im Kontext 
 übergeben werden. Ein weiteres Beispiel ist das sogenannte Few-Shot-Learning, bei dem eine  beispielhafte Konversation zwischen dem Nutzer und dem \glslink{glos:llm}{LLM} dargestellt wird, um Beispiele für das 
 gewünschte Format oder den Stil der Antwort zu geben.\\
-Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{glos:llm}{LLM} als Input mitgegeben werden können. Wird diese Anzahl überschritten, wird der Inhalt nicht vollständig mitgegeben, 
+Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{glos:llm}{LLM} als Eingabe mitgegeben werden können. Wird diese Anzahl überschritten, wird der Inhalt nicht vollständig mitgegeben, 
 was zu ungewünschten und unvollständigen Ergebnissen führen kann.
 
 \section{Wirkungen und Nebenrisiken}
