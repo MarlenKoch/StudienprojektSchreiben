@@ -46,7 +46,7 @@ erfasst werden. Jeder Vektor durchläuft das \acrshort{mlp}, dessen Ausgabe zum 
 \acrshort{mlp}-Schicht, worauf die Softmax-Funktion eine Wahrscheinlichkeitsverteilung über alle Tokens berechnet. Durch die Anwendung dieser Funktion ist die Summe der Wahrscheinlichkeiten 1 und jede liegt im Intervall zwischen 0 und 1.\cite{architecture} 
 \end{itemize}
 
-Basierend auf der sich so ergebenen Wahrscheinlichkeitsverteilung wählt das \glslink{glos:llm}{LLM} zufällig ein nächstes Wort und fügt es dem Text an. Der Vorgang wiederholt sich mit dem aktualisierten Text, 
+Die beschriebenen Bestandteile besitzen jeweils durch Training festgelegte Parameter. Basierend auf der sich so ergebenen Wahrscheinlichkeitsverteilung wählt das \glslink{glos:llm}{LLM} zufällig ein nächstes Wort und fügt es dem Text an. Der Vorgang wiederholt sich mit dem aktualisierten Text, 
 bis eine Abbruchbedingung eintritt, etwa eine maximale Tokenanzahl oder ein spezielles Abbruchtoken.\cite{architecture}\\
 
 \section{\gls{glos:prompt} und Kontext}
@@ -66,7 +66,7 @@ Zusätzlich zum System-Prompt und User-Prompt können dem \glslink{glos:llm}{LLM
 zum Beispiel der vorherige Chatverlauf, damit das \glslink{glos:llm}{LLM} sich auf die vorherige Konversation beziehen kann. Auch Texte, die für die Generierung der Antwort relevant sind, können im Kontext 
 übergeben werden. Ein weiteres Beispiel ist das sogenannte Few-Shot-Learning, bei dem eine  beispielhafte Konversation zwischen dem Nutzer und dem \glslink{glos:llm}{LLM} dargestellt wird, um Beispiele für das 
 gewünschte Format oder den Stil der Antwort zu geben.\cite{kontext,FewShot}\\
-Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{glos:llm}{LLM} als Input mitgegeben werden können. Wird diese Anzahl überschritten, wird der Inhalt nicht vollständig mitgegeben, 
+Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{glos:llm}{LLM} als Eingabe mitgegeben werden können. Wird diese Anzahl überschritten, wird der Inhalt nicht vollständig mitgegeben, 
 was zu ungewünschten und unvollständigen Ergebnissen führen kann.
 
 \section{Wirkungen und Nebenrisiken}
