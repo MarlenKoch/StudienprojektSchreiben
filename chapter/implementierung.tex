@@ -98,7 +98,12 @@ Ausdruck, grammatikalische Korrektheit und Inhalt überprüft. Dabei ergaben sic
 [vllt noch was dazu sagen, wie man sich neue modelle ziehen kann]
 
 \section{Aufbau der Datenbank}
-Die Datenbank wird in Abb.. schematisch dargestellt. Die Datenbank hat insgesamt vier miteinander verknüpfte Tabellen. Die erste Tabelle speichert alle zu einem Projekt gehörenden 
+\begin{figure}[h!]
+  \includegraphics[scale=0.14]{bilder/Datenbank.png}
+  \caption{Datenbankschema}
+  \label{fig:data}
+\end{figure}
+Die Datenbank wird in Abb \ref{fig:data} schematisch dargestellt. Die Datenbank hat insgesamt vier miteinander verknüpfte Tabellen. Die erste Tabelle speichert alle zu einem Projekt gehörenden 
 Informationen. Neben der ID und dem Projekttitel hat diese Tabelle noch das Feld "`mode"', welches den Modus des Projektes angibt. Modus 0 steht dabei für den normalen Modus ohne 
 Einschränkungen. Modus 1 und 2 haben die Einschränkungen des Schülermodus, wobei in Modus 2 der Text nur in einer bestimmten Zeit bearbeitet werden kann. Um im Frontend einen Timer 
 zu ermöglichen, werden im Backend die Startzeit sowie die Dauer des Timers vermerkt. Schließlich gibt es noch den Modus 3, welcher der Abgegeben-Modus ist. In diesem kann das Projekt 
@@ -110,6 +115,8 @@ im Chat mitgegeben, sonst nicht. Außerdem hat jede Answer einen Zeitstempel, we
 Zusätzlich zu den beschriebenen Verknüpfungen der Tabellen gibt es noch eine Verknüpfung zwischen den Projekten und den Answers. Diese sorgt dafür, dass im Schülermodus, in welchem 
 alle \glslink{glos:ki}{KI}-Anfragen gespeichert werden sollen, selbst beim Löschen des Paragraphen die Anfrage nicht verloren geht. So können im \glslink{glos:ki}{KI}-Nutzungsverzeichnis die \glslink{glos:ki}{KI}-Anfragen für gelöschte 
 Paragraphen gespeichert werden, was die Nachvollziehbarkeit für den benotenden Lehrer erhöht.
+
+
 
 \section{Frontend und Backend}
 
