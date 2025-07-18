@@ -5,7 +5,8 @@
 
 \subsection{Ziel der Implementierung}
 
-Die Entwicklung des hier beschriebenen Schreibassistenten hat das Ziel, ein innovatives \glslink{glos:ki}{KI}-Werkzeug zu schaffen, das vor allem Schüler und Studenten bei dem Verfassen 
+
+Die Entwicklung des hier beschriebenen Schreibassistenten verfolgt das Ziel, ein innovatives \glslink{glos:ki}{KI}-Werkzeug zu schaffen, das vor allem Schüler und Studenten bei dem Verfassen 
 verschiedener Texte unterstützt. Die von Studenten genutzten Text-Editoren wie Overleaf sollen nicht ersetzt werden. Stattdessen soll eine Möglichkeit geboten werden, 
 \glslink{glos:ki}{KI}-Chats mit unterschiedlichen \glslink{glos:llm}{LLM}s übersichtlich zu sammeln. Es soll, wie in \autoref{sec:nachteile} beschrieben, eine Art "`Augmented Intelligence"' geschaffen werden, die die Effizienz im Schreibprozess 
 steigert, aber nicht das komplette Verfassen übernimmt.\\ Im Gegensatz zu den in \autoref{sec:bereitsBestehendeLoesungen} beschriebenen bestehenden Lösungen, sollen verschiedene \glslink{glos:ki}{KI}-Chats 
@@ -16,6 +17,7 @@ generativer \glslink{glos:ki}{KI} zu vereinfachen, werden die in \autoref{ch:anf
 ein Textfeld oder eine Auswahl aus einem Drop-Down-Menü auf die Antwort hat. Zudem wird der Nutzer beim Anlegen eines Projekts gewarnt, dass 
 \glslink{glos:ki}{KI}-Modelle halluzinieren können. Damit soll, ähnlich wie in der in \autoref{ch:anforderungen} behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Misinformationen verringert werden. Dadurch 
 wird das Risiko, dass Fehlinformationen in Arbeiten von Schülern und Studenten gelangen, reduziert. Der Nutzer soll angeregt werden, die von der \glslink{glos:ki}{KI} generierten Inhalte 
+
 kritisch zu hinterfragen.\\
 Auch bei der Formulierung von Prompts soll der Nutzer Unterstützung erhalten. Da bereits kleine Änderungen im Prompt oder in der Reihenfolge der Informationen großen 
 Einfluss auf die \glslink{glos:ki}{KI}-Antwort haben können, sind verlässliche und reproduzierbare Abläufe schwer zu erreichen\cite{creativeWriting}. Dies soll durch das Zusammensetzen vorgefertigter 
@@ -70,6 +72,7 @@ Prüfungen der Antworten auf Ausdruck, Grammatik und Inhalt. Im Folgenden werden
 
 \begin{itemize} \item \textbf{lukasmalkmus/llama3-sauerkraut} (8 Mrd. Parameter, auf Llama-3 basierend)\cite{sauerkraut}: Antwortet teils auf Englisch oder ersetzt deutsche Begriffe. Wird daher im Schreibassistenten nicht verwendet.
 
+
 \item \textbf{mayflowergmbh/wiedervereinigung} (auf Mistral basierend, 7 Mrd. Parameter)\cite{wiedervereinigung}: Fügt oft neuen Inhalt hinzu statt der Aufgabe zu folgen. Nicht verwendet.
 
 \item \textbf{mayflowergmbh/wiederchat} (7 Mrd. Parameter)\cite{wiederchat}: Führt Prompts oft nicht ganz aus, liefert aber beim Zusammenfassen die besten Stichpunkt-Antworten. Wird dafür empfohlen.
@@ -90,6 +93,7 @@ lieferten. Sie sind auf Deutsch verfasst, da der Schreibassistent auf die deutsc
   \caption{Datenbankschema}
   \label{fig:data}
 \end{figure}
+
 Die Datenbank wird in Abb. \ref{fig:data} schematisch dargestellt und umfasst vier miteinander verknüpfte Tabellen. Die erste Tabelle speichert alle projektbezogenen Informationen wie ID, 
 Projekttitel und den "`mode"', der den Modus des Projektes angibt. Modus 0 steht für den normalen Modus ohne Einschränkungen, Modus 1 und 2 für den Schülermodus, wobei Modus 2 zusätzlich 
 eine Bearbeitungszeit mithilfe von Startzeit und Dauer im Backend vorgibt. Modus 3 (Abgegeben-Modus) ermöglicht nur noch das Lesen des Textes und Generieren des \glslink{glos:ki}{KI}-Nutzungsverzeichnisses, 
