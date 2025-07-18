@@ -44,7 +44,7 @@ Vektoren nahe der Tokens "`Parkbank"' oder "`Kreditinstitut"'. So bleibt der Kon
 erfasst werden. Jeder Vektor durchläuft das \acrshort{mlp}, dessen Ausgabe zum ursprünglichen Vektor addiert wird. Somit kann die Komplexität der Sprache erfasst werden.\cite{mlp}
 
 \item \textbf{Decoder:} Ein \glslink{glos:llm}{LLM} besteht aus abwechselnden Attention- und MLP-Schichten (Abb. \ref{fig:trans}). Abschließend erhält der Decoder die Ausgabe aus der letzten 
-\acrshort{mlp}-Schicht, worauf die Softmax-Funktion eine Wahrscheinlichkeitsverteilung über alle Tokens berechnet. Durch die Anwendung dieser Funktion ist die Summe der Wahrscheinlichkeiten 1 und jede liegt im Intervall zwischen 0 und 1.\cite{architecture} 
+\acrshort{mlp}-Schicht, worauf die Softmax-Funktion eine Wahrscheinlichkeitsverteilung über alle Tokens berechnet. Durch die Anwendung dieser Funktion ist die Summe der Wahrscheinlichkeiten 1 und jede liegt im \mbox{Intervall zwischen 0 und 1.\cite{architecture}}
 \end{itemize}
 
 Die beschriebenen Bestandteile besitzen jeweils durch Training festgelegte \glslink{parameter}{Parameter}. Basierend auf der sich so ergebenen Wahrscheinlichkeitsverteilung wählt das \glslink{glos:llm}{LLM} zufällig ein nächstes Wort und fügt es dem Text an. Der Vorgang wiederholt sich mit dem aktualisierten Text, 
@@ -53,10 +53,10 @@ bis eine Abbruchbedingung eintritt, etwa eine maximale Tokenanzahl oder ein spez
 \section{\gls{glos:prompt} und Kontext}
 
 Um zu bestimmen, welchen Text das \glslink{glos:llm}{LLM} generieren soll, erhält es Eingaben, den sogenannten \gls{glos:prompt}. Da \glslink{glos:ki}{KI}-Modelle unterschiedliche Prompts 
-verarbeiten können, lassen sie sich für verschiedenste Aufgaben einsetzen. Der Prompt setzt sich aus dem System-Prompt, dem User-Prompt und optional weiteren Kontextangaben zusammen.\cite{systemprompt}\\
+verarbeiten können, lassen sie sich für verschiedenste Aufgaben einsetzen. Der Prompt setzt sich aus dem System-Prompt, dem User-Prompt und optional weiteren \mbox{Kontextangaben zusammen.\cite{systemprompt}}\\
 Der System-Prompt stellt die Grundstruktur dar und gibt dem \glslink{glos:llm}{LLM} grundlegenden Kontext für die Textgenerierung mit. Zunächst erhält das Modell die Information, auf eine 
 Nutzereingabe oder Frage zu reagieren, sowie die Anweisung, die Rolle des \glslink{glos:ki}{KI}-Assistenten zu übernehmen. Oft sind Stil oder Ton sowie verbotene Wörter oder Themen im System-Prompt 
-enthalten. So können bereits erste Filter eingebaut werden.\cite{systemprompt} Der System-Prompt bleibt meist konstant und ist für Nutzer nicht sichtbar.\\
+enthalten. So können bereits erste Filter eingebaut werden.\cite{systemprompt} Der System-Prompt bleibt meist konstant und ist für Nutzer \mbox{nicht sichtbar.}\\
 Der zweite Bestandteil ist der User-Prompt. Diesen gibt der Nutzer konkret ein. Wird er verändert, um das Ergebnis zu verbessern, spricht man von \glslink{prompt-engineering}{Prompt-Engineering} . 
 Dafür sind meist viele Versuche und ein tiefes Verständnis der Funktionsweise des \glslink{glos:llm}{LLM}s notwendig.\cite{promptengineering}\\
 Zusätzlich zu System- und User-Prompt können weitere Informationen als Kontext übergeben werden, etwa der vorherige Chatverlauf oder relevante Texte. 
@@ -82,13 +82,13 @@ das Phänomen, dass generative \glslink{glos:ki}{KI}-Anwendungen scheinbar plaus
 \glslink{halluzinationen}{Halluzinationen} können verschiedene Ursachen haben. Auch Probleme mit den Trainingsdaten sind ein häufiger Grund. Fehlen aktuelle Trainingsdaten, kann das \glslink{glos:ki}{KI}-Modell keine korrekten Aussagen zu neueren Ereignissen tätigen.\\ 
 Zudem können die Daten ungenau, nicht fallspezifisch oder fehlerhaft sein, besonders wenn Trainingsdaten aus dem Internet stammen.\\ 
 Schwachstellen in der Architektur sind eine weitere mögliche Ursache für Halluzinationen. Als "`Sycophancy"' wird das Phänomen bezeichnet, dass das \glslink{glos:ki}{KI}-Modell Texte 
-generiert, die den Erwartungen des Nutzers entsprechen, dabei aber fachliche Korrektheit vernachlässigen. Die Formulierung des \gls{glos:prompt}s kann dies begünstigen.\cite{allgemHalluzinationen} \\
+generiert, die den Erwartungen des Nutzers entsprechen, dabei aber fachliche Korrektheit vernachlässigen. Die Formulierung des \gls{glos:prompt}s kann \mbox{dies begünstigen.\cite{allgemHalluzinationen}} \\
 Die in \autoref{sec:llm} beschriebene Methode, mit der \glslink{glos:ki}{KI} Texte erzeugt, birgt ebenfalls ein Risiko für Falschinformationen. Ein Artikel des Frauenhofer-Instituts beschreibt, dass manche Token-Typen sehr nah beieinander liegen 
 und ähnliche Wahrscheinlichkeiten haben. Dazu zählen "`ähnliche numerische Werte wie Preise (9,99 EUR; 10,00 EUR), nahe beieinander liegende Daten (2020, 2021), ähnlich klingende Namen oder 
 technische Begriffe und Abkürzungen (\glslink{glos:ki}{KI}, ML)"'\cite{halluzinationenFraunhofer}. Die Verwechslung solcher Daten kann leicht zu fehlerhaften Aussagen führen.\\
 Bei der Auswahl des nächsten \glslink{token}{Token}s können durch die Wahrscheinlichkeitsberechnung, wie in \autoref{sec:llm}  beschrieben, unpassende Wörter bevorzugt werden, die wiederum Halluzinationen 
 begünstigen. Technisch lässt sich dies mit dem sogenannten Softmax-Bottleneck erklären: Der Softmax-Algorithmus kann mit seiner Natur nur einen Ausschnitt aller möglichen 
-Wahrscheinlichkeitsverteilungen darstellen, sodass manche Verteilungen nicht exakt abgebildet werden und unpassende Wörter eine zu hohe Wahrscheinlichkeit bekommen.\cite{softmax} \\
+Wahrscheinlichkeitsverteilungen darstellen, sodass manche Verteilungen nicht exakt abgebildet werden und unpassende Wörter eine zu hohe \mbox{Wahrscheinlichkeit bekommen.\cite{softmax}} \\
 Ein einmal falsch gewähltes Wort, welches dem Text angefügt wird, bildet wiederum die Grundlage für die nächsten generierten Wörter. Tritt eine bestimmte Falschinformation auf, 
 kann "`Over-Confidence"' dazu führen, dass trotz Nachfragen oder Korrekturversuchen das \glslink{glos:ki}{KI}-Modell weiterhin auf die falsche Behauptung besteht. Dies erschwert die 
 Überprüfung für den Anwender.\cite{allgemHalluzinationen,softmax} \\
@@ -113,7 +113,7 @@ KI-Modelle verbrauchen während des Trainings und beim Bearbeiten von Anfragen v
 Der Stromverbrauch von GPT4 liegt laut eines im Jahr 2025 veröffentlichten Artikels bei bis zu einer Kilowattstunde pro Anfrage\cite{Energieverbrauch}. Für die oben beschriebene Anpassung der \glslink{parameter}{Parameter} sind während des Bearbeitens einer Anfrage viele 
 komplexe Berechnungen in möglichst kurzer Zeit notwendig. Auch das Training ist durch die große Menge benötigter Daten und die häufig wochen- bis monatelangen Trainingszeiten 
 energieintensiv. In den Rechenzentren wird zudem Wasser zur Kühlung verwendet. Der Wasser-und Ressourcenverbrauch der Nutzung eines \glslink{glos:ki}{KI}-Modells ist im Vergleich zu dem der Nutzung einer 
-Suchmaschine wie Google sehr hoch\cite{KINachhaltigkeit}. 
+Suchmaschine wie Google \mbox{sehr hoch\cite{KINachhaltigkeit}.} 
 
 \subsection{Datenschutz}
 \label{sec:datenschutz}
@@ -122,7 +122,7 @@ Des Weiteren besteht bei dem Training sowie bei der Nutzung von \glslink{glos:ki
 wiedergeben werden können. Einige \glslink{glos:llm}{LLM}-Anbieter behalten sich das Recht vor, das Modell anhand der 
 Eingabedaten weiter zu trainieren und die Daten anderweitig zu nutzen\cite{OpenAI_Datenschutzerklaerung_2025,MistralAI_Terms_2025}. Auch so können personenbezogenen oder unternehmensspezifischen Informationen in die Trainings- oder Ausgabedaten 
 erscheinen und so zu Datenschutzverletzungen führen.\\ Im Falle einer missbräuchlichen Verwendung solcher Daten ist oft unklar, wer dafür die Verantwortung trägt. Vor allem bei der \glslink{glos:ki}{KI}-Nutzung 
-über Online-Schnittstellen sollte daher sorgfältig mit wichtigen Informationen umgegangen werden. Sie sollten beispielsweise nicht in Form des \gls{glos:prompt}s an das Modell gegeben werden.
+über Online-Schnittstellen sollte daher sorgfältig mit wichtigen Informationen umgegangen werden. Sie sollten beispielsweise nicht in Form des \gls{glos:prompt}s an das Modell \mbox{gegeben werden.}
 
 
 \end{document}
