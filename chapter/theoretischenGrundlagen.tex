@@ -41,7 +41,7 @@ Ein Beispiel: In den Sätzen "`Ich sitze auf der Bank"' und "`Ich habe in der Ba
 Vektoren nahe der Tokens "`Parkbank"' oder "`Kreditinstitut"'. So bleibt der Kontext des verwendeten Wortes erhalten.\cite{attention, attention2} 
 
 \item \textbf{\acrfull{mlp}:} Neben der linearen Attention-Funktion können mit dem \acrshort{mlp}, einem kleinen neuronalen Netzwerk mit meist nur einer inneren Schicht, auch nichtlineare Zusammenhänge 
-erfasst werden. Jeder Vektor durchläuft das \acrshort{mlp}, dessen Ausgabe zum ursprünglichen Vektor addiert wird. Somit kann die Komplexität der Sprache erfasst werden.
+erfasst werden. Jeder Vektor durchläuft das \acrshort{mlp}, dessen Ausgabe zum ursprünglichen Vektor addiert wird. Somit kann die Komplexität der Sprache erfasst werden.\cite{mlp}
 
 \item \textbf{Decoder:} Ein \glslink{glos:llm}{LLM} besteht aus abwechselnden Attention- und MLP-Schichten (Abb. \ref{fig:trans}). Abschließend erhält der Decoder die Ausgabe aus der letzten 
 \acrshort{mlp}-Schicht, worauf die Softmax-Funktion eine Wahrscheinlichkeitsverteilung über alle Tokens berechnet. Durch die Anwendung dieser Funktion ist die Summe der Wahrscheinlichkeiten 1 und jede liegt im Intervall zwischen 0 und 1.\cite{architecture} 
@@ -61,12 +61,11 @@ Der zweite Bestandteil ist der User-Prompt. Diesen gibt der Nutzer konkret ein. 
 Dafür sind meist viele Versuche und ein tiefes Verständnis der Funktionsweise des \glslink{glos:llm}{LLM}s notwendig.\cite{promptengineering}\\
 Zusätzlich zu System- und User-Prompt können weitere Informationen als Kontext übergeben werden, etwa der vorherige Chatverlauf oder relevante Texte. 
 Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{glos:llm}{LLM} als Eingabe mitgegeben werden können. Wird diese überschritten, kann dies zu unvollständigen 
-Ergebnissen führen, da das \glslink{glos:llm}{LLM} nicht mehr alle nötgen Informationen erhält.
-
-\section{Wirkungen und Nebenrisiken}
-Mit der beschriebenen Architektur entstehen Texte, die menschengeschriebenen stark ähneln und zahlreiche Anwendungsgebiete eröffnen. Gleichzeitig ergeben sich daraus Herausforderungen und Risiken, 
+Ergebnissen führen, da das \glslink{glos:llm}{LLM} nicht mehr alle nötgen Informationen erhält.\\
+Mit der beschriebenen Architektur und Funktionsweise entstehen Texte, die menschengeschriebenen stark ähneln und zahlreiche Anwendungsgebiete eröffnen. Gleichzeitig ergeben sich daraus Herausforderungen und Risiken, 
 die im Folgenden behandelt werden.
 
+\section{Risiken der Nutzung von Künstlicher Intelligenz}
 
 \subsection{Abhängigkeit von den Trainingsdaten}
 
