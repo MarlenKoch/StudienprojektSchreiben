@@ -53,10 +53,10 @@ Der Schreibassistent wird für unterschiedliche Anwendungsfälle entwickelt: \\
 
 Das Frontend des Schreibassistenten wurde mit dem Framework React entwickelt. Diese JavaScript-Bibliothek verfolgt einen komponentenbasierten Ansatz, welcher die Wiederverwendbarkeit 
 des Codes erhöht. React TypeScript bietet zusätzlich Typisierung, wodurch der Code weniger fehleranfällig ist. Es wurde wurde primär wegen seiner Performanz und Dynamik gewählt. \cite{react1,react2} \\
-Für das Design kommt Cascading Style Sheets (CSS) zum Einsatz. Die Nutzung eigener CSS-Klassen erlaubt Wiederverwendbarkeit. Im Gegensatz zu CSS-Frameworks ermöglicht reines CSS größere Flexibilität.\\
+Für das Design kommt Cascading Style Sheets (CSS) zum Einsatz. Die Nutzung eigener \acrshort{css}-Klassen erlaubt Wiederverwendbarkeit. Im Gegensatz zu CSS-Frameworks ermöglicht reines CSS größere Flexibilität.\\
 Das Backend ist mit dem Web-Framework FastAPI umgesetzt. Dieses Python-Framework zeichnet sich durch gute Performanz und eingebaute Typisierung aus. Die Verwendung von Datenmodellen verbessert die Code-Qualität\cite{fastapi}.\\
 Python als Programmiersprache steigert ebenfalls die Effizienz, da sie einfach aufgebaut und weit verbreitet ist. Zudem existieren zahlreiche zusätzliche Bibliotheken.\cite{python}\\
-Eine dieser Bibliotheken ist SQLAlchemy, die für die Implementierung verwendet wurde. Sie bietet eine objektorientierte Abstraktionsschicht für den Datenbankzugriff, sodass mit Python-Klassen statt mit SQL-Abfragen gearbeitet werden kann. 
+Eine dieser Bibliotheken ist SQLAlchemy, die für die Implementierung verwendet wurde. Sie bietet eine objektorientierte Abstraktionsschicht für den Datenbankzugriff, sodass mit Python-Klassen statt mit \acrshort{sql}-Abfragen gearbeitet werden kann. 
 So wird der Code übersichtlicher und wartbarer. Der Zugriff auf die verwendete SQLite-Datenbank wird erleichtert. Ein Umstieg auf eine leistungsfähigere Datenbank wäre später mit wenig Aufwand möglich.\cite{SQLAlchemy}\\
 Für die Einbindung der \glslink{glos:ki}{KI}-Modelle wurde \glslink{ollama}{Ollama} verwendet. Ollama ist eine \glslink{open-source}{Open-Source}-Software, die die Ausführung von \glslink{glos:llm}{LLM}s lokal ermöglicht. 
 Sie stellt eine \acrshort{api1} zur Verfügung, über die verschiedene Modelle genutzt werden können. Ollama übernimmt den Wechsel zwischen Modellen, verhindert Parallelnutzung und erhöht so die Performanz.\cite{ollamaSchreibassi,ollamaTechnologie}
