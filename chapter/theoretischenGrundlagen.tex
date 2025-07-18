@@ -12,7 +12,7 @@
 
 \glspl{nn} bilden die Basis für \glslink{glos:ki}{KI} und sind in ihrer Funktionsweise dem menschlichen Gehirn nachempfunden. Sie bestehen aus einer Anzahl von Neuronen, die – wie in Abb. \ref{fig:NN} dargestellt – in verschiedenen Schichten angeordnet sind. Die erste Schicht heißt Eingabeschicht, die letzte Ausgabeschicht, dazwischen liegen sogenannte versteckte Schichten. Jedes Neuron ist über gewichtete Verbindungen mit allen Neuronen der vorherigen und nachfolgenden Schicht verbunden. Ein Neuron nimmt zu jedem Zeitpunkt einen Wert zwischen 0 und 1 an, welcher der Ausgabe des Neurons entspricht. Dieser Wert wird aus der Verarbeitung der Eingaben errechnet, also aus den Ausgaben der vorherigen Schicht, auf deren Summe eine Funktion angewandt wird. \\
 Jede Verbindung zwischen Neuronen verfügt über eine Gewichtung zwischen -1 und 1, die bestimmt, mit welcher Zahl der Wert eines Neurons multipliziert wird, bevor er an die nächste Schicht weitergegeben wird. Die Gewichtungen zwischen zwei Schichten können als Matrix dargestellt werden, und der Übergang zwischen Schichten entspricht einer Matrixmultiplikation. \\
-Die Gewichtungen stehen zu Beginn noch nicht fest, sondern werden durch das Training bestimmt. Das Training eines \glslink{glos:nn}{NN} ist die Anpassung dieser Gewichtungen mittels Backpropagation. Dazu werden die Gewichtungen zunächst zufällig gewählt und das \glslink{glos:nn}{NN} durchläuft viele Trainingsdaten. Die erhaltenen Ergebnisse werden mit den gewünschten verglichen. Bei zu großen Abweichungen werden alle zugehörigen Gewichtungen reduziert, bei Übereinstimmung werden sie erhöht. Auf diese Art und Weise festgelegte Werte werden als Parameter des \glslink{glos:nn}{NN} bezeichnet. \glslink{glos:nn}{NN}s sind die Grundlage für Technologien wie \glspl{llm}, die auch für \glslink{glos:ki}{KI}-Schreibwerkzeuge verwendet werden. 
+Die Gewichtungen stehen zu Beginn noch nicht fest, sondern werden durch das Training bestimmt. Das Training eines \glslink{glos:nn}{NN} ist die Anpassung dieser Gewichtungen mittels Backpropagation. Dazu werden die Gewichtungen zunächst zufällig gewählt und das \glslink{glos:nn}{NN} durchläuft viele Trainingsdaten. Die erhaltenen Ergebnisse werden mit den gewünschten verglichen. Bei zu großen Abweichungen werden alle zugehörigen Gewichtungen reduziert, bei Übereinstimmung werden sie erhöht. Auf diese Art und Weise festgelegte Werte werden als Parameter des \glslink{glos:nn}{NN} bezeichnet. \glslink{glos:nn}{NN}s sind die Grundlage für Technologien wie \glspl{llm}, die für \glslink{glos:ki}{KI}-Schreibwerkzeuge verwendet werden. 
 
 \section{Large Language Models}
 \label{sec:llm}
@@ -63,7 +63,7 @@ Das Kontextfenster bezeichnet die maximale Anzahl an Tokens, die dem \glslink{gl
 Ergebnissen führen, da das \glslink{glos:llm}{LLM} nicht mehr alle nötgen Informationen erhält.
 
 \section{Wirkungen und Nebenrisiken}
-Mit der beschriebenen Architektur entstehen Texte, die menschengeschriebenen stark ähneln und zahlreiche Anwendungsgebiete eröffnen. Gleichzeitig ergeben sich daraus auch Herausforderungen und Risiken, 
+Mit der beschriebenen Architektur entstehen Texte, die menschengeschriebenen stark ähneln und zahlreiche Anwendungsgebiete eröffnen. Gleichzeitig ergeben sich daraus Herausforderungen und Risiken, 
 die im Folgenden behandelt werden.
 
 \subsection{Abhängigkeit von den Trainingsdaten}
@@ -71,21 +71,18 @@ die im Folgenden behandelt werden.
 Da \glslink{glos:ki}{KI} Zusammenhänge lediglich auf Grundlage der verwendeten Trainingsdaten erlernt, sind diese oft Ursache für Probleme. Werden etwa Trainingsdaten genutzt, 
 bei denen bestimmte Personengruppen benachteiligt werden oder seltener vorkommen, kann dies die generierten Inhalte der \glslink{glos:ki}{KI} beeinflussen. Diskriminierende Inhalte können aus den Trainingsdaten 
 übernommen werden. Zudem können fehlende Informationen über bestimmte Personengruppen, Sprachen oder Dialekte Nachteile in der Nutzung von \glslink{glos:ki}{KI} für die Betroffenen zur Folge haben.\\ 
-Dieses Verhalten generativer \glslink{glos:ki}{KI} kann soziale und wirtschaftliche Folgen haben. \glslink{glos:ki}{KI} Anbieter versuchen zwar, durch eine möglichst 
+Dieses Verhalten generativer \glslink{glos:ki}{KI} kann soziale und wirtschaftliche Folgen haben. \glslink{glos:ki}{KI}-Anbieter versuchen zwar, durch eine möglichst 
 facettenreiche Auswahl von Trainingsdaten und Filtermechanismen, welche etwa das Auftreten bestimmter Wörter wie Beleidigungen verhindern, entgegenzuwirken, 
 dennoch sollten sich Nutzer dieses Risikos bewusst sein.\\
 
 \subsection{Halluzinationen}
-
-Die von einer \glslink{glos:ki}{KI} generierten Texte können falsche Informationen enthalten. Diese werden häufig als "`Halluzinationen"' bezeichnet. \glslink{glos:ki}{KI}-Halluzination beschreibt 
+ \glslink{glos:ki}{KI}-Halluzination beschreibt 
 das Phänomen, dass generative \glslink{glos:ki}{KI}-Anwendungen scheinbar plausible, aber tatsächlich unlogische oder falsche Antworten erzeugen\cite{hallucinationForewarning}.\\
-Halluzinationen können verschiedene Ursachen haben. Auch Probleme mit den Trainingsdaten sind ein häufiger Grund. Sind die Trainingsdaten nicht aktuell,
-können sie veraltete Informationen enthalten. Fehlen aktuelle Daten, kann das \glslink{glos:ki}{KI}-Modell keine korrekten Aussagen zu neueren Ereignissen tätigen.\\ 
+Halluzinationen können verschiedene Ursachen haben. Auch Probleme mit den Trainingsdaten sind ein häufiger Grund. Fehlen aktuelle Trainingsdaten, kann das \glslink{glos:ki}{KI}-Modell keine korrekten Aussagen zu neueren Ereignissen tätigen.\\ 
 Zudem können die Daten ungenau, nicht fallspezifisch oder fehlerhaft sein, besonders wenn Trainingsdaten aus dem Internet stammen.\\ 
 Schwachstellen in der Architektur sind eine weitere mögliche Ursache für Halluzinationen. Als "`Sycophancy"' wird das Phänomen bezeichnet, dass das \glslink{glos:ki}{KI}-Modell Texte 
-generiert, die den Erwartungen des Nutzers entsprechen, dabei aber fachliche Korrektheit vernachlässigen. Auch die Formulierung des \gls{glos:prompt}s kann dies begünstigen.\cite{allgemHalluzinationen} \\
-Die Methode, mit der \glslink{glos:ki}{KI} Texte erzeugt, birgt ebenfalls ein Risiko für Falschinformationen. Bei hoher Temperatureinstellung steigt etwa die Wahrscheinlichkeit für 
-unplausible oder falsche Inhalte. Ein Artikel des Frauenhofer-Instituts beschreibt, dass manche Token-Typen sehr nah beieinander liegen 
+generiert, die den Erwartungen des Nutzers entsprechen, dabei aber fachliche Korrektheit vernachlässigen. Die Formulierung des \gls{glos:prompt}s kann dies begünstigen.\cite{allgemHalluzinationen} \\
+Die in \autoref{sec:llm} beschriebene Methode, mit der \glslink{glos:ki}{KI} Texte erzeugt, birgt ebenfalls ein Risiko für Falschinformationen. Ein Artikel des Frauenhofer-Instituts beschreibt, dass manche Token-Typen sehr nah beieinander liegen 
 und ähnliche Wahrscheinlichkeiten haben. Dazu zählen "`ähnliche numerische Werte wie Preise (9,99 EUR; 10,00 EUR), nahe beieinander liegende Daten (2020, 2021), ähnlich klingende Namen oder 
 technische Begriffe und Abkürzungen (\glslink{glos:ki}{KI}, ML)"'\cite{halluzinationenFraunhofer}. Die Verwechslung solcher Daten kann leicht zu fehlerhaften Aussagen führen.\\
 Bei der Auswahl des nächsten Tokens können durch die Wahrscheinlichkeitsberechnung, wie in \autoref{sec:llm}  beschrieben, unpassende Wörter bevorzugt werden, die wiederum Halluzinationen 
@@ -95,8 +92,8 @@ Ein einmal falsch gewähltes Wort, welches dem Text angefügt wird, bildet wiede
 kann "`Over-Confidence"' dazu führen, dass trotz Nachfragen oder Korrekturversuchen das \glslink{glos:ki}{KI}-Modell weiterhin auf die falsche Behauptung besteht. Dies erschwert die 
 Überprüfung für den Anwender.\cite{allgemHalluzinationen,softmax} \\
 Selbst wenn ein \glslink{glos:ki}{KI}-Text keine Falschinformationen enthält, können diese Phänomene Unvollständigkeit oder ein Abweichen von der Fragestellung bewirken. Das als 
-"`Instructions-Forgetting"' bekannte Phänomen beschreibt, dass eine \glslink{glos:ki}{KI} den Kontext der ursprünglichen Anfrage vergisst und einen Text generiert, der nicht exakt der 
-eigentlichen Fragestellung entspricht. Daher sollten \glslink{glos:ki}{KI}-generierte Texte, besonders beim wissenschaftlichen Schreiben, immer überprüft werden.\cite{allgemHalluzinationen}
+"`Instructions-Forgetting"' bekannte Phänomen beschreibt, dass eine \glslink{glos:ki}{KI} den Kontext der ursprünglichen Anfrage vergisst und einen Text generiert, der von der 
+eigentlichen Fragestellung abweicht. Daher sollten \glslink{glos:ki}{KI}-generierte Texte, besonders beim wissenschaftlichen Schreiben, immer überprüft werden.\cite{allgemHalluzinationen}
 
 
 \subsection{Erklärbarkeitsproblem}
@@ -111,8 +108,8 @@ Entscheidungsfindungsprozesses entwickeln.\cite{explainable}
 
 \subsection{Ressourcenverbrauch}
 
-KI-Modelle verbrauchen während des Trainings und beim Bearbeiten von Anfragen viele Ressourcen. Desto größer das verwendete Modell, desto höher ist auch der Ressourcenverbrauch. 
-Der Stromverbrauch von GPT4 0.1 liegt laut eines im Jahr 2025 veröffentlichten Artikels bei bis zu einer Kilowattstunde pro Anfrage\cite{Energieverbrauch}. Für die oben beschriebene Anpassung der Parameter sind während des Bearbeitens einer Anfrage viele 
+KI-Modelle verbrauchen während des Trainings und beim Bearbeiten von Anfragen viele Ressourcen. Desto größer das verwendete Modell, desto höher ist der Ressourcenverbrauch. 
+Der Stromverbrauch von GPT4 liegt laut eines im Jahr 2025 veröffentlichten Artikels bei bis zu einer Kilowattstunde pro Anfrage\cite{Energieverbrauch}. Für die oben beschriebene Anpassung der Parameter sind während des Bearbeitens einer Anfrage viele 
 komplexe Berechnungen in möglichst kurzer Zeit notwendig. Auch das Training ist durch die große Menge benötigter Daten und die häufig wochen- bis monatelangen Trainingszeiten 
 energieintensiv. In den Rechenzentren wird zudem Wasser zur Kühlung verwendet. Der Wasser-und Ressourcenverbrauch der Nutzung eines \glslink{glos:ki}{KI}-Modells ist im Vergleich zu dem der Nutzung einer 
 Suchmaschine wie Google sehr hoch\cite{KINachhaltigkeit}. 
@@ -120,10 +117,11 @@ Suchmaschine wie Google sehr hoch\cite{KINachhaltigkeit}.
 \subsection{Datenschutz}
 \label{sec:datenschutz}
 
-Zudem besteht beim Training sowie bei der Nutzung von \glslink{glos:ki}{KI} das Problem des Datenschutzes. Die Trainingsdaten können personenbezogene Daten beinhalten. Das \glslink{glos:ki}{KI}-Modell kann bestimmte sensible 
-Informationen aus den Trainingsinhalten wiedergeben, auch wenn diese nicht absichtlich gespeichert werden sollen. Einige \glslink{glos:llm}{LLM}-Anbieter behalten sich das Recht vor, das Modell anhand der 
-Eingabedaten weiter zu trainieren und die Daten anderweitig zu nutzen. Auch so können personenbezogenen oder unternehmensspezifischen Informationen in die Trainings- oder Ausgabedaten 
-erscheinen und so zu Datenschutzverletzungen führen. Im Falle einer missbräuchlichen Verwendung solcher Daten ist oft unklar, wer dafür die Verantwortung trägt. Vor allem bei der \glslink{glos:ki}{KI}-Nutzung 
+Des Weiteren besteht bei dem Training sowie bei der Nutzung von \glslink{glos:ki}{KI} das Problem des Datenschutzes. Die Trainingsdaten können personenbezogene Informationen beinhalten, welche ungewollt 
+wiedergeben werden können. Einige \glslink{glos:llm}{LLM}-Anbieter behalten sich das Recht vor, das Modell anhand der 
+Eingabedaten weiter zu trainieren und die Daten anderweitig zu nutzen\cite{OpenAI_Datenschutzerklaerung_2025,MistralAI_Terms_2025}. Auch so können personenbezogenen oder unternehmensspezifischen Informationen in die Trainings- oder Ausgabedaten 
+erscheinen und so zu Datenschutzverletzungen führen.\\ Im Falle einer missbräuchlichen Verwendung solcher Daten ist oft unklar, wer dafür die Verantwortung trägt. Vor allem bei der \glslink{glos:ki}{KI}-Nutzung 
 über Online-Schnittstellen sollte daher sorgfältig mit wichtigen Informationen umgegangen werden. Sie sollten beispielsweise nicht in Form des \gls{glos:prompt}s an das Modell gegeben werden.
+
 
 \end{document}

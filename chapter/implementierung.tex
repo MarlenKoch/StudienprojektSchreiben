@@ -5,21 +5,21 @@
 
 \subsection{Ziel der Implementierung}
 
-Die Entwicklung des hier beschriebenen Schreibassistenten hat das Ziel, ein innovatives \glslink{glos:ki}{KI}-Werkzeug zu schaffen, das vor allem Schüler und Studenten beim Verfassen 
+Die Entwicklung des hier beschriebenen Schreibassistenten hat das Ziel, ein innovatives \glslink{glos:ki}{KI}-Werkzeug zu schaffen, das vor allem Schüler und Studenten bei dem Verfassen 
 verschiedener Texte unterstützt. Die von Studenten genutzten Text-Editoren wie Overleaf sollen nicht ersetzt werden. Stattdessen soll eine Möglichkeit geboten werden, 
 \glslink{glos:ki}{KI}-Chats mit unterschiedlichen \glslink{glos:llm}{LLM}s übersichtlich zu sammeln. Es soll, wie in \autoref{sec:nachteile} beschrieben, eine Art "`Augmented Intelligence"' geschaffen werden, die die Effizienz im Schreibprozess 
-steigert, aber nicht das komplette Verfassen übernimmt. Im Gegensatz zu den in \autoref{sec:bereitsBestehendeLoesungen} beschriebenen bestehenden Lösungen, sollen verschiedene \glslink{glos:ki}{KI}-Chats 
-übersichtlich und abschnittsbezogen angelegt werden können. Für jeden Textabschnitt können mehrere \glslink{glos:ki}{KI}-Chats mit unterschiedlichen Modellen erstellt und gespeichert werden. Durch das Sammeln der \glslink{glos:ki}{KI}-Gespräche soll ein übersichtlicheres Arbeiten ermöglicht werden. Zudem kann der Nutzer die \glslink{glos:ki}{KI}-Antworten kommentieren, um sich Gedanken zu Verbesserungen oder zur Relevanz der generierten Antwort für den Text zu notieren.\\
-Das Nutzerinterface des Schreibassistenten soll intuitiv und verständlich gestaltet sein, begleitet von einem schlichten Design. Um auch unerfahrenen Nutzern den Umgang mit 
+steigert, aber nicht das komplette Verfassen übernimmt.\\ Im Gegensatz zu den in \autoref{sec:bereitsBestehendeLoesungen} beschriebenen bestehenden Lösungen, sollen verschiedene \glslink{glos:ki}{KI}-Chats 
+übersichtlich und abschnittsbezogen angelegt werden können. Für jeden Textabschnitt können mehrere \glslink{glos:ki}{KI}-Chats mit unterschiedlichen Modellen erstellt und gespeichert werden. Durch das Sammeln der \glslink{glos:ki}{KI}-Gespräche soll ein übersichtlicheres Arbeiten ermöglicht werden. Zudem kann der Nutzer die \glslink{glos:ki}{KI}-Antworten kommentieren, um sich Gedanken zu Verbesserungen oder zu der Relevanz der generierten Antwort für den Text zu notieren.\\
+Das Nutzerinterface des Schreibassistenten soll intuitiv und verständlich gestaltet sein, begleitet von einem schlichten Design. Um unerfahrenen Nutzern den Umgang mit 
 generativer \glslink{glos:ki}{KI} zu vereinfachen, werden die in \autoref{ch:anforderungen} identifizierten Anforderungen umgesetzt. Dazu gehören Tooltips an Knöpfen, die mit der 
 \glslink{glos:ki}{KI}-Funktionalität verbunden sind. Diese erklären dem Nutzer die jeweilige Funktion. Jeder Nutzer soll nachvollziehen können, welchen Einfluss eine Eingabe in 
 ein Textfeld oder eine Auswahl aus einem Drop-Down-Menü auf die Antwort hat. Zudem wird der Nutzer beim Anlegen eines Projekts gewarnt, dass 
-\glslink{glos:ki}{KI}-Modelle halluzinieren können. Damit soll, ähnlich wie in der in \autoref{ch:anforderungen} behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Missinformationen verringert werden. Dadurch 
-wird das Risiko, dass Fehlinformationen in Arbeiten von Schülern und Studenten gelangen, reduziert. Die Nutzer sollen angeregt werden, die von der \glslink{glos:ki}{KI} generierten Inhalte 
+\glslink{glos:ki}{KI}-Modelle halluzinieren können. Damit soll, ähnlich wie in der in \autoref{ch:anforderungen} behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Misinformationen verringert werden. Dadurch 
+wird das Risiko, dass Fehlinformationen in Arbeiten von Schülern und Studenten gelangen, reduziert. Der Nutzer soll angeregt werden, die von der \glslink{glos:ki}{KI} generierten Inhalte 
 kritisch zu hinterfragen.\\
-Auch bei der Formulierung von Prompts sollen die Nutzer Unterstützung erhalten. Da bereits kleine Änderungen im Prompt oder in der Reihenfolge der Informationen großen 
+Auch bei der Formulierung von Prompts soll der Nutzer Unterstützung erhalten. Da bereits kleine Änderungen im Prompt oder in der Reihenfolge der Informationen großen 
 Einfluss auf die \glslink{glos:ki}{KI}-Antwort haben können, sind verlässliche und reproduzierbare Abläufe schwer zu erreichen\cite{creativeWriting}. Dies soll durch das Zusammensetzen vorgefertigter 
-Prompts im Backend umgangen werden. So wird das Tool auch für \glslink{glos:ki}{KI}-Unerfahrene erleichtert. Dafür werden Prompts für diese in \autoref{sec:vorteile} identifizierten 
+Prompts im Backend umgangen werden. So wird die Nutzung für \glslink{glos:ki}{KI}-Unerfahrene erleichtert. Dafür werden Prompts für diese in \autoref{sec:vorteile} identifizierten 
 Einsatzmöglichkeiten bereitgestellt: umformulieren, zusammenfassen, Text aus Stichpunkten erstellen, Synonyme finden, Grammatik und Rechtschreibung prüfen sowie Feedback geben. Außerdem soll das KI-Modell
 Schülern Sachverhalte erklären können, um das Textverständnis zu verbessern.
 
@@ -27,36 +27,35 @@ Schülern Sachverhalte erklären können, um das Textverständnis zu verbessern.
 \subsection{Anwendungsfälle}
 
 Der Schreibassistent wird für unterschiedliche Anwendungsfälle entwickelt: \\
- Zum einen soll dem Nutzer ein Werkzeug geboten werden, mit welchem er strukturiert verschiedene \glslink{glos:ki}{KI}-Modelle nutzen kann. Die bereitgestellten vorgefertigten Prompts sollen 
- die Effizienz während des Schreibprozesses weiter steigern. Darüber hinaus sind auch nutzerdefinierte Prompts möglich. Das generierte \glslink{glos:ki}{KI}-Nutzungsverzeichnis kann als eine 
+ Zum einen soll dem Nutzer ein Werkzeug geboten werden, mit welchem er strukturiert verschiedene \glslink{glos:ki}{KI}-Modelle verwenden kann. Die bereitgestellten vorgefertigten Prompts sollen 
+ die Effizienz während des Schreibprozesses weiter steigern. Darüber hinaus ist das Schreiben nutzerdefinierter Prompts möglich. Das generierte \glslink{glos:ki}{KI}-Nutzungsverzeichnis kann als eine 
  Art Quellenverzeichnis an wissenschaftliche Arbeiten angehangen werden. Es zeigt das verwendete \glslink{glos:ki}{KI}-Modell, die Aufgabe, welche das Modell übernehmen sollte 
- beziehungsweise den Prompt, sowie das Datum der Anfrage. In diesem KI-Nutzungsverzeichnis werden nur Prompts zu den gespeicherten Chats angeführt. Dadurch wird vermieden, dass Chats 
+ beziehungsweise den Prompt, sowie das Datum der Anfrage. In diesem Nutzungsverzeichnis werden nur Prompts zu den gespeicherten Chats angeführt. Dadurch wird vermieden, dass Chats 
  vermerkt werden, deren Ergebnisse nicht in die Arbeit eingeflossen sind, und das Verzeichnis bleibt übersichtlich.\\ 
  Der zweite Anwendungsfall ist der sogenannte Schülermodus. Durch 
  Einschränken der Funktionalität soll ein Werkzeug zur Verfügung gestellt werden, welches zu Unterrichtszwecken verwendet werden kann. Schüler sollen so den Umgang mit generativer 
- \glslink{glos:ki}{KI} erlernen, ohne den gesamten Text vom \glslink{glos:ki}{KI}-Modell schreiben zu lassen. Die entstandenen Texte sind Eigenleistung des Schülers, jedoch kann der 
+ \glslink{glos:ki}{KI} erlernen, ohne den gesamten Text von dem \glslink{glos:ki}{KI}-Modell schreiben zu lassen. Die entstandenen Texte sind Eigenleistung des Schülers, jedoch kann der 
  Schreibprozess durch den KI-Einsatz effizienter gestaltet werden, was die in \autoref{sec:vorteile} beschriebenen Vorteile mit sich bringt. Der Schüler kann aus den vorgefertigten Aufgaben 
  wählen, jedoch keinen eigenen Prompt verwenden. Dadurch soll verhindert werden, dass ganze Texte \glslink{glos:ki}{KI}-generiert werden. Zudem wird, anders als im normalen Modus, jeder 
- Chat im \glslink{glos:ki}{KI}-Nutzungsverzeichnis vermerkt. Dies sorgt für bessere Nachvollziehbarkeit der \glslink{glos:ki}{KI}-Nutzung für Lehrkräfte.\\ 
+ Chat im \glslink{glos:ki}{KI}-Nutzungsverzeichnis vermerkt. Dies sorgt für bessere Nachvollziehbarkeit des \glslink{glos:ki}{KI}-Einsatzes für Lehrkräfte.\\ 
  Zuletzt soll der Schreibassistent 
- auch beim Schreiben von benoteten Arbeiten während des Unterrichts eingesetzt werden können. Dazu dient der Prüfungsmodus. Es kann eine bestimmte Bearbeitungszeit eingestellt werden. 
+ beim Schreiben von benoteten Arbeiten während des Unterrichts eingesetzt werden können. Dazu dient der Prüfungsmodus. Es kann eine bestimmte Bearbeitungszeit eingestellt werden. 
  Ist diese abgelaufen, wird der entstandene Text automatisch abgegeben. Das \glslink{glos:ki}{KI}-Nutzungsverzeichnis wird wie im Schülermodus erstellt, sodass alle \glslink{glos:ki}{KI}-Chats 
- erkennbar sind. Zudem wird das Öffnen anderer Projekte oder Tabs verhindert. Sollte ein Schüler versuchen, andere \glslink{glos:ki}{KI}-Werkzeuge oder andere Hilfsmittel zu verwenden, 
+ erkennbar sind. Überdies  wird das Öffnen anderer Projekte oder Tabs verhindert. Sollte ein Schüler versuchen, andere \glslink{glos:ki}{KI}-Werkzeuge oder Hilfsmittel zu verwenden, 
  wird die Arbeit automatisch abgegeben. Dadurch soll sichergestellt werden, dass das Schreiben der Arbeit weiterhin eine Eigenleistung des Schülers ist. Die \glslink{glos:ki}{KI} hilft 
  bei der Formulierung und Rechtschreibung des Textes, den Inhalt muss jedoch der Schüler verfassen. Insgesamt soll eine sichere Umgebung zur Verfügung gestellt werden, wodurch der Einsatz 
- generativer \glslink{glos:ki}{KI} auch während des Unterrichts ermöglicht wird.
+ generativer \glslink{glos:ki}{KI} während des Unterrichts ermöglicht wird.
 
 
 \section{Verwendete Technologien}
 
-Das Frontend des Schreibassistenten wurde mit dem Framework React entwickelt. Diese JavaScript-Bibliothek verfolgt einen komponentenbasierten Ansatz, wodurch die Wiederverwendbarkeit 
-des Codes steigt. Alle benutzerdefinierten Komponenten sind direkt oder indirekt der von React bereitgestellten App-Komponente untergeordnet, wodurch eine Baumstruktur entsteht.\cite{react1,react2}\\ 
-React TSX wurde primär wegen seiner Performanz und Dynamik gewählt. React TypeScript bietet zusätzlich Typisierung, wodurch der Code weniger fehleranfällig ist.\cite{react1,react2} \\
+Das Frontend des Schreibassistenten wurde mit dem Framework React entwickelt. Diese JavaScript-Bibliothek verfolgt einen komponentenbasierten Ansatz, welcher die Wiederverwendbarkeit 
+des Codes erhöht. React TypeScript bietet zusätzlich Typisierung, wodurch der Code weniger fehleranfällig ist. Es wurde wurde primär wegen seiner Performanz und Dynamik gewählt. \cite{react1,react2} \\
 Für das Design kommt Cascading Style Sheets (CSS) zum Einsatz. Die Nutzung eigener CSS-Klassen erlaubt Wiederverwendbarkeit. Im Gegensatz zu CSS-Frameworks ermöglicht reines CSS größere Flexibilität.\\
 Das Backend ist mit dem Web-Framework FastAPI umgesetzt. Dieses Python-Framework zeichnet sich durch gute Performanz und eingebaute Typisierung aus. Die Verwendung von Datenmodellen verbessert die Code-Qualität\cite{fastapi}.\\
 Python als Programmiersprache steigert ebenfalls die Effizienz, da sie einfach aufgebaut und weit verbreitet ist. Zudem existieren zahlreiche zusätzliche Bibliotheken.\cite{python}\\
 Eine dieser Bibliotheken ist SQLAlchemy, die für die Implementierung verwendet wurde. Sie bietet eine objektorientierte Abstraktionsschicht für den Datenbankzugriff, sodass mit Python-Klassen statt mit SQL-Abfragen gearbeitet werden kann. 
-So wird der Code übersichtlicher und wartbarer. Der Zugriff auf die verwendete SQLite-Datenbank wird erleichtert, ein Umstieg auf eine leistungsfähigere Datenbank wäre später mit wenig Aufwand möglich.\cite{SQLAlchemy}\\
+So wird der Code übersichtlicher und wartbarer. Der Zugriff auf die verwendete SQLite-Datenbank wird erleichtert. Ein Umstieg auf eine leistungsfähigere Datenbank wäre später mit wenig Aufwand möglich.\cite{SQLAlchemy}\\
 Für die Einbindung der \glslink{glos:ki}{KI}-Modelle wurde Ollama verwendet. Ollama ist eine Open-Source-Software, die die Ausführung von \glslink{glos:llm}{LLM}s lokal ermöglicht. 
 Sie stellt eine API zur Verfügung, über die verschiedene Modelle genutzt werden können. Ollama übernimmt den Wechsel zwischen Modellen, verhindert Parallelnutzung und erhöht so die Performanz.\cite{ollamaSchreibassi,ollamaTechnologie}
 
@@ -66,24 +65,24 @@ Sie stellt eine API zur Verfügung, über die verschiedene Modelle genutzt werde
 
 Mit Ollama können verschiedene \glslink{glos:ki}{KI}-Modelle lokal und damit datenschutzkonform genutzt werden. Somit werden die in \autoref{sec:datenschutz} beschrieben Nachteile umgangen. 
 Nutzer können frei zwischen mehreren Modellen wählen und selbst festlegen, welche verfügbar sind. Für Einsteiger wird zu jeder Aufgabe ein empfohlenes Modell mit passendem, 
-getestetem Prompt vorgeschlagen. Die getesteten Modelle sind auf gute Ergebnisse bei deutscher Sprache und Performance auf aktuellen Laptops ausgelegt. Dabei erfolgten stichprobenartige 
-Prüfungen der Antworten auf Ausdruck, Grammatik und Inhalt. Die wichtigsten Testergebnisse:
+getestetem Prompt vorgeschlagen. Die getesteten Modelle sind auf gute Ergebnisse bei deutscher Sprache und Performanz auf aktuellen Laptops ausgelegt. Dabei erfolgten stichprobenartige 
+Prüfungen der Antworten auf Ausdruck, Grammatik und Inhalt. Im Folgenden werden die wichtigsten Testergebnisse beleuchtet:
 
-\begin{itemize} \item \textbf{lukasmalkmus/llama3-sauerkraut} (8 Mrd. Parameter, Llama-3, Deutsch)\cite{sauerkraut}: Antwortet teils auf Englisch oder ersetzt deutsche Begriffe. Wird daher im Schreibassistenten nicht verwendet.
+\begin{itemize} \item \textbf{lukasmalkmus/llama3-sauerkraut} (8 Mrd. Parameter, auf Llama-3 basierend)\cite{sauerkraut}: Antwortet teils auf Englisch oder ersetzt deutsche Begriffe. Wird daher im Schreibassistenten nicht verwendet.
 
-\item \textbf{mayflowergmbh/wiedervereinigung} (auf Mistral, 7 Mrd. Parameter, Deutsch)\cite{wiedervereinigung}: Fügt oft neuen Inhalt hinzu statt der Aufgabe zu folgen. Nicht verwendet.
+\item \textbf{mayflowergmbh/wiedervereinigung} (auf Mistral basierend, 7 Mrd. Parameter)\cite{wiedervereinigung}: Fügt oft neuen Inhalt hinzu statt der Aufgabe zu folgen. Nicht verwendet.
 
 \item \textbf{mayflowergmbh/wiederchat} (7 Mrd. Parameter)\cite{wiederchat}: Führt Prompts oft nicht ganz aus, liefert aber beim Zusammenfassen die besten Stichpunkt-Antworten. Wird dafür empfohlen.
 
-\item \textbf{jobautomation/OpenEuroLLM-German} (auf Gemma 3, Deutsch optimiert)\cite{openeurollm}: Generiert vollständige und gut strukturierte Texte, keine fremdsprachigen Fachwörter. Für das Erstellen aus Stichpunkten und Umformulieren als Standard-Modell gewählt.
+\item \textbf{jobautomation/OpenEuroLLM-German} (auf Gemma 3 basierend)\cite{openeurollm}: Generiert vollständige und gut strukturierte Texte, keine fremdsprachigen Fachwörter. Für das Erstellen aus Stichpunkten und Umformulieren als Standard-Modell gewählt.
 
-\item \textbf{Gemma3} (Google, 12 Mrd. Parameter)\cite{gemma3}: Aufgrund fehlender Spezialisierung meist weniger gut formulierte Texte, aber sehr gut geeignet für Synonyme und Feedback. \end{itemize}
+\item \textbf{Gemma3} (von Google entwickelt, Open Source, 12 Mrd. Parameter)\cite{gemma3}: Aufgrund fehlender Spezialisierung meist weniger gut formulierte Texte, aber sehr gut geeignet für Synonyme und Feedback. \end{itemize}
 
 Die Einbindung der Modelle erfolgt über die lokale Ollama-API. Für jeden \glslink{glos:ki}{KI}-Aufruf sendet das Backend die Modellwahl sowie Inhalte wie Aufgabe, bisherigen Chatverlauf, 
-Paragraphinhalt, ggf. Nutzerkommentare und weitere Felder an Ollama. Die Prompts für jede Aufgabe wurden getestet und iterativ angepasst, bis die Modelle zufriedenstellende Antworten 
-lieferten. Die Prompts sind auf Deutsch, da der Schreibassistent auf die deutsche Sprache spezialisiert ist. Englische Prompts führten im Test zu keinen signifikant besseren Ergebnissen.
+Paragraphinhalt, gegebenenfalls Nutzerkommentare und weitere Felder an Ollama.\\ Die Prompts für jede Aufgabe wurden getestet und iterativ angepasst, bis die Modelle zufriedenstellende Antworten 
+lieferten. Sie sind auf Deutsch verfasst, da der Schreibassistent auf die deutsche Sprache spezialisiert ist. Englische Prompts führten im Test zu keinen signifikant besseren Ergebnissen.
 
-[vllt noch was dazu sagen, wie man sich neue modelle ziehen kann]
+[neue modelle ziehen]
 
 \section{Aufbau der Datenbank}
 \begin{figure}[h!]
@@ -93,13 +92,13 @@ lieferten. Die Prompts sind auf Deutsch, da der Schreibassistent auf die deutsch
 \end{figure}
 Die Datenbank wird in Abb. \ref{fig:data} schematisch dargestellt und umfasst vier miteinander verknüpfte Tabellen. Die erste Tabelle speichert alle projektbezogenen Informationen wie ID, 
 Projekttitel und den "`mode"', der den Modus des Projektes angibt. Modus 0 steht für den normalen Modus ohne Einschränkungen, Modus 1 und 2 für den Schülermodus, wobei Modus 2 zusätzlich 
-eine Bearbeitungszeit mithilfe von Startzeit und Dauer im Backend vorgibt. Modus 3 (Abgegeben-Modus) ermöglicht nur noch das Lesen und Generieren des \glslink{glos:ki}{KI}-Nutzungsverzeichnisses, 
+eine Bearbeitungszeit mithilfe von Startzeit und Dauer im Backend vorgibt. Modus 3 (Abgegeben-Modus) ermöglicht nur noch das Lesen des Textes und Generieren des \glslink{glos:ki}{KI}-Nutzungsverzeichnisses, 
 eine Bearbeitung ist dann nicht mehr möglich.\\ Jedes Projekt kann mehrere Paragraphen enthalten, die den geschriebenen Text darstellen. Jedem Paragraphen können wiederum mehrere 
-\glslink{glos:ki}{KI}-Chats zugeordnet werden, die jeweils einen Titel und mehrere "`Answers"' (eigentliche Konversationen mit der \glslink{glos:ki}{KI}) besitzen. Eine Answer besteht aus 
-der Nutzeranfrage samt allen zu speichernden Daten und einem optionalen Kommentar, der – falls aktiviert – künftigen Anfragen im Chat beigefügt wird. Außerdem beinhaltet jede Answer einen 
-Zeitstempel, welcher im \glslink{glos:ki}{KI}-Nutzungsverzeichnis verwendet wird.\\ Zusätzlich gibt es eine direkte Verknüpfung zwischen Projekten und Answers. Dadurch gehen im 
-Schülermodus selbst beim Löschen eines Paragraphen die zugehörigen \glslink{glos:ki}{KI}-Anfragen nicht verloren. So können auch für gelöschte Paragraphen deren \glslink{glos:ki}{KI}-Anfragen 
-im \glslink{glos:ki}{KI}-Nutzungsverzeichnis dokumentiert und die Nachvollziehbarkeit für Lehrkräfte erhöht werden.
+\glslink{glos:ki}{KI}-Chats zugeordnet werden, die jeweils einen Titel und mehrere "`Answers"' besitzen, welche die eigentlichen Konversationen mit der \glslink{glos:ki}{KI} darstellen. Eine Answer besteht aus 
+der Nutzeranfrage samt allen zu speichernden Daten und einem optionalen Kommentar, der künftigen Anfragen im Chat beigefügt werden kann. Außerdem beinhaltet jede Answer einen 
+Zeitstempel, welcher im \glslink{glos:ki}{KI}-Nutzungsverzeichnis angegeben wird.\\ Zusätzlich gibt es eine direkte Verknüpfung zwischen Projekten und Answers. Dadurch gehen im 
+Schülermodus selbst beim Löschen eines Paragraphen die zugehörigen \glslink{glos:ki}{KI}-Anfragen nicht verloren. So können auch für gelöschte Paragraphen die dazugehörigen \glslink{glos:ki}{KI}-Anfragen 
+im Nutzungsverzeichnis dokumentiert und die Nachvollziehbarkeit für Lehrkräfte erhöht werden.
 
 
 
@@ -109,28 +108,26 @@ im \glslink{glos:ki}{KI}-Nutzungsverzeichnis dokumentiert und die Nachvollziehba
   \caption{Architekturschema}
   \label{fig:architecture}
 \end{figure}
-Das Backend stellt die nötigen Endpunkte für das Frontend bereit, um Projekte, Paragraphen, Chats und Answers zu erstellen, zu löschen, abzurufen oder zu bearbeiten sowie Aufrufe an Ollama 
+Das Backend stellt die nötigen Endpunkte für das Frontend bereit, um Projekte, Paragraphen, Chats und Answers zu erstellen, zu löschen, abzurufen oder zu bearbeiten, sowie Aufrufe an Ollama 
 zu senden (Abb. \ref{fig:architecture}). Das Frontend nutzt diese Endpunkte, um die Funktionalität für den Nutzer bereitzustellen.\\
-
-Beim Erstellen eines Projekts im Modus 2 kann eine Bearbeitungszeit festgelegt werden, die über einen Timer angezeigt wird. Läuft die Zeit ab, wird der Modus automatisch auf Modus 3 gesetzt 
+Bei dem Erstellen eines Projekts im Modus 2 kann eine Bearbeitungszeit festgelegt werden, die über einen Timer angezeigt wird. Läuft die Zeit ab, wird der Modus automatisch auf Modus 3 gesetzt 
 und sowohl das \glslink{glos:ki}{KI}-Nutzungsverzeichnis als auch die Text-PDF werden generiert und heruntergeladen. Um zu verhindern, dass Schüler während der Bearbeitung andere Tabs 
 oder Programme öffnen, wird die Arbeit beim Verlassen des Browsertabs („blur-event“)\cite{react-onblur} oder beim Zurückkehren zum Startbildschirm automatisch abgegeben. Das Projekt 
-kann auch manuell per „Abgeben“-Button abgeschlossen werden.\\
+kann manuell per „Abgeben“-Button abgeschlossen werden.\\
 Zum Generieren des \glslink{glos:ki}{KI}-Nutzungsverzeichnisses sendet das Frontend eine Anfrage ans Backend, das ein JSON-Objekt mit den nötigen Informationen zurückliefert. 
 Dieses wird im Frontend als PDF formatiert und zum Download bereitgestellt.
 
 
 \section{Problema}
 
-Während der Entwicklung und Implementierung traten mehrere Probleme auf.\\
-Eines bestand darin, dass der Schreibassistent auch funktionieren muss, wenn Schüler keine \glslink{glos:ki}{KI}-Chats anlegen. Beim Generieren des \glslink{glos:ki}{KI}-Nutzungsverzeichnisses 
-trat sonst ein Fehler auf, da keine dem Projekt zugehörigen Answers gefunden werden konnten. Dieser Backend-Fehler wird nun abgefangen, und das Verzeichnis stattdessen mit dem Hinweis 
+Während der Implementierung traten mehrere Probleme auf. Eines bestand darin, dass das Generieren des Nutzungsverzeichnisses auch funktionieren muss, wenn Schüler keine \glslink{glos:ki}{KI}-Chats anlegen. 
+Zuvor trat ein Fehler auf, da keine dem Projekt zugehörigen Answers gefunden werden konnten. Statt in diesem Fall einen Fehler zu werfen, wird das Verzeichnis mit dem Hinweis 
 "`keine \glslink{glos:ki}{KI} verwendet"' erzeugt.\\
-Weiterhin wurden Variablen im Frontend beim Neuladen der Seite zurückgesetzt und der Timer begann von vorn. Zur Lösung werden Startzeitpunkt und Dauer der Bearbeitungszeit jetzt im Backend 
+Weiterhin wurden Variablen im Frontend bei dem Neuladen der Seite zurückgesetzt und der Timer begann von vorn. Zur Lösung werden Startzeitpunkt und Dauer der Bearbeitungszeit im Backend 
 gespeichert.\\ 
 Ein weiteres Risiko ist Prompt-Injection, bei dem Schüler versuchen könnten, die vorgesehenen Einschränkungen zu umgehen, indem sie in einigen Feldern oder in Absätzen ganze Prompts einfügen.\\ 
-Zur Abwehr dieser Versuche gibt es verschiedene Ansätze: Eine Möglichkeit wäre das Filtern der Eingaben, z.B. mittels zwischengeschaltetem \glslink{glos:llm}{LLM} oder das statische Verbieten 
+Zur Abwehr dieser Versuche gibt es verschiedene Ansätze: Eine Möglichkeit wäre das Filtern der Eingaben, zum Beispiel mittels zwischengeschaltetem \glslink{glos:llm}{LLM} oder das statische Verbieten 
 bestimmter Phrasen. Beides wurde verworfen, da dies die Performanz mindert oder den Schreibprozess einschränken könnte.\cite{promptinjection}\\
-Auch das Filtern der Ausgaben ist ungeeignet, da sich neu generierte und umformulierte Texte kaum unterscheiden lassen. Stattdessen wird eine Kombination aus Parametrisierung und Prompt-Engineering 
+Das Filtern der Ausgaben ist ungeeignet, da sich neu generierte und umformulierte Texte kaum unterscheiden lassen. Stattdessen wird eine Kombination aus Parametrisierung und Prompt-Engineering 
 eingesetzt: Eingabefelder werden meist auf wenige Optionen beschränkt. Wo dies nicht möglich ist, werden die Prompts so gestaltet, dass klar zwischen Nutzereingabe und Systemanweisung unterschieden wird.
 \end{document}
