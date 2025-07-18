@@ -8,18 +8,18 @@
 
 Die Entwicklung des hier beschriebenen Schreibassistenten verfolgt das Ziel, ein innovatives \glslink{glos:ki}{KI}-Werkzeug zu schaffen, das vor allem Schüler und Studenten bei dem Verfassen 
 verschiedener Texte unterstützt. Die von Studenten genutzten Text-Editoren wie Overleaf sollen nicht ersetzt werden. Stattdessen soll eine Möglichkeit geboten werden, 
-\glslink{glos:ki}{KI}-Chats mit unterschiedlichen \glslink{glos:llm}{LLM}s übersichtlich zu sammeln. Es soll, wie in \autoref{sec:nachteile} beschrieben, eine Art "`Augmented Intelligence"' geschaffen werden, die die Effizienz im Schreibprozess 
+\glslink{glos:ki}{KI}-Chats mit unterschiedlichen \glslink{glos:llm}{LLM}s übersichtlich zu sammeln. Es soll, wie in \autoref{sec:nachteile} beschrieben, eine Art "`\glslink{augmented-intelligence}{Augmented Intelligence}"' geschaffen werden, die die Effizienz im Schreibprozess 
 steigert, aber nicht das komplette Verfassen übernimmt.\\ Im Gegensatz zu den in \autoref{sec:bereitsBestehendeLoesungen} beschriebenen bestehenden Lösungen, sollen verschiedene \glslink{glos:ki}{KI}-Chats 
 übersichtlich und abschnittsbezogen angelegt werden können. Für jeden Textabschnitt können mehrere \glslink{glos:ki}{KI}-Chats mit unterschiedlichen Modellen erstellt und gespeichert werden. Durch das Sammeln der \glslink{glos:ki}{KI}-Gespräche soll ein übersichtlicheres Arbeiten ermöglicht werden. Zudem kann der Nutzer die \glslink{glos:ki}{KI}-Antworten kommentieren, um sich Gedanken zu Verbesserungen oder zu der Relevanz der generierten Antwort für den Text zu notieren.\\
 Das Nutzerinterface des Schreibassistenten soll intuitiv und verständlich gestaltet sein, begleitet von einem schlichten Design. Um unerfahrenen Nutzern den Umgang mit 
-generativer \glslink{glos:ki}{KI} zu vereinfachen, werden die in \autoref{ch:anforderungen} identifizierten Anforderungen umgesetzt. Dazu gehören Tooltips an Knöpfen, die mit der 
+generativer \glslink{glos:ki}{KI} zu vereinfachen, werden die in \autoref{ch:anforderungen} identifizierten Anforderungen umgesetzt. Dazu gehören \glslink{tooltips}{Tooltips} an Knöpfen, die mit der 
 \glslink{glos:ki}{KI}-Funktionalität verbunden sind. Diese erklären dem Nutzer die jeweilige Funktion. Jeder Nutzer soll nachvollziehen können, welchen Einfluss eine Eingabe in 
 ein Textfeld oder eine Auswahl aus einem Drop-Down-Menü auf die Antwort hat. Zudem wird der Nutzer beim Anlegen eines Projekts gewarnt, dass 
 \glslink{glos:ki}{KI}-Modelle halluzinieren können. Damit soll, ähnlich wie in der in \autoref{ch:anforderungen} behandelten Studie, die Akzeptanz von \glslink{glos:ki}{KI}-generierten Misinformationen verringert werden. Dadurch 
 wird das Risiko, dass Fehlinformationen in Arbeiten von Schülern und Studenten gelangen, reduziert. Der Nutzer soll angeregt werden, die von der \glslink{glos:ki}{KI} generierten Inhalte 
 
 kritisch zu hinterfragen.\\
-Auch bei der Formulierung von Prompts soll der Nutzer Unterstützung erhalten. Da bereits kleine Änderungen im Prompt oder in der Reihenfolge der Informationen großen 
+Auch bei der Formulierung von \gls{glos:prompt}s soll der Nutzer Unterstützung erhalten. Da bereits kleine Änderungen im Prompt oder in der Reihenfolge der Informationen großen 
 Einfluss auf die \glslink{glos:ki}{KI}-Antwort haben können, sind verlässliche und reproduzierbare Abläufe schwer zu erreichen\cite{creativeWriting}. Dies soll durch das Zusammensetzen vorgefertigter 
 Prompts im Backend umgangen werden. So wird die Nutzung für \glslink{glos:ki}{KI}-Unerfahrene erleichtert. Dafür werden Prompts für diese in \autoref{sec:vorteile} identifizierten 
 Einsatzmöglichkeiten bereitgestellt: umformulieren, zusammenfassen, Text aus Stichpunkten erstellen, Synonyme finden, Grammatik und Rechtschreibung prüfen sowie Feedback geben. Außerdem soll das KI-Modell
@@ -29,7 +29,7 @@ Schülern Sachverhalte erklären können, um das Textverständnis zu verbessern.
 \subsection{Anwendungsfälle}
 
 Der Schreibassistent wird für unterschiedliche Anwendungsfälle entwickelt: \\
- Zum einen soll dem Nutzer ein Werkzeug geboten werden, mit welchem er strukturiert verschiedene \glslink{glos:ki}{KI}-Modelle verwenden kann. Die bereitgestellten vorgefertigten Prompts sollen 
+ Zum einen soll dem Nutzer ein Werkzeug geboten werden, mit welchem er strukturiert verschiedene \glslink{glos:ki}{KI}-Modelle verwenden kann. Die bereitgestellten vorgefertigten \gls{glos:prompt}s sollen 
  die Effizienz während des Schreibprozesses weiter steigern. Darüber hinaus ist das Schreiben nutzerdefinierter Prompts möglich. Das generierte \glslink{glos:ki}{KI}-Nutzungsverzeichnis kann als eine 
  Art Quellenverzeichnis an wissenschaftliche Arbeiten angehangen werden. Es zeigt das verwendete \glslink{glos:ki}{KI}-Modell, die Aufgabe, welche das Modell übernehmen sollte 
  beziehungsweise den Prompt, sowie das Datum der Anfrage. In diesem Nutzungsverzeichnis werden nur Prompts zu den gespeicherten Chats angeführt. Dadurch wird vermieden, dass Chats 
@@ -58,8 +58,8 @@ Das Backend ist mit dem Web-Framework FastAPI umgesetzt. Dieses Python-Framework
 Python als Programmiersprache steigert ebenfalls die Effizienz, da sie einfach aufgebaut und weit verbreitet ist. Zudem existieren zahlreiche zusätzliche Bibliotheken.\cite{python}\\
 Eine dieser Bibliotheken ist SQLAlchemy, die für die Implementierung verwendet wurde. Sie bietet eine objektorientierte Abstraktionsschicht für den Datenbankzugriff, sodass mit Python-Klassen statt mit SQL-Abfragen gearbeitet werden kann. 
 So wird der Code übersichtlicher und wartbarer. Der Zugriff auf die verwendete SQLite-Datenbank wird erleichtert. Ein Umstieg auf eine leistungsfähigere Datenbank wäre später mit wenig Aufwand möglich.\cite{SQLAlchemy}\\
-Für die Einbindung der \glslink{glos:ki}{KI}-Modelle wurde Ollama verwendet. Ollama ist eine Open-Source-Software, die die Ausführung von \glslink{glos:llm}{LLM}s lokal ermöglicht. 
-Sie stellt eine API zur Verfügung, über die verschiedene Modelle genutzt werden können. Ollama übernimmt den Wechsel zwischen Modellen, verhindert Parallelnutzung und erhöht so die Performanz.\cite{ollamaSchreibassi,ollamaTechnologie}
+Für die Einbindung der \glslink{glos:ki}{KI}-Modelle wurde \glslink{ollama}{Ollama} verwendet. Ollama ist eine \glslink{open-source}{Open-Source}-Software, die die Ausführung von \glslink{glos:llm}{LLM}s lokal ermöglicht. 
+Sie stellt eine \acrshort{api1} zur Verfügung, über die verschiedene Modelle genutzt werden können. Ollama übernimmt den Wechsel zwischen Modellen, verhindert Parallelnutzung und erhöht so die Performanz.\cite{ollamaSchreibassi,ollamaTechnologie}
 
 
 
@@ -70,7 +70,7 @@ Nutzer können frei zwischen mehreren Modellen wählen und selbst festlegen, wel
 getestetem Prompt vorgeschlagen. Die getesteten Modelle sind auf gute Ergebnisse bei deutscher Sprache und Performanz auf aktuellen Laptops ausgelegt. Dabei erfolgten stichprobenartige 
 Prüfungen der Antworten auf Ausdruck, Grammatik und Inhalt. Im Folgenden werden die wichtigsten Testergebnisse beleuchtet:
 
-\begin{itemize} \item \textbf{lukasmalkmus/llama3-sauerkraut} (8 Mrd. Parameter, auf Llama-3 basierend)\cite{sauerkraut}: Antwortet teils auf Englisch oder ersetzt deutsche Begriffe. Wird daher im Schreibassistenten nicht verwendet.
+\begin{itemize} \item \textbf{lukasmalkmus/llama3-sauerkraut} (8 Mrd. \glslink{parameter}{Parameter}, auf Llama-3 basierend)\cite{sauerkraut}: Antwortet teils auf Englisch oder ersetzt deutsche Begriffe. Wird daher im Schreibassistenten nicht verwendet.
 
 
 \item \textbf{mayflowergmbh/wiedervereinigung} (auf Mistral basierend, 7 Mrd. Parameter)\cite{wiedervereinigung}: Fügt oft neuen Inhalt hinzu statt der Aufgabe zu folgen. Nicht verwendet.
@@ -81,7 +81,7 @@ Prüfungen der Antworten auf Ausdruck, Grammatik und Inhalt. Im Folgenden werden
 
 \item \textbf{Gemma3} (von Google entwickelt, Open Source, 12 Mrd. Parameter)\cite{gemma3}: Aufgrund fehlender Spezialisierung meist weniger gut formulierte Texte, aber sehr gut geeignet für Synonyme und Feedback. \end{itemize}
 
-Die Einbindung der Modelle erfolgt über die lokale Ollama-API. Für jeden \glslink{glos:ki}{KI}-Aufruf sendet das Backend die Modellwahl sowie Inhalte wie Aufgabe, bisherigen Chatverlauf, 
+Die Einbindung der Modelle erfolgt über die lokale \glslink{ollama}{Ollama}-API. Für jeden \glslink{glos:ki}{KI}-Aufruf sendet das Backend die Modellwahl sowie Inhalte wie Aufgabe, bisherigen Chatverlauf, 
 Paragraphinhalt, gegebenenfalls Nutzerkommentare und weitere Felder an Ollama.\\ Die Prompts für jede Aufgabe wurden getestet und iterativ angepasst, bis die Modelle zufriedenstellende Antworten 
 lieferten. Sie sind auf Deutsch verfasst, da der Schreibassistent auf die deutsche Sprache spezialisiert ist. Englische Prompts führten im Test zu keinen signifikant besseren Ergebnissen.
 
@@ -129,9 +129,9 @@ Zuvor trat ein Fehler auf, da keine dem Projekt zugehörigen Answers gefunden we
 "`keine \glslink{glos:ki}{KI} verwendet"' erzeugt.\\
 Weiterhin wurden Variablen im Frontend bei dem Neuladen der Seite zurückgesetzt und der Timer begann von vorn. Zur Lösung werden Startzeitpunkt und Dauer der Bearbeitungszeit im Backend 
 gespeichert.\\ 
-Ein weiteres Risiko ist Prompt-Injection, bei dem Schüler versuchen könnten, die vorgesehenen Einschränkungen zu umgehen, indem sie in einigen Feldern oder in Absätzen ganze Prompts einfügen.\\ 
+Ein weiteres Risiko ist Prompt-Injection, bei dem Schüler versuchen könnten, die vorgesehenen Einschränkungen zu umgehen, indem sie in einigen Feldern oder in Absätzen ganze \gls{glos:prompt}s einfügen.\\ 
 Zur Abwehr dieser Versuche gibt es verschiedene Ansätze: Eine Möglichkeit wäre das Filtern der Eingaben, zum Beispiel mittels zwischengeschaltetem \glslink{glos:llm}{LLM} oder das statische Verbieten 
 bestimmter Phrasen. Beides wurde verworfen, da dies die Performanz mindert oder den Schreibprozess einschränken könnte.\cite{promptinjection}\\
-Das Filtern der Ausgaben ist ungeeignet, da sich neu generierte und umformulierte Texte kaum unterscheiden lassen. Stattdessen wird eine Kombination aus Parametrisierung und Prompt-Engineering 
+Das Filtern der Ausgaben ist ungeeignet, da sich neu generierte und umformulierte Texte kaum unterscheiden lassen. Stattdessen wird eine Kombination aus Parametrisierung und \glslink{prompt-engineering}{Prompt-Engineering} 
 eingesetzt: Eingabefelder werden meist auf wenige Optionen beschränkt. Wo dies nicht möglich ist, werden die Prompts so gestaltet, dass klar zwischen Nutzereingabe und Systemanweisung unterschieden wird.
 \end{document}
