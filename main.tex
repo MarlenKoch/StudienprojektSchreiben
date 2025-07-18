@@ -76,26 +76,36 @@
 \definecolor{dkblue}{rgb}{0,0,.6}
 \definecolor{dkyellow}{cmyk}{0,0,.8,.3}
 
+% \lstset{
+%     % numbers=left, 
+%     % numberstyle=\tiny, 
+%     % numbersep=5pt,
+%     breaklines=true,
+%     frame=lines,
+%     % language=sh,
+%     basicstyle=\small\ttfamily,
+%     columns=flexible,
+%     showstringspaces=false
+%     % basicstyle=\ttfamily\fontsize{10}{12}\selectfont,
+%     % keywordstyle    = \color{dkblue},
+%     % stringstyle     = \color{red},
+%     % identifierstyle = \color{dkgreen},
+%     % commentstyle    = \color{gray},
+%     % emph            =[1]{php},
+%     % emphstyle       =[1]\color{black},
+%     % emph            =[2]{if,and,or,else},
+%     % emphstyle       =[2]\color{dkyellow}
+% } 
+
 \lstset{
-    % numbers=left, 
-    % numberstyle=\tiny, 
-    % numbersep=5pt,
-    breaklines=true,
-    frame=lines,
-    % language=sh,
-    basicstyle=\small\ttfamily,
-    columns=flexible,
-    showstringspaces=false
-    % basicstyle=\ttfamily\fontsize{10}{12}\selectfont,
-    % keywordstyle    = \color{dkblue},
-    % stringstyle     = \color{red},
-    % identifierstyle = \color{dkgreen},
-    % commentstyle    = \color{gray},
-    % emph            =[1]{php},
-    % emphstyle       =[1]\color{black},
-    % emph            =[2]{if,and,or,else},
-    % emphstyle       =[2]\color{dkyellow}
-} 
+  basicstyle=\ttfamily\small,
+  extendedchars=true,
+  inputencoding=utf8,
+  breaklines=true,
+  numbers=left,
+  numberstyle=\tiny,
+  frame=lines
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% Sonderformatierung
@@ -368,5 +378,9 @@ Alle Abbildungen sind eigene Darstellungen.
 \addcontentsline{toc}{chapter}{Ehrenwörtliche Erklärung}
 \subfile{chapter/ehrenwörtliche_erklärung.tex}
 
+\appendix
+\chapter*{Anhang}
+\addcontentsline{toc}{chapter}{Anhang}
+\subfile{chapter/anhang.tex}
 \end{document}
 
