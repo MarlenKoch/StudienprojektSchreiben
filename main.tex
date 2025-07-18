@@ -164,7 +164,7 @@
 % ändert Titelschriftart in Serifen-Normalschriftart
 \addtokomafont{disposition}{\rmfamily} 
 
-
+\setcounter{tocdepth}{1}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -256,17 +256,17 @@
 % \onehalfspacing
 
 
-\vspace{20mm}
+% \vspace{20mm}
 
-\begin{tabular}{lp{2em}l} 
-    \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
-    Ort, Datum     && \studentNameOne{}
-\end{tabular}
+% \begin{tabular}{lp{2em}l} 
+%     \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
+%     Ort, Datum     && \studentNameOne{}
+% \end{tabular}
 
-\begin{tabular}{lp{2em}l} 
-    \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
-    Ort, Datum     && \studentNameTwo{}
-\end{tabular}
+% \begin{tabular}{lp{2em}l} 
+%     \hspace{4cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
+%     Ort, Datum     && \studentNameTwo{}
+% \end{tabular}
 
 % \vspace{\fill}
 % \normalsize{Von der betrieblichen Betreuung zur Kenntnis genommen:}
@@ -302,19 +302,21 @@
 \tableofcontents{}
 \addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
 
+
 \listoffigures
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-\newpage
 
 % \listoftables
 % \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
 
 \section*{Hinweise}
 
-Aus Gründen der besseren Lesbarkeit wird im Text verallgemeinernd das generische Maskulinum verwendet. Diese Formulierungen umfassen gleichermaßen weibliche, männliche und diverse Personen.\\
+Aus Gründen der besseren Lesbarkeit wird im Text verallgemeinernd das generische Maskulinum verwendet. Diese Formulierungen umfassen gleichermaßen weibliche, männliche und diverse Personen.
 
 Um den Lesefluss zu verbessern, werden Quellen, die sich auf einen gesamten Absatz beziehen, am Ende des Absatzes nach dem Schlusspunkt angegeben, während Abbildungen und Codebeispiele, die den
-Lesefluss stören, im Anhang platziert werden, auf den im Text zusätzlich verwiesen wird.
+Lesefluss stören, im Anhang platziert werden, auf den im Text zusätzlich verwiesen wird. 
+
+Alle Abbildungen sind eigene Darstellungen.
 \clearpage
 
 %Tabellenverzeichnis, falls nötig: 
