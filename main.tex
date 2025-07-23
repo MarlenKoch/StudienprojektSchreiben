@@ -299,18 +299,24 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% Abstract
-\chapter*{Kurzfassung}
-\addcontentsline{toc}{chapter}{Kurzfassung}
+\chapter*{Abstract}
+% \addcontentsline{toc}{chapter}{Abstract}
 \subfile{chapter/abstract.tex}
 
 \pagenumbering{Roman} % römische Seitenzahlen
+
+\chapter*{Hinweise}
+% \addcontentsline{toc}{chapter}{Abstract}
+\subfile{chapter/hinweise.tex}
+
+\pagenumbering{Roman} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% Inhaltsverzeichnis, Tabellen, Abbildungen, etc.
 \newpage
 
 \tableofcontents{}
-\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+% \addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
 
 
 \listoffigures
@@ -318,16 +324,6 @@
 
 % \listoftables
 % \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-
-\section*{Hinweise}
-
-Aus Gründen der besseren Lesbarkeit wird im Text verallgemeinernd das generische Maskulinum verwendet. Diese Formulierungen umfassen gleichermaßen weibliche, männliche und diverse Personen.
-
-Um den Lesefluss zu verbessern, werden Quellen, die sich auf einen gesamten Absatz beziehen, am Ende des Absatzes nach dem Schlusspunkt angegeben, während Abbildungen und Codebeispiele, die den
-Lesefluss stören, im Anhang platziert werden, auf den im Text zusätzlich verwiesen wird. 
-
-Alle Abbildungen sind eigene Darstellungen.
-\clearpage
 
 %Tabellenverzeichnis, falls nötig: 
 
@@ -354,13 +350,13 @@ Alle Abbildungen sind eigene Darstellungen.
 \chapter{Wissenschaftliches Schreiben und Künstliche Intelligenz}\label{ch:wissenschaftlichesSchreibenUndKI}
 \subfile{chapter/wissenschaftlichesSchreibenUndKI.tex}
 
-\chapter{Anforderungen}\label{ch:anforderungen}
+\chapter{Konzeptuelle Grundlagen}\label{ch:anforderungen}
 \subfile{chapter/anforderungen.tex}
 
 \chapter{Implementierung}\label{ch:implementierung}
 \subfile{chapter/implementierung.tex}
 
-\chapter{Bewertung}\label{ch:bewertung}
+\chapter{Evaluationg}\label{ch:bewertung}
 \subfile{chapter/bewertung.tex}
 
 \chapter{Fazit}\label{ch:fazit}
