@@ -2,7 +2,7 @@
 \begin{document}
 
 \section{Motivation}
-
+%TODO: ich finde solche leeren abschnitte immer nich so schön ist aber wirklich nur mein persöhnliches empfinden
 \subsection{Zielsetzung}
 
 
@@ -24,12 +24,15 @@ Prompts im Backend umgangen werden. So wird die Nutzung für \glslink{glos:ki}{K
 Einsatzmöglichkeiten bereitgestellt: umformulieren, zusammenfassen, Text aus Stichpunkten erstellen, Synonyme finden, Grammatik und Rechtschreibung prüfen sowie Feedback geben. Außerdem soll das KI-Modell
 Schülern Sachverhalte erklären können, um das Textverständnis zu verbessern.
 
+%TODO: Das hier sind für mich Anforderungen
+
 
 \subsection{Anwendungsfälle}
 
 Der Schreibassistent wird für unterschiedliche Anwendungsfälle entwickelt: \\
  Zum einen soll dem Nutzer ein Werkzeug geboten werden, mit welchem er strukturiert verschiedene \glslink{glos:ki}{KI}-Modelle verwenden kann. Die bereitgestellten vorgefertigten \gls{glos:prompt}s sollen 
  die Effizienz während des Schreibprozesses weiter steigern. Darüber hinaus ist das Schreiben nutzerdefinierter Prompts möglich. Das generierte \glslink{glos:ki}{KI}-Nutzungsverzeichnis kann als eine 
+ %TODO: das sowas generiert wird taucht hier das erste Mal auf und ist ein bisschen überraschend. Habe ich was überlesen?
  Art Quellenverzeichnis an wissenschaftliche Arbeiten angehangen werden. Es zeigt das verwendete \glslink{glos:ki}{KI}-Modell, die Aufgabe, welche das Modell übernehmen sollte 
  beziehungsweise den Prompt, sowie das Datum der Anfrage. In diesem Nutzungsverzeichnis werden nur Prompts zu den gespeicherten Chats angeführt. Dadurch wird vermieden, dass Chats 
  vermerkt werden, deren Ergebnisse nicht in die Arbeit eingeflossen sind, und das Verzeichnis bleibt übersichtlich.\\ 
@@ -48,13 +51,16 @@ Der Schreibassistent wird für unterschiedliche Anwendungsfälle entwickelt: \\
  generativer \glslink{glos:ki}{KI} während des Unterrichts ermöglicht wird.
 
 
+%TODO: Das hier sind für mich auch Anforderungen
+
 \section{Verwendete Technologien}
 
 Das Frontend des Schreibassistenten wurde mit dem Framework React entwickelt. Diese JavaScript-Bibliothek verfolgt einen komponentenbasierten Ansatz, welcher die Wiederverwendbarkeit 
-des Codes erhöht. React TypeScript bietet zusätzlich Typisierung, wodurch der Code weniger fehleranfällig ist. Es wurde wurde primär wegen seiner Performanz und Dynamik gewählt. \cite{react1,react2} \\
+des Codes erhöht. React TypeScript bietet zusätzlich Typisierung, wodurch der Code weniger fehleranfällig ist. React wurde primär wegen seiner Performanz und Dynamik gewählt. \cite{react1,react2} \\
 Für das Design kommt Cascading Style Sheets (CSS) zum Einsatz. Die Nutzung eigener \acrshort{css}-Klassen erlaubt Wiederverwendbarkeit. Im Gegensatz zu CSS-Frameworks ermöglicht reines CSS größere Flexibilität.\\
-Das Backend ist mit dem Web-Framework FastAPI umgesetzt. Dieses Python-Framework zeichnet sich durch gute Performanz und eingebaute Typisierung aus. Die Verwendung von Datenmodellen verbessert die Code-Qualität\cite{fastapi}.\\
-Python als Programmiersprache steigert ebenfalls die Effizienz, da sie einfach aufgebaut und weit verbreitet ist. Zudem existieren zahlreiche \mbox{zusätzliche Bibliotheken.\cite{python}}\\
+%TODO: dasd wort Wiederverwendbarkeit sollte hier nicht mehrfach wiederverwendet ;-) werden. nehmt ein Synonym und formuliert um
+Das Backend ist mit dem Web-Framework FastAPI umgesetzt. Dieses Python-Framework zeichnet sich durch gute Performanz und eingebaute Typisierung aus. Die Verwendung von Datenmodellen verbessert die Code-Qualität \cite{fastapi}.\\
+Python als Programmiersprache steigert ebenfalls die Effizienz, da sie einfach aufgebaut und weit verbreitet ist. Zudem existieren zahlreiche \mbox{zusätzliche Bibliotheken. \cite{python}}\\
 Eine dieser Bibliotheken ist SQLAlchemy, die für die Implementierung verwendet wurde. Sie bietet eine objektorientierte Abstraktionsschicht für den Datenbankzugriff, sodass mit Python-Klassen statt mit \acrshort{sql}-Abfragen gearbeitet werden kann. 
 So wird der Code übersichtlicher und wartbarer. Der Zugriff auf die verwendete SQLite-Datenbank wird erleichtert. Ein Umstieg auf eine leistungsfähigere Datenbank wäre später mit wenig Aufwand möglich.\cite{SQLAlchemy}\\
 Für die Einbindung der \glslink{glos:ki}{KI}-Modelle wurde \glslink{ollama}{Ollama} verwendet. Ollama ist eine \glslink{open-source}{Open-Source}-Software, die die Ausführung von \glslink{glos:llm}{LLM}s lokal ermöglicht. 
@@ -70,7 +76,7 @@ getestetem Prompt vorgeschlagen. Die getesteten Modelle sind auf gute Ergebnisse
 Prüfungen der Antworten auf Ausdruck, Grammatik und Inhalt. Im Folgenden werden die wichtigsten \mbox{Testergebnisse beleuchtet:}
 
 \begin{itemize} \item \textbf{lukasmalkmus/llama3-sauerkraut} (8 Mrd. \glslink{parameter}{Parameter}, auf Llama-3 basierend)\cite{sauerkraut}: Antwortet teils auf Englisch oder ersetzt deutsche Begriffe. Wird daher im Schreibassistenten nicht verwendet.
-
+%TODO: Warum listet ihr das dann hier?
 
 \item \textbf{mayflowergmbh/wiedervereinigung} (auf Mistral basierend, 7 Mrd. Parameter)\cite{wiedervereinigung}: Fügt oft neuen Inhalt hinzu statt der Aufgabe zu folgen. Nicht verwendet.
 
@@ -84,7 +90,10 @@ Die Einbindung der Modelle erfolgt über die lokale \glslink{ollama}{Ollama}-API
 Paragraphinhalt, gegebenenfalls Nutzerkommentare und weitere Felder an Ollama.\\ Die Prompts für jede Aufgabe wurden getestet und iterativ angepasst, bis die Modelle zufriedenstellende Antworten 
 lieferten. Sie sind auf Deutsch verfasst, da der Schreibassistent auf die deutsche Sprache spezialisiert ist. Englische Prompts führten im Test zu keinen signifikant besseren Ergebnissen. Die Ergebnisse des Prompt-Engineerings befinden sich im Anhang \ref{Prompts}.
 
+%TODO: Diese Test methode müsst ihr später auf jeden Fall kritisch hinterfrage! (ich habe noch nicht weitergelessen, wenn das also kommt ignoriert das hier)
+
 [neue modelle ziehen]
+%TODO: das soll glaube ich nicht mehr da sein
 
 \section{Aufbau der Datenbank}
 \begin{figure}[h!]
@@ -114,6 +123,7 @@ im Nutzungsverzeichnis dokumentiert und die Nachvollziehbarkeit für Lehrkräfte
 Das Backend stellt die nötigen Endpunkte für das Frontend bereit, um Projekte, Paragraphen, Chats und Answers zu erstellen, zu löschen, abzurufen oder zu bearbeiten, sowie Aufrufe an Ollama 
 zu senden (Abb. \ref{fig:architecture}). Das Frontend nutzt diese Endpunkte, um die Funktionalität für den Nutzer bereitzustellen.\\
 Bei dem Erstellen eines Projekts im Modus 2 kann eine Bearbeitungszeit festgelegt werden, die über einen Timer angezeigt wird. Läuft die Zeit ab, wird der Modus automatisch auf Modus 3 gesetzt 
+%TODO:: Diese details hier kommen ein bisschen aus dem nichts. soll das einfach nur ein beispiel sein? wenn ja, dann bitte kennzeichen weil sonst list man und list man und fragt sich was diese ganzen informatioen eigentlich sollen
 und sowohl das \glslink{glos:ki}{KI}-Nutzungsverzeichnis als auch die Text-PDF werden generiert und heruntergeladen. Um zu verhindern, dass Schüler während der Bearbeitung andere Tabs 
 oder Programme öffnen, wird die Arbeit beim Verlassen des Browsertabs („blur-event“)\cite{react-onblur} oder beim Zurückkehren zum Startbildschirm automatisch abgegeben. Das Projekt 
 kann manuell per „Abgeben“-Button abgeschlossen werden.\\
@@ -125,6 +135,7 @@ Dieses wird im Frontend als PDF formatiert und zum \mbox{Download bereitgestellt
 
 Während der Implementierung traten mehrere Probleme auf. Eines bestand darin, dass das Generieren des Nutzungsverzeichnisses auch funktionieren muss, wenn Schüler keine \glslink{glos:ki}{KI}-Chats anlegen. 
 Zuvor trat ein Fehler auf, da keine dem Projekt zugehörigen Answers gefunden werden konnten. Statt in diesem Fall einen Fehler zu werfen, wird das Verzeichnis mit dem Hinweis 
+%TODO: Das "Answers" kommt ein bisschen plötzlich heir weil ihr gefḧlt sonst immer viel wert auf die deutschen übersetzungen gelegt habt.
 "`keine \glslink{glos:ki}{KI} verwendet"' erzeugt.\\
 Weiterhin wurden Variablen im Frontend bei dem Neuladen der Seite zurückgesetzt und der Timer begann von vorn. Zur Lösung werden Startzeitpunkt und Dauer der Bearbeitungszeit im Backend 
 gespeichert.\\ 

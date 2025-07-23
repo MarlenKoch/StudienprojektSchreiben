@@ -2,34 +2,38 @@
 \begin{document}
 
 In einer bereits in \autoref{sec:efficacy} erwähnten quantitativen Analyse von Yulu Cui wird untersucht, welche Faktoren das Nutzungsverhalten von Studierenden im Hinblick auf den 
-Einsatz von \glslink{glos:ki}{KI}  bei wissenschaftlichen Schreibaufgaben beeinflussen\cite{influencingUsingAi}. Einige der identifizierten Kriterien, welche für die im folgenden Kapitel 
+Einsatz von \glslink{glos:ki}{KI}  bei wissenschaftlichen Schreibaufgaben beeinflussen \cite{influencingUsingAi}. Einige der identifizierten Kriterien, welche für die im folgenden Kapitel 
 beschriebene Implementierung des \glslink{glos:ki}{KI}-basierten Schreibassistenten relevant sind, werden nun \mbox{näher beleuchtet.} \\ 
 Cui stellt fest, dass "`Erfahrung […] positiv mit Häufigkeit, Optimismus, Innovation und wahrgenommener Freude [korreliert]"'\cite[6]{influencingUsingAi}. Wer bereits 
 Erfahrung mit der Nutzung von \glslink{glos:ki}{KI}-Werkzeugen hat, nutzt diese häufiger und verfügt über eine positive Einstellung gegenüber technischen Neuerungen. Dementsprechend 
 sollten neue \glslink{glos:ki}{KI}-Hilfsmittel versuchen, die Eintrittshürden zu senken, sodass auch Schüler und Studenten mit wenig oder keiner Erfahrung mit dem Einsatz von \glslink{glos:ki}{KI} diese 
-sammeln können. Zudem sei eine benutzerfreundliche und intuitive Bedienung von großer Bedeutung\cite[6]{influencingUsingAi}. Dies führe zu mehr Freude an der Nutzung 
+sammeln können. Zudem sei eine benutzerfreundliche und intuitive Bedienung von großer Bedeutung \cite[6]{influencingUsingAi}. Dies führe zu mehr Freude an der Nutzung 
 von \glslink{glos:ki}{KI} und somit zu einem häufigeren Gebrauch. Darüber hinaus wird die Häufigkeit der Verwendung von der Nützlichkeit beeinflusst, welche Schüler und Studenten 
 dem \glslink{glos:ki}{KI}-Dienst zuschreiben. Als wie nützlich ein \glslink{glos:ki}{KI}-Werkzeug angesehen wird, wird maßgeblich von den zur Verfügung gestellten Funktionalitäten beeinflusst. Die in 
 \autoref{sec:vorteile} beschriebenen häufigen Einsatzmöglichkeiten sollten von einem \glslink{glos:ki}{KI}-Werkzeug unterstützt werden. Nach Cui sehen Studenten eine \glslink{glos:ki}{KI}-Applikation vor allem dann 
 als nützlich an, wenn sie das Gefühl haben, durch den Gebrauch ihre Effizienz und die Qualität des geschriebenen Textes zu verbessern. Dadurch werde ebenfalls die 
 Nutzungsabsicht beeinflusst\cite[7]{influencingUsingAi}. \\
+
+%TODO: diesen Absatz würde ich nicht direct unter "Anforderungen" einorden sondern eher noch zu den theoretischen Grundlagen zählen
+
 Für die Gestaltung von \glslink{glos:ki}{KI}-Werkzeugen solle auf die Steigerung der Zufriedenheit der Nutzer durch personalisierte Funktionen und Echtzeitfeedback geachtet 
-werden\cite[10]{influencingUsingAi}. So könne die Motivation sowie das Selbstvertrauen von Studenten im akademischen Schreibprozess erhöht werden, wodurch 
-wiederum die fortlaufende Inanspruchnahme der \glslink{glos:ki}{KI}-Anwendung gefördert würde\cite[10]{influencingUsingAi}. \\Ebenso verweist die Studie auf die Bedeutung, welche dem 
+werden \cite[10]{influencingUsingAi}. So könne die Motivation sowie das Selbstvertrauen von Studenten im akademischen Schreibprozess erhöht werden, wodurch 
+wiederum die fortlaufende Inanspruchnahme der \glslink{glos:ki}{KI}-Anwendung gefördert würde \cite[10]{influencingUsingAi}. \\Ebenso verweist die Studie auf die Bedeutung, welche dem 
 Verständnis der Funktionsweise von \glslink{glos:ki}{KI} zukommt. \glslink{glos:ki}{KI}-Anwendungen sollten möglichst transparent gestaltet sein, so dass ihre Logik und Funktionsweise für die Schüler und 
 Studenten nachvollziehbar ist. Dies fördere darüber hinaus die Tranzparenz der von der \glslink{glos:ki}{KI} gegebenen Antworten. Somit erhöhe sich das Vertrauen, welches Studenten dem \glslink{glos:ki}{KI}-Werkzeug 
 entgegenbringen\cite[10]{influencingUsingAi}. Zudem ließe sich so eine unreflektierte Nutzung der \glslink{glos:ki}{KI}-generierten Antworten verhindern, da die Nutzer sich der 
-potentiellen Risiken bewusst sind und generierte Inhalte häufiger kritisch hinterfragen\cite[10]{influencingUsingAi}. Eine solche Nachvollziehbarkeit kann 
+potentiellen Risiken bewusst sind und generierte Inhalte häufiger kritisch hinterfragen \cite[10]{influencingUsingAi}. Eine solche Nachvollziehbarkeit kann 
 beispielsweise durch sogenannte \glslink{tooltips}{Tooltips} erzielt werden. Diese beschreiben die Funktion, welche eine bestimmte Einstellung übernimmt, und wie dadurch die Antwort der 
 KI beeinflusst wird.\\  
 Eines der in \autoref{ch:technischeHintergründe} beschriebenen Risiken der Nutzung von \glslink{glos:ki}{KI} sind \glslink{halluzinationen}{Halluzinationen}, also generierte Fehlinformationen. Im Artikel "`Generative Artificial Intelligence 
 and Misinformation Acceptance: An Experimental Test of the Effect of Forewarning About Artificial Intelligence Hallucination"' untersuchen Yoori Hwang und Se-Hoon Jeong, 
+%TODO: wieder ganzer titel
 wie eine Vorwarnung vor \glslink{glos:ki}{KI}-Halluzinationen die Akzeptanz von solchen Fehlinformationen beeinflussen kann. Sie kommen zu dem Ergebnis, dass ein Hinweis auf 
 die Möglichkeit, dass \glslink{glos:ki}{KI} halluzinieren kann, die Akzeptanz von generierten Falschinformationen verringert. Getestet wurde dies mit einer 127 Wörter langen Nachricht an 
 den Nutzer, welche vor der Verwendung des \glslink{glos:ki}{KI}-Werkzeuges angezeigt wurde. Diese enthielt eine Definition, ein Beispiel sowie eine Erklärung möglicher Gründe für \glslink{glos:ki}{KI}-Halluzinationen\cite[285]{hallucinationForewarning}. \\Nutzer hinterfragten die \glslink{glos:ki}{KI}-generierten Antworten im Anschluss kritischer. Um das Risiko, welches durch \glslink{glos:ki}{KI}-generierte Falschinformationen 
 entsteht, zu minimieren, wird für den im Kontext dieses Studienprojektes entwickelten Schreibassistenten ein Hinweis auf mögliche Halluzinationen implementiert.\cite{hallucinationForewarning}
 
-
+%TODO: Für mich hat der gesamte chapter nicht so viel mit Anforderungen zu tun, ich würde das vielleicht nochmal renamen
 
 
 \end{document}
