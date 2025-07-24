@@ -77,13 +77,13 @@ Prüfungen der Antworten auf Ausdruck, Grammatik und Inhalt, um zu bestimmen, we
 
 \item \textbf{mayflowergmbh/wiederchat} (7 Mrd. Parameter) \cite{wiederchat}: Führt Prompts oft nicht ganz aus, liefert aber beim Zusammenfassen die besten Stichpunkt-Antworten. Wird dafür empfohlen.
 
-\item \textbf{jobautomation/OpenEuroLLM-German} (auf Gemma 3 basierend) \cite{openeurollm}: Generiert vollständige und gut strukturierte Texte, keine fremdsprachigen Fachwörter. Für das Erstellen aus Stichpunkten und Umformulieren als Standard-Modell gewählt.
+\item \textbf{jobautomation/OpenEuroLLM-German} (auf Gemma 3 basierend) \cite{openeurollm}: Generiert vollständige und gut strukturierte Texte, keine fremdsprachigen Fachwörter. Für das Erstellen eines Textes aus Stichpunkten und Umformulieren als Standard-Modell gewählt.
 
-\item \textbf{Gemma3} (von Google entwickelt, Open Source, 12 Mrd. Parameter) \cite{gemma3}: Aufgrund fehlender Spezialisierung meist weniger gut formulierte Texte, aber sehr gut geeignet für Synonyme und Feedback. \end{itemize}
+\item \textbf{Gemma3} (von Google entwickelt, Open Source, 12 Mrd. Parameter) \cite{gemma3}: Aufgrund fehlender Spezialisierung meist weniger gut formulierte Texte, aber sehr gut geeignet für Synonyme, Feedback, Überprüfung der Grammatik sowie erklären von Sachzusammenhängen. \end{itemize}
 
 Die Einbindung der Modelle erfolgt über die lokale \glslink{ollama}{Ollama}-API. Für jeden \glslink{glos:ki}{KI}-Aufruf sendet das Backend die Modellwahl sowie Inhalte wie Aufgabe, bisherigen Chatverlauf, 
 Paragraphinhalt, gegebenenfalls Nutzerkommentare und weitere Felder an Ollama.\\ Die Prompts für jede Aufgabe wurden getestet und iterativ angepasst, bis die Modelle zufriedenstellende Antworten 
-lieferten. Sie sind auf Deutsch verfasst, da der Schreibassistent auf die deutsche Sprache spezialisiert ist. Englische Prompts führten im Test zu keinen signifikant besseren Ergebnissen. Die Ergebnisse des Prompt-Engineerings befinden sich im Anhang \ref{Prompts}.\\
+lieferten. Sie sind auf Deutsch verfasst, da der Schreibassistent auf die deutsche Sprache spezialisiert ist. Englische Prompts führten im Test zu keinen signifikant besseren Ergebnissen. Die Ergebnisse des Prompt-Engineerings befinden sich in Anhang \ref{Prompts}.\\
 Erstellt der Nutzer ein Projekt wird automatisch geprüft, ob die für die Standardaufgaben vorgeschlagenen KI-Modelle installiert sind. Sollte dies nicht der Fall sein, werden sie heruntergeladen.
 Darüber hinaus kann der Nutzer den Schreibassistenten verwenden, um weitere KI-Modelle zu laden. 
 
