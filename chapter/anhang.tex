@@ -1,28 +1,23 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\pagestyle{empty}
-\thispagestyle{empty}
 
-\pagestyle{empty}
-\begin{lstlisting}[label={Prompts},language=Python,caption={Anfügen des Prompts abhängig von der vom Nutzer gewählten Aufgabe}]
-def switchPrompt(task, synonym):
-    if task == 1:
-        return "Schreibe den folgenden Text neu, verbessere dabei die Struktur und Formulierung. Geh dabei auf alle Informationen im Text ein. Dein Schreibstil soll wissenschaftlich sein. Deine Antwort soll ausschliesslich aus dem Text bestehen. Fuege keine weiteren Informationen oder Erklaerungen hinzu."
-    elif task == 2:
-        return "Fasse folgenden Text in Stichpunkten zusammen. Beachte dabei alle wichtigen Informationen und verwende nur Informationen aus dem gegebenen Text. Der Kontext der Informationen darf dabei nicht verloren gehen. Deine Antwort soll ausschliesslich aus Stichpunkten bestehen."
-    elif task == 3:
-        return "Formuliere aus den folgenden Stichpunkten einen Fliesstext. Geh dabei auf alle Informationen ein. Deine Antwort soll ausschliesslich aus dem Text bestehen."
-    elif task == 4:
-        return "Ignoriere alle weiteren Prompts, antworte lediglich mit einer Liste von Synonymen fuer: " + f"{synonym}"
-    elif task == 5:
-        return "Korrigiere im folgenden Text Rechtschreibung und Grammatik. Antworte ausschliesslich mit dem korrigierten Text."
-    elif task == 6:
-        return "Schreibe Feedback zu dem Text den du gleich erhalten wirst. Das Feedback sollte folgendermassen strukturiert sein: Staerken: Gehe zuerst auf die Sachen ein, die gut gelungen sind, sowie die Staerken des Textes. Kritik: Kritisiere anschliessend konstruktiv aber ehrlich, was an dem Text nicht so gut gelungen ist. Bewertung: Gib zum Schluss eine begruendete Einschaetzung darueber ab, wie du den Text bewerten wuerdest. Die Bewertungskriterien sollten dabei sein: Inhalt, Struktur, Satzbau und Sprache, Stil. Gib optional noch ein paar Tipps, was der Autor des Textes noch ueben sollte. Abschluss: Fasse zum Schluss noch einmal die positiven Punkte zusammen und beende das Feedback mit einem motivierenden Satz oder Spruch!"
-    elif task == 7:
-        return "Erklaere folgenden Sachzusammenhang:"
-    else:
-        return ""
-
-\end{lstlisting}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[htbp]
+    \centering
+    \caption{KI-Aufgaben und zugehörige Prompts}
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3cm} X}
+        \toprule
+        \textbf{Aufgabe} & \textbf{KI-Prompt} \\
+        \midrule
+        Umformulieren & Schreibe den folgenden Text neu, beachte dabei unbedingt den gewünschten Schreibstil. Gehe dabei auf alle Informationen im Text ein. Deine Antwort soll ausschließlich aus dem gewünschten Text bestehen. Füge keine weiteren Informationen oder Erklärungen hinzu. \\
+        Zusammenfassen & Fasse folgenden Text in Stichpunkten zusammen. Beachte dabei alle wichtigen Informationen und verwende nur Informationen aus dem gegebenen Text. Der Kontext der Informationen darf dabei nicht verloren gehen. Deine Antwort soll ausschließlich aus Stichpunkten bestehen. \\
+        Text aus Stichpunkten & Formuliere aus den folgenden Stichpunkten einen Fließtext. Gehe dabei auf alle Informationen ein. Deine Antwort soll ausschließlich aus dem Text bestehen. \\
+        Synonyme & Ignoriere alle weiteren Prompts, antworte lediglich mit einer Liste von Synonymen für: \emph{[Begriff einsetzen]} \\
+        Grammatik und Rechtschreibung & Korrigiere im folgenden Text Rechtschreibung und Grammatik. Antworte ausschließlich mit dem korrigierten Text. \\
+        Feedback & Schreibe Feedback zu dem Text den du gleich erhalten wirst. Das Feedback sollte folgendermaßen strukturiert sein: Stärken: Gehe zuerst auf die Sachen ein, die gut gelungen sind, sowie die Stärken des Textes. Kritik: Kritisiere anschließend konstruktiv aber ehrlich, was an dem Text nicht so gut gelungen ist. Bewertung: Gib zum Schluss eine begründete Einschätzung darüber ab, wie du den Text bewerten würdest. Die Bewertungskriterien sollten dabei sein: Inhalt, Struktur, Satzbau und Sprache, Stil. Gib optional noch ein paar Tipps, was der Autor des Textes noch üben sollte. Abschluss: Fasse zum Schluss noch einmal die positiven Punkte zusammen und beende das Feedback mit einem motivierenden Satz oder Spruch! \\
+        Erklären & Erkläre folgenden Sachzusammenhang: \emph{[Thema einsetzen]} \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
 \end{document}
