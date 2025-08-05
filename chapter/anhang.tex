@@ -1,6 +1,8 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
+\pagestyle{empty}
+
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[htbp]
     \centering
@@ -19,5 +21,45 @@
         \bottomrule
     \end{tabularx}
 \end{table}
+\thispagestyle{empty}
+\begin{table}[H]
+    \caption{KI-Nutzungsverzeichnis}
+    \small % Schriftgröße anpassen, optional
+    \begin{tabularx}{\textwidth}{
+        >{\raggedright\arraybackslash}p{3cm}    % Aufgabe
+        >{\raggedright\arraybackslash}p{4.7cm}    % KI-Modell
+        >{\centering\arraybackslash}p{2.5cm}    % Datum
+        >{\raggedright\arraybackslash}X         % Anmerkungen
+    }
+        \toprule
+        \textbf{Aufgabe} & \textbf{KI-Modell} & \textbf{Datum} & \textbf{Anmerkungen}\\
+        \midrule
+        Umformulieren & jobautomation/OpenEuroLLM-German & 17.07.25 & Absatz 2.4.3 \\
+        Umformulieren & jobautomation/OpenEuroLLM-German & 17.07.25 & Absatz 6 \\
+        Abstract erstellen & GPT4.1 & 23.07.25 & anschließend händisch überarbeitet \\
+        Synonyme finden & GPT4.1 & gesamter Zeitraum & für gesamte Arbeit verwendet\\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{bilder/frontend_1.png}
+    \caption{Frontend Schreibassistent — Startseite}
+    \label{fig:fe1}
+\end{figure}
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=1\textwidth]{bilder/frontend_2.png} 
+    \caption{Frontend Schreibassistent — Projektansicht}
+    \label{fig:fe2}
+\end{figure}
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=1\textwidth]{bilder/frontend_3.png}
+    \caption{Frontend Schreibassistent — Modelle laden}
+    \label{fig:fe3}
+\end{figure}
 
 \end{document}
